@@ -1,22 +1,4 @@
-# To change this template, choose Tools | Templates
-# and open the template in the editor.
-
-=begin
-words = Fiber.new do
-  File.foreach ("lorem.txt") do |line|
-    line.scan(/\w+/) do |word|
-      Fiber.yield word.downcase
-    end
-  end
-end
-
-counts = Hash.new(0)
-while word = words.resume
-  counts[word] += 1
-end
-
-counts.keys.sort.each {|k| print "#{k}: #{counts[k]} "}
-=end
+require 'thread'
 
 def fibonacci_fiber(max)
 
@@ -38,19 +20,6 @@ def fibonacci_fiber(max)
 
 end
 
-
-
-=begin
-threads = []
-4.times do |number|
-  threads << Thread.new(number) do |i|
-    raise "Ooooh" if i == 2
-    print "#{i}\n"
-  end
-end
-=end
-require 'thread'
-
 def fibonacci_threads(max)
 
   queue = Queue.new
@@ -69,7 +38,7 @@ def fibonacci_threads(max)
 
   consumer = Thread.new() {
     while (producer.alive? || !queue.empty?)
-      puts "#{queue.pop()}";
+      print "#{queue.pop()}\n";
     end
   }
 
