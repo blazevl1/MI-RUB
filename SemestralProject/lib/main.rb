@@ -3,12 +3,15 @@
 
 $: << "."
 require 'file_parser'
+require 'graph_algorithms'
 
 include FileParser
+include GraphAlgorithms
 
 parser = DistanceMatrixFileParser.new
 begin
-  parser.parse_file('matrix.txt')
+  graph = parser.parse_file('matrix.txt')
+  p GraphAlgorithms.bfs(0,graph)
 rescue RuntimeError => error
   puts "Parsing error: #{error}"
 end

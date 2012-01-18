@@ -5,8 +5,12 @@ module FileParser
   class DistanceMatrixFileParser
 
     def parse_file(filename)
-      file_content = File.open(filename,'r')
-      parse(file_content)
+      file = File.open(filename,'r')
+      begin
+        parse(file)
+      ensure
+        file.close
+      end
     end
 
     private
@@ -20,11 +24,11 @@ module FileParser
     def create_matrix(content)
       matrix = []
       content.each_line() { |line|
-        chunks = line.split(/[\s]*/);
+        chunks = line.split(/[\s]+/);
         matrix[content.lineno-1] = []
         chunks.each_index() { |index|
           value = chunks[index].strip
-          if (/^{0,1}[0-9]+$/ =~ value)
+          if (/^\d+$/ =~ value)
             matrix[content.lineno-1].push(value.to_i)
           else
             raise "Invalid file structure. Expected number given: #{value}"
@@ -45,21 +49,21 @@ module FileParser
 
     def create_graph_from_matrix(matrix)
       graph = GraphModule::Graph.new
-      for id in (0..matrix.length)
+      for id in (0..matrix.length-1)
         graph.add_node(GraphModule::Node.new(id))
       end
       matrix.each_index { |node_A_index|
         matrix[node_A_index].each_index { |node_B_index|
           weight = matrix[node_A_index][node_B_index]
           if (weight != 0)          
-            source_node = graph.get_node(node_A_index)
-            target_node = graph.get_node(node_B_index)
+            target_node = graph.get_node(node_A_index)
+            source_node = graph.get_node(node_B_index)
             edge = GraphModule::Edge.new(source_node,target_node,weight)
-            source_node.add_edge(edge)
-            target_node.add_edge(edge)          
+            graph.add_edge(edge)
           end
         }
-      }   
+      }
+      return graph
     end
   end
     
