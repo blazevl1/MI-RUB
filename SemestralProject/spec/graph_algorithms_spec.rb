@@ -7,28 +7,50 @@ include GraphAlgorithms
 
 describe GraphAlgorithms do
 
-  it "BFS should discover all nodes if graph is connected" do
-    file_parser = DistanceMatrixFileParser.new
-    graph = file_parser.parse_file('spec/strongly_connected.txt')
-    GraphAlgorithms.bfs(0, graph).length.should eql 4
+
+  before(:each) do
+    @file_parser = DistanceMatrixFileParser.new
   end
 
-  it "BFS should not discover all nodes if graph is not connected" do
-    file_parser = DistanceMatrixFileParser.new
-    graph = file_parser.parse_file('spec/correct_matrix.txt')
-    GraphAlgorithms.bfs(0, graph).length.should_not eql 4
+  describe "#bfs" do
+    it "should discover all nodes if graph is connected" do
+      graph = @file_parser.parse_file('spec/strongly_connected.txt')
+      GraphAlgorithms.bfs(0, graph).length.should eql 4
+    end
+
+    it "should not discover all nodes if graph is not connected" do
+      graph = @file_parser.parse_file('spec/correct_matrix.txt')
+      GraphAlgorithms.bfs(0, graph).length.should_not eql 4
+    end
   end
 
-  it "strongly connected method should return true if graph is strongly connected" do
-    file_parser = DistanceMatrixFileParser.new
-    graph = file_parser.parse_file('spec/strongly_connected.txt')
-    GraphAlgorithms.bfs(0, graph).length.should_not eql true
+  describe "#is_strongly_connected?" do
+    it "should return true if graph is strongly connected" do
+      graph = @file_parser.parse_file('spec/strongly_connected.txt')
+      GraphAlgorithms.bfs(0, graph).length.should_not eql true
+    end
+
+    it "should return false if graph is not strongly connected" do
+      graph = @file_parser.parse_file('spec/not_strongly_connected.txt')
+      GraphAlgorithms.is_strongly_connected?(0, graph).should eql false
+    end
   end
 
-  it "strongly connected method should return false if graph is not strongly connected" do
-    file_parser = DistanceMatrixFileParser.new
-    graph = file_parser.parse_file('spec/not_strongly_connected.txt')
-    GraphAlgorithms.is_strongly_connected?(0, graph).should eql false
+  describe "#is_euler_graph?" do
+    it "should return true if graph is Euler graph" do
+      graph = @file_parser.parse_file('spec/euler_graph.txt')
+      GraphAlgorithms.is_euler?(graph).should eql true
+    end
+
+    it "should return false if graph is not Euler graph" do
+      graph = @file_parser.parse_file('spec/euler_graph.txt')
+      edge = Edge.new(graph.get_node(0),graph.get_node(2),1)
+      graph.add_edge(edge)
+      GraphAlgorithms.is_euler?(graph).should eql false
+    end
   end
+  
+
+  
 end
 

@@ -105,6 +105,14 @@ module GraphModule
       end
     end
 
+    def input_degree
+      return @input_edges.length
+    end
+
+    def output_degree
+      return @output_edges.length
+    end
+
     def open
       @closed = false
     end

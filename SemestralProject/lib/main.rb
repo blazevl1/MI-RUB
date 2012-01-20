@@ -11,7 +11,8 @@ include GraphAlgorithms
 parser = DistanceMatrixFileParser.new
 begin
   graph = parser.parse_file('matrix.txt')
-  p GraphAlgorithms.bfs(0,graph)
+  tour = GraphAlgorithms.find_tour_in_euler_graph(graph.get_node(0),graph)
+  tour.to_s
 rescue RuntimeError => error
   puts "Parsing error: #{error}"
 end

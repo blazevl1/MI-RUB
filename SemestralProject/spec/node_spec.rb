@@ -19,7 +19,6 @@ describe Node do
     edge = Edge.new(tested_node,nodeB,1)
     tested_node.add_edge(edge)
     edge = Edge.new(@node,nodeB,1)
-    @node.add_edge(edge)
     @node.should eql tested_node
   end
 
@@ -32,7 +31,6 @@ describe Node do
     edge = Edge.new(tested_node,nodeA,1)
     tested_node.add_edge(edge)
     edge = Edge.new(@node,nodeB,1)
-    @node.add_edge(edge)
     @node.should_not eql tested_node
   end
 
@@ -45,7 +43,6 @@ describe Node do
     edge = Edge.new(nodeA,tested_node,1)
     tested_node.add_edge(edge)
     edge = Edge.new(nodeB,@node,1)
-    @node.add_edge(edge)
     @node.should_not eql tested_node
   end
 
@@ -59,15 +56,29 @@ describe Node do
   it "should add edge to input edges if node is target of the edge" do
     nodeA = Node.new(1)
     edge = Edge.new(nodeA,@node,1)
-    @node.add_edge(edge)
     @node.input_edges.has_value?(edge).should eql true
   end
 
   it "should add edge to output edges if node is source of the edge" do
     nodeA = Node.new(1)
     edge = Edge.new(@node,nodeA,1)
-    @node.add_edge(edge)
     @node.output_edges.has_value?(edge).should eql true
+  end
+
+  it "should have output degree equal to number of edges which have this node as source" do
+    nodeA = Node.new(1)
+    nodeB = Node.new(2)
+    edge = Edge.new(@node,nodeA,1)
+    edge = Edge.new(@node,nodeB,1)    
+    @node.output_degree.should eql 2
+  end
+
+  it "should have input degree equal to number of edges which have this node as target" do
+    nodeA = Node.new(1)
+    nodeB = Node.new(2)
+    edge = Edge.new(nodeA,@node,1)
+    edge = Edge.new(nodeB,@node,1)
+    @node.input_degree.should eql 2
   end
 
 end

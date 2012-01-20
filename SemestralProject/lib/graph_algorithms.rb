@@ -4,6 +4,7 @@ require 'thread'
 
 module GraphAlgorithms
 
+
   def GraphAlgorithms.bfs(root_node_index,graph)
     bfs = BFS.new
     return bfs.execute(root_node_index, graph)
@@ -22,9 +23,28 @@ module GraphAlgorithms
     return true
   end
 
+  def GraphAlgorithms.is_euler?(graph)
+    graph.nodes.each_value() { |node|
+      if (node.input_degree != node.output_degree)
+        return false
+      end
+    }
+    return true
+  end
+
   def GraphAlgorithms.find_tour_in_euler_graph(start_node,graph)
     edges = graph.edges.dup
-    return find_tour(start_node,edges,Array.new)
+    tour = Tour.new(start_node)
+    node = start_node
+    while (edges.length > 0)
+      cycle = Array.new
+      cycle = find_tour(node,edges,cycle)
+      tour.add_cycle(node, cycle.reverse)
+      if (edges[0] != nil)
+        node = edges[0].source
+      end
+    end
+    return tour
   end
 
   def find_tour(start_node,edges,tour)
@@ -35,8 +55,10 @@ module GraphAlgorithms
       end
     }
     tour.push(start_node)
+    return tour
   end
 
+  private :find_tour
 
   class Search
     def initialize
@@ -66,7 +88,7 @@ module GraphAlgorithms
     @array
 
     def initialize()
-      @queue = Array.new
+      @queue = Queue.new
       @array = Array.new
     end
 
@@ -93,5 +115,39 @@ module GraphAlgorithms
       }
     end
   end
+
+  class Tour
+
+    def initialize(start_node)
+      @start_node = start_node
+      @cycles = Hash.new
+    end
+
+    def add_cycle(start_node,nodes)
+      if (@cycles[start_node.id] == nil)
+        @cycles[start_node.id] = Array.new
+      end
+      if (start_node != @start_node)
+        nodes.pop()
+      end  
+      @cycles[start_node.id].push(nodes)
+    end
+
+    def to_s
+      @cycles[@start_node.id].each { |array|
+        array.each() { |node|
+          if (@cycles.has_key?(node.id) && node != @start_node)
+            @cycles[node.id].each() { |array|
+              array.each() { |node|
+                print "#{node} "
+              }
+            }
+          end
+          print "#{node} "
+        }
+      }
+    end
+  end
+
     
 end
