@@ -7,7 +7,6 @@ include GraphAlgorithms
 
 describe GraphAlgorithms do
 
-
   before(:each) do
     @file_parser = DistanceMatrixFileParser.new
   end
@@ -49,8 +48,20 @@ describe GraphAlgorithms do
       GraphAlgorithms.is_euler?(graph).should eql false
     end
   end
-  
 
+  describe '#find_closest_nodes' do
+    it "should return array of nodes order by distance from start_node" do
+      graph = @file_parser.parse_file('spec/graph_for_dijkstra.txt')
+      path = Array.new
+      path.push(graph.get_node(0))
+      path.push(graph.get_node(1))
+      path.push(graph.get_node(4))
+      path.push(graph.get_node(2))
+      path.push(graph.get_node(3))
+      path.push(graph.get_node(5))
+      GraphAlgorithms.find_closest_nodes(graph.get_node(0),graph).should eql path
+    end
+  end
   
 end
 

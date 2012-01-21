@@ -88,11 +88,12 @@ module GraphModule
 
   class Node
 
-    def initialize(id)
+    def initialize(id,distance = 1/0.0)
       @id= id
       @input_edges = {}
       @output_edges = {}
       @closed = false
+      @distance = distance
     end
 
     def add_edge(edge)
@@ -153,10 +154,11 @@ module GraphModule
     end
 
     def to_s
-      return "(#{id})"
+      return "(#{id}) distance: #{distance}"
     end
 
-    attr_reader :id, :input_edges, :output_edges
+    attr_reader :id, :distance, :input_edges, :output_edges
+    attr_writer :distance
 
 
   end
