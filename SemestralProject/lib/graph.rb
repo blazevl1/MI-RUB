@@ -72,6 +72,11 @@ module GraphModule
       @weight = weight
       @source.add_edge(self)
       @target.add_edge(self)
+      @temporary = false
+    end
+
+    def temporary?
+      return @temporary
     end
 
     def eql? (edge)
@@ -84,6 +89,27 @@ module GraphModule
 
     attr_reader :source, :target, :weight
 
+  end
+
+  class TemporaryEdge < Edge
+
+    @edges = Array.new
+
+    def initialize(source,target,edges)
+      weight = 0
+      @edges = edges
+      @edges.each { |edge|
+        weight += edge.weight
+      }
+      super(source,target,weight)
+      @temporary = true
+    end
+
+    def to_s
+      @edges.join(', ')
+    end
+
+    
   end
 
   class Node
@@ -154,7 +180,7 @@ module GraphModule
     end
 
     def to_s
-      return "(#{id}) distance: #{distance}"
+      return "(#{id})"
     end
 
     attr_reader :id, :distance, :input_edges, :output_edges

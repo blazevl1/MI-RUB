@@ -1,10 +1,8 @@
-# To change this template, choose Tools | Templates
-# and open the template in the editor.
-
 $: << "."
 require 'file_parser'
 require 'graph_algorithms'
 require 'dijkstra_algorithm'
+require 'heuristic_algorithm'
 
 include FileParser
 include GraphAlgorithms
@@ -12,8 +10,9 @@ include GraphAlgorithms
 parser = DistanceMatrixFileParser.new
 begin
   graph = parser.parse_file('matrix.txt')
-  algorithm = DijkstraAlgorithm.new
-  algorithm.execute(graph.get_node(0),graph)
+  algorithm = HeuristicAlgorithm.new
+  tour = algorithm.execute(graph.get_node(0),graph)
+  puts tour.to_s
   
 rescue RuntimeError => error
   puts "Parsing error: #{error}"

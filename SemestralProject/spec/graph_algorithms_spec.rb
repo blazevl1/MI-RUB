@@ -52,14 +52,15 @@ describe GraphAlgorithms do
   describe '#find_closest_nodes' do
     it "should return array of nodes order by distance from start_node" do
       graph = @file_parser.parse_file('spec/graph_for_dijkstra.txt')
-      path = Array.new
-      path.push(graph.get_node(0))
-      path.push(graph.get_node(1))
-      path.push(graph.get_node(4))
-      path.push(graph.get_node(2))
-      path.push(graph.get_node(3))
-      path.push(graph.get_node(5))
-      GraphAlgorithms.find_closest_nodes(graph.get_node(0),graph).should eql path
+      array = Array.new
+      array.push(graph.get_node(0))
+      array.push(graph.get_node(1))
+      array.push(graph.get_node(4))
+      array.push(graph.get_node(2))
+      array.push(graph.get_node(3))
+      array.push(graph.get_node(5))
+      closest_nodes,paths = GraphAlgorithms.find_closest_nodes(graph.get_node(0),graph)
+      closest_nodes.should eql array
     end
   end
   

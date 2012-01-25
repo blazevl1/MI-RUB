@@ -5,7 +5,7 @@ require 'dijkstra_algorithm'
 
 module GraphAlgorithms
 
-  @algorithms = Hash.new
+  @@algorithms = Hash.new
 
   def bfs(root_node_index,graph)
     algorithm = get_algorithm("BFS")
@@ -45,10 +45,10 @@ module GraphAlgorithms
   end
 
   def get_algorithm(class_name)
-    if (@algorithms.has_key?(class_name))
-      algorithm = @algorithms[class_name]
+    if (@@algorithms.has_key?(class_name))
+      algorithm = @@algorithms[class_name]
     else
-      algorithm = @algorithms[class_name] = Object.const_get("GraphAlgorithms").const_get(class_name).new
+      algorithm = @@algorithms[class_name] = Object.const_get("GraphAlgorithms").const_get(class_name).new
     end
     return algorithm
   end

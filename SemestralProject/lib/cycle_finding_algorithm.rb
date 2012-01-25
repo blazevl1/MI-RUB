@@ -52,19 +52,29 @@ module GraphAlgorithms
       @cycles[start_node.id].push(nodes)
     end
 
-    def to_s
+    def nodes
+      nodes = Array.new
       @cycles[@start_node.id].each { |array|
         array.each() { |node|
           if (@cycles.has_key?(node.id) && node != @start_node)
             @cycles[node.id].each() { |array|
               array.each() { |node|
-                print "#{node} "
+                nodes.push(node)
               }
             }
           end
-          print "#{node} "
+          nodes.push(node)
         }
       }
+      return nodes
+    end
+
+    def to_s
+      output = ''
+      self.nodes.each { |node|
+        output += "#{node} "
+      }
+      return output
     end
   end
 end

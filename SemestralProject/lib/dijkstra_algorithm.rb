@@ -10,21 +10,22 @@ module GraphAlgorithms
 
     def execute(start_node,graph)
       initialize_algorithm(start_node,graph)
-      closes_nodes = Array.new
+      closest_nodes = Array.new  
       until(@nodes.empty?)
         @nodes.sort! { |nodeA,nodeB| nodeA.distance <=> nodeB.distance }
         node = @nodes.first()
         @nodes.delete(node)
         relaxation(node)
-        closes_nodes.push(node)
+        closest_nodes.push(node)
         node.close
       end
       finalize_algorithm(graph)
-      return closes_nodes
+      return closest_nodes,@paths
     end
 
     def initialize_algorithm(start_node,graph)
       @nodes = Array.new
+      @paths = Hash.new
       start_node.distance = 0
       graph.nodes.each_value { |node|
         @nodes.push(node)
@@ -34,6 +35,7 @@ module GraphAlgorithms
     def finalize_algorithm(graph)
       graph.nodes.each_value { |node|
         node.distance = 1/0.0
+        node.open
       }
     end
 
@@ -43,6 +45,7 @@ module GraphAlgorithms
         unless (descendant.closed?)
           distance = node.distance + edge.weight
           if (distance < descendant.distance)
+            @paths[descendant] = edge
             descendant.distance = distance
           end
         end
