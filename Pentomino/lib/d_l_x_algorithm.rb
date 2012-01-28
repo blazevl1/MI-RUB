@@ -12,10 +12,10 @@ class DLXAlgorithm
 
   def execute
     beginning = Time.now
-    puts "Vytvářím datové struktury pro běh algoritmu..."
+    puts "Vytvarim datove struktury pro beh algoritmu..."
     init()
-    puts "Datové struktury připraveny."
-    puts "Spouštím algoritmus."
+    puts "Datove struktury pripraveny."
+    puts "Spoustim algoritmus."
     puts ""
     begin
       execute_dlx()
@@ -28,12 +28,13 @@ class DLXAlgorithm
         @board.fill(position_numbers,item_number)
       }
       time = Time.now - beginning
-      puts "Řešení nalezeno za #{time.round(0)} vteřin."
+      puts "Reseni nalezeno za #{time.round(0)} vterin."
       puts "----------------"
       puts ""
       print_result()
+      puts ""
     rescue
-      puts "Nepodařilo se najít řešení"
+      puts "Nepodarilo se najit reseni"
     end 
   end
 
