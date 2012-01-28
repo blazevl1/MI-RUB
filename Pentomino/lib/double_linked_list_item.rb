@@ -12,16 +12,21 @@ module DLXStructure
     end
   
     def reconnect
-      @previous_item.next_item = self
-      @next_item.previous_item = self
+      if (not is_first?)
+        @previous_item.next_item = self
+      end
+      if (not is_last?)
+        @next_item.previous_item = self
+      end
+      
     end
   
     def disconnect
-      if (@previous_item != nil)
-        @previous_item.vertical_next = @next_item
+      if (not is_first?)
+        @previous_item.next_item = @next_item
       end
-      if (@next_item != nil)
-        @next_item.vertical_previous = @previous_item
+      if (not is_last?)
+        @next_item.previous_item = @previous_item
       end
     end
 
@@ -30,14 +35,18 @@ module DLXStructure
     end
 
     def is_last?
-      return @next_item == nill
+      return @next_item == nil
     end
 
-    def last_item
+    def has_next?
+      return @next_item != nil
+    end
+
+    def last
       if (is_last?)
         return self
       else
-        @next_item.last_item
+        @next_item.last
       end
     end
 
@@ -49,7 +58,7 @@ module DLXStructure
       @previous_item.parent
     end
 
-    attr_accessor :previous_item, :next_item
+    attr_accessor :previous_item, :next_item, :parent
 
 
   end

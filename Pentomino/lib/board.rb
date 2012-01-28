@@ -12,13 +12,15 @@ module Pentomino
         @height = height
       end
       @items = Hash.new
+      @virtual_items = Hash.new
       @structure = Hash.new
       for i in 0..width-1
         @structure[i] = Hash.new
         for j in 0..height-1
           @structure[i][j] = 0
         end
-      end   
+      end
+      @length = @width*@height-1
     end
 
     def add_item(item,coordinates)
@@ -32,22 +34,43 @@ module Pentomino
       }
     end
 
+    def fill(array,item_number)
+      item_number = item_number-@length
+      if (@virtual_items.key?(item_number))
+        letter = @virtual_items[item_number].letter
+        array.each { |number|
+        x,y = convert_number_to_coordinates(number)
+        @structure[x][y] = letter
+      }
+      else
+        puts "Invalid item number. Not found ##{item_number}"
+      end  
+    end
+
+    def add_virtual_item(item)
+      item.number = @virtual_items.length+1
+      @virtual_items[item.number] = item
+    end
+
     # Převede všechny možné pozice jednoho předmětu do pole obsahující pole
     # čísel
 
     def calculate_all_positions_of_item(item)
+      numbers = Array.new
       for x in 0..(@width-item.width)
         for y in 0..(@height-item.height)
-           calculate_position_of_item(item,x,y)
+           numbers.push(calculate_position_of_item(item,x,y))
         end
       end
+      return numbers
     end
 
     def calculate_position_of_item(item,x,y)
       array = Array.new
       item.coordinates.each { |coordinate|
-        array.push(convert_coordinates_to_number(x + coordinate.x,y + coordinate.y))
+        array.push(convert_coordinates_to_number(x + coordinate.x,y + coordinate.y))     
       }
+      array.push(@length+item.number)
       return array
     end
 
@@ -55,7 +78,8 @@ module Pentomino
 
     def convert_coordinates_to_number(x,y)
       if ((@width-1) < x || (@height-1) < y)
-        raise "Invalid coordinates [#{x};#{y}]. Cannot convert because coordinates are bigger than dimension of board."
+        #raise "Invalid coordinates [#{x};#{y}]. Cannot convert because coordinates are bigger than dimension of board."
+        puts "Invalid coordinates [#{x};#{y}]. Cannot convert because coordinates are bigger than dimension of board."
       else
         return x*@height + y
       end
@@ -87,4 +111,6 @@ module Pentomino
       lines.values.join("\n")
     end
   end
+
+  attr_reader :width, :height, :virtual_items
 end

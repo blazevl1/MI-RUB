@@ -2,20 +2,23 @@ module DLXStructure
 
   class DoubleLinkedMatrixItem
   
-    def initialize(horizontal_item,vertical_item)
+    def initialize(horizontal_item,vertical_item,value)
       @items = Hash.new
       @items['horizontal'] = DoubleLinkedListItem.new(horizontal_item,self)
       @items['vertical'] = DoubleLinkedListItem.new(vertical_item,self)
       @connected = true
+      @value = value
     end
 
     # Odpojí prvek pokud již nebyl odpojen
 
     def disconnect
-      if(@connected)
-        if (not @items['vertical'].is_first())
+      if(@connected)      
+        if (not @items['vertical'].is_first?())
+          #puts "Disconnecting item #{value} vertical"
           @items['vertical'].disconnect
         else
+          #puts "Disconnecting item #{value} horizontal"
           @items['horizontal'].disconnect
         end
         @connected = false
@@ -26,7 +29,7 @@ module DLXStructure
 
     def reconnect
       if (not @connected)
-        if (not @items['vertical'].is_first())
+        if (not @items['vertical'].is_first?())
           @items['vertical'].reconnect
         else
           @items['horizontal'].reconnect
@@ -42,10 +45,15 @@ module DLXStructure
     end
 
 
-    # Pošle zprávu pro odpojení řádku, na kterém se prvek nachází
+    # Pošle zprávu pro odpojení řádku, na kterém se prvek nachází, pokud není prvek v hlavičce sloupců
 
     def disconnect_row
-      call_method_on_row_items(:disconnect)
+      if (not @items['vertical'].is_first?())
+        call_method_on_row_items(:disconnect)
+      else
+        disconnect
+      end
+
     end
 
     # Pošle zprávu pro připojení všem prvkům ve sloupci kromě prvku na kterém byla metoda vyvolána
@@ -96,10 +104,10 @@ module DLXStructure
 
     def call_method_on_items_except_source(method,item)
       if (not @items[item].is_first?)
-        @items[item].previous.call_method_previous(method)
+        @items[item].previous.call_method_previous(method,item)
       end
       if (not @items[item].is_last?)
-        @items[item].next.call_method_next(method)
+        @items[item].next.call_method_next(method,item)
       end
     end
 
@@ -124,11 +132,19 @@ module DLXStructure
       call_method(method)
       if (not @items[item].is_last?)
         @items[item].next.call_method_next(method,item)
+      else
       end
     end
 
+    def vertical
+      return @items['vertical']
+    end
 
-    attr_reader :vertical, :horizontal
+    def horizontal
+      return @items['horizontal']
+    end
+
+    attr_reader :value
 
   end
 

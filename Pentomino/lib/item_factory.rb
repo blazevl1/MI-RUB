@@ -1,41 +1,53 @@
 module Pentomino
+  
   class ItemFactory
     def initialize
       @letters = Hash.new
-      @letters['f'] = true
-      @letters['i'] = true
-      @letters['l'] = true
-      @letters['n'] = true
-      @letters['p'] = true
-      @letters['t'] = true
-      @letters['u'] = true
-      @letters['v'] = true
-      @letters['w'] = true
-      @letters['x'] = true
-      @letters['y'] = true
-      @letters['z'] = true
+      @letters['f'] = 1
+      @letters['i'] = 2
+      @letters['l'] = 3
+      @letters['n'] = 4
+      @letters['p'] = 5
+      @letters['t'] = 6
+      @letters['u'] = 7
+      @letters['v'] = 8
+      @letters['w'] = 9
+      @letters['x'] = 10
+      @letters['y'] = 11
+      @letters['z'] = 12
     end
   end
 
   def create(letter)
     downcase_letter = letter.downcase
-    if (@letters.key?(downcase_letter) && @letters[downcase_letter])
+    if (@letters.key?(downcase_letter))
       self.send("create_#{downcase_letter}")
     end
   end
 
-  def create_all_possibilities(letter)
+  # Vytvoří pole všech možných pozic zadaného prvku
+
+  def create_all_possibilities(prototype)
     array = Array.new
-    item = create(letter)
-    array[0] = create_rotated_possibilities(letter,item)
+    item = create(prototype.letter)
+    item.number = prototype.number
+    array[0] = create_rotated_possibilities(item)
     if (item.has_reflection?)
       reflected_item = item.create_reflected_clone
-      array[1] = create_rotated_possibilities(letter,reflected_item)
+      array[1] = create_rotated_possibilities(reflected_item)
     end
     return array.flatten
   end
 
-  def create_rotated_possibilities(letter,item)
+  def letters
+    return @letters.keys
+  end
+
+  private
+
+  # Vytvoří pole všech možných pozic vytvořených rotací zadaného prvku
+
+  def create_rotated_possibilities(item)
     array = Array.new
     array.push(item)
     if (item.has_rotation_90?)
@@ -49,10 +61,6 @@ module Pentomino
       end
     end
     return array
-  end
-
-  def letters
-    return @letters.keys
   end
 
   def create_z()
