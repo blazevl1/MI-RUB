@@ -142,39 +142,6 @@ module DLXStructure
       @column_header_iterator = @root
     end
 
-=begin
-    def to_s
-      array = Array.new(self.rows)
-      for i in 0..100
-        array[i] = Array.new(self.columns)
-        for j in 0..100
-          array[i][j] = ' '
-        end
-      end
-      vertical_item = @root
-      while (vertical_item.vertical.has_next?)
-        vertical_item = vertical_item.vertical.next
-        item = vertical_item
-        while (item.horizontal.has_next?)
-          item = item.horizontal.next
-          if (array[item.value[1]-1] == nil)
-            puts "#{item.value[1]-1},#{item.value[0]+1}"
-          else
-            array[item.value[1]-1][item.value[0]+1] = "O"
-          end             
-        end
-      end
-      output = "#{self.columns},#{self.rows}"
-      array.each { |array2|
-        array2.each { |character|
-          output += character
-        }
-        output += "\n"
-      }
-      return output
-    end
-=end
-
   end
 
 end

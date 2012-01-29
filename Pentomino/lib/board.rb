@@ -18,17 +18,8 @@ module Pentomino
         end
       end
       @length = @width*@height-1
-    end
-
-    def add_item(item,coordinates)
-      @items[item] = coordinates
-      item.coordinates.each { |coordinate|
-        x = coordinates.x + coordinate.x
-        y = coordinates.y + coordinate.y
-        if (@structure.key?(x) && @structure[x].key?(y))
-          @structure[x][y] = item.letter
-        end      
-      }
+      @max_capacity = @width*@height
+      @actual_capacity = 0
     end
 
     def fill(array,item_number)
@@ -36,17 +27,22 @@ module Pentomino
       if (@virtual_items.key?(item_number))
         letter = @virtual_items[item_number].letter
         array.each { |number|
-        x,y = convert_number_to_coordinates(number)
-        @structure[x][y] = letter
-      }
+          x,y = convert_number_to_coordinates(number)
+          @structure[x][y] = letter 
+        }
       else
         puts "Invalid item number. Not found ##{item_number}"
       end  
     end
 
+    def can_be_full?
+      return @actual_capacity == @max_capacity
+    end
+
     def add_virtual_item(item)
       item.number = @virtual_items.length+1
       @virtual_items[item.number] = item
+      @actual_capacity += item.capacity
     end
 
     # Převede všechny možné pozice jednoho předmětu do pole obsahující pole
@@ -109,5 +105,5 @@ module Pentomino
     end
   end
 
-  attr_reader :width, :height, :virtual_items
+  attr_reader :width, :height, :virtual_items, :max_capacity, :actual_capacity
 end

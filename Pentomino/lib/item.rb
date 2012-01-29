@@ -18,6 +18,7 @@ module Pentomino
       @has_reflection = reflection
       @has_rotation_90 = rotation_90
       @has_rotation_180 = rotation_180
+      @capacity = 0
     end
 
     def fill(x,y)
@@ -27,6 +28,7 @@ module Pentomino
         @structure[x][y] = 1
         @coordinates.push(Coordinates.new(x,y))
       end
+      @capacity += 1
       calculate_boundaries
     end
 
@@ -114,7 +116,7 @@ module Pentomino
       lines.values.join("\n")
     end
 
-    attr_reader :coordinates, :letter, :width, :height
+    attr_reader :coordinates, :letter, :width, :height, :capacity
     attr_accessor :number
     
   end
