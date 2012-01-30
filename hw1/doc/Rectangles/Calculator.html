@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Rectangles::Calculator</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/calculator_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/calculator.rb">lib/calculator.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-intersection">::intersection</a></li>
+					
+					<li><a href="#method-c-intersection_dimension">::intersection_dimension</a></li>
+					
+					<li><a href="#method-c-union">::union</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Rectangles.html">Rectangles</a></li>
+				
+					<li><a href="../Rectangles/Calculator.html">Rectangles::Calculator</a></li>
+				
+					<li><a href="../Rectangles/InputParser.html">Rectangles::InputParser</a></li>
+				
+					<li><a href="../Rectangles/Rectangle.html">Rectangles::Rectangle</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Rectangles::Calculator</h1>
+
+		<div id="description">
+			<p>
+Třída se statickou metodou pro výpočet sjednocení dvou čtverců
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="union-method" class="method-detail ">
+				<a name="method-c-union"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">union</span><span
+						class="method-args">(rectangle1, rectangle2)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Spočítá sjednocení dvou čtverců rectangle1 - první čtverec
+rectangle2 - druhý čtverec
+</p>
+<p>
+vrací:
+</p>
+<ul>
+<li><p>
+hodnotu > 0 - pokud existuje nenulový průnik
+</p>
+</li>
+</ul>
+<p>
+*0 - pokud se čtverce pouze dotýkají *-1 - pokud je průník prázdný
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="union-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/calculator.rb, line 17</span>
+17:     <span class="ruby-keyword kw">def</span> <span class="ruby-constant">Calculator</span>.<span class="ruby-identifier">union</span>(<span class="ruby-identifier">rectangle1</span>, <span class="ruby-identifier">rectangle2</span>)
+18:       <span class="ruby-identifier">intersection</span> = <span class="ruby-keyword kw">self</span><span class="ruby-operator">::</span><span class="ruby-identifier">intersection</span>(<span class="ruby-identifier">rectangle1</span>, <span class="ruby-identifier">rectangle2</span>)
+19:       <span class="ruby-keyword kw">if</span> (<span class="ruby-identifier">intersection</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>)
+20:         <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">rectangle1</span>.<span class="ruby-identifier">volume</span><span class="ruby-operator">+</span><span class="ruby-identifier">rectangle2</span>.<span class="ruby-identifier">volume</span><span class="ruby-operator">-</span><span class="ruby-identifier">intersection</span>
+21:       <span class="ruby-keyword kw">else</span>
+22:         <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">intersection</span>
+23:       <span class="ruby-keyword kw">end</span>
+24:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="private-class-method-details" class="method-section section">
+			<h3 class="section-header">Private Class Methods</h3>
+
+		
+			<div id="intersection-method" class="method-detail ">
+				<a name="method-c-intersection"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">intersection</span><span
+						class="method-args">(rectangle1, rectangle2)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Vypočítá průnik dvou čtverců rectangle1 - první čtverec rectangle2
+- druhý čtverec
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="intersection-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/calculator.rb, line 31</span>
+31:     <span class="ruby-keyword kw">def</span> <span class="ruby-constant">Calculator</span>.<span class="ruby-identifier">intersection</span>(<span class="ruby-identifier">rectangle1</span>, <span class="ruby-identifier">rectangle2</span>)
+32:       <span class="ruby-identifier">x_intersection</span> = <span class="ruby-keyword kw">self</span><span class="ruby-operator">::</span><span class="ruby-identifier">intersection_dimension</span>(<span class="ruby-identifier">rectangle1</span>.<span class="ruby-identifier">border_x_start</span>,<span class="ruby-identifier">rectangle1</span>.<span class="ruby-identifier">border_x_end</span>,<span class="ruby-identifier">rectangle2</span>.<span class="ruby-identifier">border_x_start</span>,<span class="ruby-identifier">rectangle2</span>.<span class="ruby-identifier">border_x_end</span>)
+33:       <span class="ruby-identifier">y_intersection</span> = <span class="ruby-keyword kw">self</span><span class="ruby-operator">::</span><span class="ruby-identifier">intersection_dimension</span>(<span class="ruby-identifier">rectangle1</span>.<span class="ruby-identifier">border_y_start</span>,<span class="ruby-identifier">rectangle1</span>.<span class="ruby-identifier">border_y_end</span>,<span class="ruby-identifier">rectangle2</span>.<span class="ruby-identifier">border_y_start</span>,<span class="ruby-identifier">rectangle2</span>.<span class="ruby-identifier">border_y_end</span>)
+34:       <span class="ruby-keyword kw">if</span> (<span class="ruby-identifier">x_intersection</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">y_intersection</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span>)
+35:         <span class="ruby-keyword kw">return</span> <span class="ruby-value">1</span>
+36:       <span class="ruby-keyword kw">else</span>      
+37:         <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">x_intersection</span> * <span class="ruby-identifier">y_intersection</span>;
+38:       <span class="ruby-keyword kw">end</span>
+39:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="intersection-dimension-method" class="method-detail ">
+				<a name="method-c-intersection_dimension"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">intersection_dimension</span><span
+						class="method-args">(a1,a2,b1,b2)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Vypočítá průnik dvou intervalů a1 - počátek prvního intervalu a2 -
+konec prvního intervalu b1 - počátek druhého intervalu b2 - konec
+druhého intervalu
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="intersection-dimension-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/calculator.rb, line 46</span>
+46:     <span class="ruby-keyword kw">def</span> <span class="ruby-constant">Calculator</span>.<span class="ruby-identifier">intersection_dimension</span>(<span class="ruby-identifier">a1</span>,<span class="ruby-identifier">a2</span>,<span class="ruby-identifier">b1</span>,<span class="ruby-identifier">b2</span>)
+47:       <span class="ruby-identifier">intersection</span> = [<span class="ruby-identifier">a2</span>,<span class="ruby-identifier">b2</span>].<span class="ruby-identifier">min</span> <span class="ruby-operator">-</span> [<span class="ruby-identifier">a1</span>,<span class="ruby-identifier">b1</span>].<span class="ruby-identifier">max</span>
+48:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">intersection</span>.<span class="ruby-identifier">to_f</span>
+49:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+
