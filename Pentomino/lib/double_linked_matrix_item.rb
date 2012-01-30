@@ -1,8 +1,18 @@
+require 'double_linked_list_item'
+
 module DLXStructure
 
+  # Třída reprezentující položku v datové struktuře pro algoritmus DLX
+
   class DoubleLinkedMatrixItem
-  
-    def initialize(horizontal_item,vertical_item,value)
+
+    # Hodnota prvku (libovolný objekt)
+    attr_reader :value
+
+    # Kontruktor
+    # horizontal_item - předchozí prvek typu DoubleLinkedListItem v horizontálním směru
+    # vertical_item  - předchozí prvek typu DoubleLinkedListItem ve vertikálním směru
+    def initialize(horizontal_item = nil ,vertical_item = nil ,value = nil )
       @items = Hash.new
       @items['horizontal'] = DoubleLinkedListItem.new(horizontal_item,self)
       @items['vertical'] = DoubleLinkedListItem.new(vertical_item,self)
@@ -83,6 +93,7 @@ module DLXStructure
     end
 
     # Zavolání metody na prvku
+    # method - metoda, která se má zavolat
 
     def call_method(method)
       method_object = self.method(method)
@@ -136,15 +147,17 @@ module DLXStructure
       end
     end
 
+    # Vrátí prvek typu DoubleLinkedListItem přiřezený k tomuto prvku pro vertikální směr
+
     def vertical
       return @items['vertical']
     end
 
+    # Vrátí prvek typu DoubleLinkedListItem přiřezený k tomuto prvku pro horizontální směr
+
     def horizontal
       return @items['horizontal']
     end
-
-    attr_reader :value
 
   end
 

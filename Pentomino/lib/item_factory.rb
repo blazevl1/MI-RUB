@@ -1,6 +1,12 @@
+require 'item'
+
 module Pentomino
+
+  # Třída starající se o vytváření objektů Pentomino::Item
   
   class ItemFactory
+
+    # Konstuktor
     def initialize
       @letters = Hash.new
       @letters['f'] = 1
@@ -16,16 +22,22 @@ module Pentomino
       @letters['y'] = 11
       @letters['z'] = 12
     end
-  end
+  
+
+  # Vytvoří položku pentomina dle zadaného písmene, pokud existuje jinak vyvolá výjimku
+  # letter - písmeno charakterizující danou položku pentomina
 
   def create(letter)
     downcase_letter = letter.downcase
     if (@letters.key?(downcase_letter))
       self.send("create_#{downcase_letter}")
+    else
+      raise "Invalid letter. Letter #{downcase_letter} is not registred in list of pentomino items."
     end
   end
 
   # Vytvoří pole všech možných pozic zadaného prvku
+  # prototype - položka pentomina ze které se mají vygenerovat všechny pozice
 
   def create_all_possibilities(prototype)
     array = Array.new
@@ -39,13 +51,16 @@ module Pentomino
     return array.flatten
   end
 
+  # Vrátí všechny zaregistrované písmena charackterizující položky pentomina
+
   def letters
     return @letters.keys
   end
 
   private
 
-  # Vytvoří pole všech možných pozic vytvořených rotací zadaného prvku
+  # Vytvoří pole všech možných pozic vytvořených rotací zadané položky pentomina
+  # item - položka pentomina
 
   def create_rotated_possibilities(item)
     array = Array.new
@@ -63,6 +78,8 @@ module Pentomino
     return array
   end
 
+  # Vytvoří položku pentomina charakterizovanou písmenem "z"
+
   def create_z()
     item = Item.new('z',true,true,false)
     for i in 0..2
@@ -73,6 +90,8 @@ module Pentomino
     return item
   end
 
+  # Vytvoří položku pentomina charakterizovanou písmenem "y"
+
   def create_y()
     item = Item.new('y',true,true,true)
     for i in 0..3
@@ -81,6 +100,8 @@ module Pentomino
     item.fill(0,1)
     return item
   end
+
+  # Vytvoří položku pentomina charakterizovanou písmenem "w"
 
   def create_w()
     item = Item.new('w',false,true,true)
@@ -94,6 +115,8 @@ module Pentomino
     return item
   end
 
+  # Vytvoří položku pentomina charakterizovanou písmenem "v"
+
   def create_v()
     item = Item.new('v',false,true,true)
     for i in 0..2
@@ -105,6 +128,8 @@ module Pentomino
     return item
   end
 
+  # Vytvoří položku pentomina charakterizovanou písmenem "u"
+
   def create_u()
     item = Item.new('u',false,true,true)
     for i in 0..2
@@ -114,6 +139,8 @@ module Pentomino
     item.fill(2,0)
     return item
   end
+
+  # Vytvoří položku pentomina charakterizovanou písmenem "t"
 
   def create_t()
     item = Item.new('t',false,true,true)
@@ -126,6 +153,8 @@ module Pentomino
     return item
   end
 
+  # Vytvoří položku pentomina charakterizovanou písmenem "p"
+
   def create_p()
     item = Item.new('p',true,true,true)
     for i in 0..2
@@ -137,6 +166,8 @@ module Pentomino
     return item
   end
 
+  # Vytvoří položku pentomina charakterizovanou písmenem "n"
+
   def create_n()
     item = Item.new('n',true,true,true)
     for i in 1..3
@@ -147,6 +178,8 @@ module Pentomino
     return item
   end
 
+  # Vytvoří položku pentomina charakterizovanou písmenem "l"
+
   def create_l()
     item = Item.new('l',true,true,true)
     for i in 0..3
@@ -156,6 +189,8 @@ module Pentomino
     return item
   end
 
+  # Vytvoří položku pentomina charakterizovanou písmenem "i"
+
   def create_i()
     item = Item.new('i',false,true,false)
     for i in 0..4
@@ -163,6 +198,8 @@ module Pentomino
     end
     return item
   end
+
+  # Vytvoří položku pentomina charakterizovanou písmenem "f"
 
   def create_f()
     item = Item.new('f',true,true,true)
@@ -174,6 +211,8 @@ module Pentomino
     return item
   end
 
+  # Vytvoří položku pentomina charakterizovanou písmenem "x"
+
   def create_x()
     item = Item.new('x',false,false,false)
     item.fill(1,0)
@@ -183,5 +222,6 @@ module Pentomino
     item.fill(1,2)
     return item
   end
-  
+
+  end
 end

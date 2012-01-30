@@ -1,0 +1,635 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: DLXAlgorithm</title>
+
+	<link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+	<script src="./js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="./lib/d_l_x_algorithm_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/d_l_x_algorithm.rb">lib/d_l_x_algorithm.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-i-backtrack">#backtrack</a></li>
+					
+					<li><a href="#method-i-create_column_headers">#create_column_headers</a></li>
+					
+					<li><a href="#method-i-create_matrix">#create_matrix</a></li>
+					
+					<li><a href="#method-i-execute">#execute</a></li>
+					
+					<li><a href="#method-i-execute_dlx">#execute_dlx</a></li>
+					
+					<li><a href="#method-i-extract_data_from_items">#extract_data_from_items</a></li>
+					
+					<li><a href="#method-i-init">#init</a></li>
+					
+					<li><a href="#method-i-print_result">#print_result</a></li>
+					
+					<li><a href="#method-i-reconstruct_path">#reconstruct_path</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="./LICENSE.html">LICENSE</a></li>
+				
+					<li class="file"><a href="./README.html">README</a></li>
+				
+					<li class="file"><a href="./Rakefile.html">Rakefile</a></li>
+				
+					<li class="file"><a href="./nbproject/private/rake-d_txt.html">rake-d.txt</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="./images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="./Pentomino.html">Pentomino</a></li>
+				
+					<li><a href="./Pentomino/Board.html">Pentomino::Board</a></li>
+				
+					<li><a href="./Pentomino/Coordinates.html">Pentomino::Coordinates</a></li>
+				
+					<li><a href="./Pentomino/InputParser.html">Pentomino::InputParser</a></li>
+				
+					<li><a href="./Pentomino/Item.html">Pentomino::Item</a></li>
+				
+					<li><a href="./Pentomino/ItemFactory.html">Pentomino::ItemFactory</a></li>
+				
+					<li><a href="./DLXStructure.html">DLXStructure</a></li>
+				
+					<li><a href="./DLXStructure/DoubleLinkedListItem.html">DLXStructure::DoubleLinkedListItem</a></li>
+				
+					<li><a href="./DLXStructure/DoubleLinkedMatrix.html">DLXStructure::DoubleLinkedMatrix</a></li>
+				
+					<li><a href="./DLXStructure/DoubleLinkedMatrixItem.html">DLXStructure::DoubleLinkedMatrixItem</a></li>
+				
+					<li><a href="./StateSpace.html">StateSpace</a></li>
+				
+					<li><a href="./StateSpace/Graph.html">StateSpace::Graph</a></li>
+				
+					<li><a href="./StateSpace/Node.html">StateSpace::Node</a></li>
+				
+					<li><a href="./DLXAlgorithm.html">DLXAlgorithm</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">DLXAlgorithm</h1>
+
+		<div id="description">
+			<p>
+Třída která se stará o spuštění DLX algoritmu
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="execute-method" class="method-detail ">
+				<a name="method-i-execute"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">execute</span><span
+						class="method-args">(board)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Spustí algoritmus
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="execute-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/d_l_x_algorithm.rb, line 14</span>
+14:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">execute</span>(<span class="ruby-identifier">board</span>) 
+15:     <span class="ruby-identifier">beginning</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>
+16:     <span class="ruby-ivar">@board</span> = <span class="ruby-identifier">board</span>
+17:     <span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;Vytvarim datove struktury pro beh algoritmu...&quot;</span>
+18:     <span class="ruby-identifier">init</span>()
+19:     <span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;Datove struktury pripraveny.&quot;</span>
+20:     <span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;Spoustim algoritmus.&quot;</span>
+21:     <span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;&quot;</span>
+22:     <span class="ruby-keyword kw">begin</span>
+23:       <span class="ruby-identifier">execute_dlx</span>()
+24:       <span class="ruby-identifier">rows</span> = <span class="ruby-identifier">reconstruct_path</span>()
+25:       <span class="ruby-identifier">rows</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">row_id</span><span class="ruby-operator">|</span>
+26:         <span class="ruby-identifier">array</span> = <span class="ruby-ivar">@matrix</span>.<span class="ruby-identifier">get_row</span>(<span class="ruby-identifier">row_id</span>)
+27:         <span class="ruby-identifier">item_number</span> = <span class="ruby-identifier">array</span>.<span class="ruby-identifier">last</span>
+28:         <span class="ruby-identifier">array</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">item_number</span>)
+29:         <span class="ruby-identifier">position_numbers</span> = <span class="ruby-identifier">array</span>
+30:         <span class="ruby-ivar">@board</span>.<span class="ruby-identifier">fill</span>(<span class="ruby-identifier">position_numbers</span>,<span class="ruby-identifier">item_number</span>)
+31:       }
+32:       <span class="ruby-identifier">time</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">beginning</span>
+33:       <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Reseni nalezeno za #{time.round(0)} vterin.&quot;</span>
+34:       <span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;----------------&quot;</span>
+35:       <span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;&quot;</span>
+36:       <span class="ruby-identifier">print_result</span>()
+37:       <span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;&quot;</span>
+38:     <span class="ruby-keyword kw">rescue</span>
+39:       <span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;Nepodarilo se najit reseni&quot;</span>
+40:     <span class="ruby-keyword kw">end</span> 
+41:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="backtrack-method" class="method-detail ">
+				<a name="method-i-backtrack"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">backtrack</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Provede backtracking
+</p>
+<ul>
+<li><p>
+znovu připojení sekce
+</p>
+</li>
+<li><p>
+návrat ve stavovém prostoru
+</p>
+</li>
+</ul>
+					
+
+					
+					<div class="method-source-code"
+						id="backtrack-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/d_l_x_algorithm.rb, line 124</span>
+124:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">backtrack</span>
+125:     <span class="ruby-ivar">@matrix</span>.<span class="ruby-identifier">reconnect_section</span>(<span class="ruby-ivar">@actual_node</span>.<span class="ruby-identifier">value</span>)
+126:     <span class="ruby-keyword kw">if</span> (<span class="ruby-ivar">@actual_node</span>.<span class="ruby-identifier">is_root?</span>)
+127:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">false</span>
+128:     <span class="ruby-keyword kw">else</span>
+129:       <span class="ruby-ivar">@actual_node</span> = <span class="ruby-ivar">@actual_node</span>.<span class="ruby-identifier">parent</span>
+130:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">true</span>
+131:     <span class="ruby-keyword kw">end</span>
+132:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="create-column-headers-method" class="method-detail ">
+				<a name="method-i-create_column_headers"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">create_column_headers</span><span
+						class="method-args">(board,matrix)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Vytvoří hlavičky matice
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="create-column-headers-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/d_l_x_algorithm.rb, line 111</span>
+111:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">create_column_headers</span>(<span class="ruby-identifier">board</span>,<span class="ruby-identifier">matrix</span>)
+112:     <span class="ruby-keyword kw">for</span> <span class="ruby-identifier">x</span> <span class="ruby-keyword kw">in</span> <span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-identifier">board</span>.<span class="ruby-identifier">width</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>
+113:       <span class="ruby-keyword kw">for</span> <span class="ruby-identifier">y</span> <span class="ruby-keyword kw">in</span> <span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-identifier">board</span>.<span class="ruby-identifier">height</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>
+114:         <span class="ruby-identifier">number</span> = <span class="ruby-identifier">board</span>.<span class="ruby-identifier">convert_coordinates_to_number</span>(<span class="ruby-identifier">x</span>,<span class="ruby-identifier">y</span>)
+115:         <span class="ruby-identifier">matrix</span>.<span class="ruby-identifier">connect_item</span>(<span class="ruby-identifier">number</span>,<span class="ruby-value">0</span>)
+116:       <span class="ruby-keyword kw">end</span>
+117:     <span class="ruby-keyword kw">end</span>
+118:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="create-matrix-method" class="method-detail ">
+				<a name="method-i-create_matrix"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">create_matrix</span><span
+						class="method-args">(rows)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Vytvoří datovou strukturu matice
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="create-matrix-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/d_l_x_algorithm.rb, line 97</span>
+ 97:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">create_matrix</span>(<span class="ruby-identifier">rows</span>)
+ 98:     <span class="ruby-identifier">matrix</span> = <span class="ruby-constant">DoubleLinkedMatrix</span>.<span class="ruby-identifier">new</span>
+ 99:     <span class="ruby-identifier">iterator</span> = <span class="ruby-value">1</span>
+100:     <span class="ruby-identifier">rows</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">columns</span><span class="ruby-operator">|</span>
+101:       <span class="ruby-identifier">columns</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">column_index</span><span class="ruby-operator">|</span>
+102:         <span class="ruby-identifier">matrix</span>.<span class="ruby-identifier">connect_item</span>(<span class="ruby-identifier">column_index</span>,<span class="ruby-identifier">iterator</span>)
+103:       }      
+104:       <span class="ruby-identifier">iterator</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+105:     }
+106:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">matrix</span>
+107:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="execute-dlx-method" class="method-detail ">
+				<a name="method-i-execute_dlx"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">execute_dlx</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Spustí hlavní část algoritmu dlx
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="execute-dlx-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/d_l_x_algorithm.rb, line 54</span>
+54:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">execute_dlx</span>
+55:     <span class="ruby-ivar">@state_space</span> = <span class="ruby-constant">StateSpace</span><span class="ruby-operator">::</span><span class="ruby-constant">Graph</span>.<span class="ruby-identifier">new</span>()
+56:     <span class="ruby-ivar">@actual_node</span> = <span class="ruby-ivar">@state_space</span>.<span class="ruby-identifier">root</span>
+57:     <span class="ruby-keyword kw">while</span> (<span class="ruby-ivar">@matrix</span>.<span class="ruby-identifier">rows</span> <span class="ruby-operator">!=</span> <span class="ruby-value">0</span> <span class="ruby-operator">||</span> <span class="ruby-ivar">@matrix</span>.<span class="ruby-identifier">columns</span> <span class="ruby-operator">!=</span> <span class="ruby-value">0</span>)
+58:       <span class="ruby-identifier">progress</span> = <span class="ruby-keyword kw">false</span>
+59:       <span class="ruby-ivar">@matrix</span>.<span class="ruby-identifier">reset_row_header_iterator</span>
+60:       <span class="ruby-keyword kw">while</span>(<span class="ruby-ivar">@matrix</span>.<span class="ruby-identifier">row_header_has_next?</span>)
+61:         <span class="ruby-identifier">value</span> = <span class="ruby-ivar">@matrix</span>.<span class="ruby-identifier">row_header_next</span>
+62:         <span class="ruby-keyword kw">if</span> (<span class="ruby-keyword kw">not</span> <span class="ruby-ivar">@actual_node</span>.<span class="ruby-identifier">has_child_with_value?</span>(<span class="ruby-identifier">value</span>))
+63:           <span class="ruby-identifier">node</span> = <span class="ruby-constant">Node</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">value</span>)
+64:           <span class="ruby-ivar">@actual_node</span>.<span class="ruby-identifier">add_child</span>(<span class="ruby-identifier">node</span>)
+65:           <span class="ruby-ivar">@actual_node</span> = <span class="ruby-identifier">node</span>
+66:           <span class="ruby-ivar">@matrix</span>.<span class="ruby-identifier">disconnect_section</span>(<span class="ruby-ivar">@actual_node</span>.<span class="ruby-identifier">value</span>)
+67:           <span class="ruby-identifier">progress</span> = <span class="ruby-keyword kw">true</span>
+68:           <span class="ruby-keyword kw">break</span>
+69:         <span class="ruby-keyword kw">end</span>
+70:       <span class="ruby-keyword kw">end</span>
+71:       <span class="ruby-keyword kw">if</span> (<span class="ruby-keyword kw">not</span> <span class="ruby-identifier">progress</span>)
+72:         <span class="ruby-identifier">can_backtrack</span> = <span class="ruby-identifier">backtrack</span>
+73:         <span class="ruby-keyword kw">if</span> (<span class="ruby-keyword kw">not</span> <span class="ruby-identifier">can_backtrack</span>)
+74:           <span class="ruby-identifier">raise</span> <span class="ruby-value str">&quot;Unable to find solution&quot;</span>
+75:         <span class="ruby-keyword kw">end</span>
+76:       <span class="ruby-keyword kw">end</span>
+77:     <span class="ruby-keyword kw">end</span>
+78:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="extract-data-from-items-method" class="method-detail ">
+				<a name="method-i-extract_data_from_items"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">extract_data_from_items</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Vytvoří všechny možné kombinace rotací, reflexí a posunů položek a
+uloží je do pole jako pole čísel reprezentujících souřadnice
+položky na desce
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="extract-data-from-items-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/d_l_x_algorithm.rb, line 83</span>
+83:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">extract_data_from_items</span>
+84:     <span class="ruby-identifier">factory</span> = <span class="ruby-constant">ItemFactory</span>.<span class="ruby-identifier">new</span>
+85:     <span class="ruby-identifier">rows</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+86:     <span class="ruby-ivar">@board</span>.<span class="ruby-identifier">virtual_items</span>.<span class="ruby-identifier">each_value</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">item</span><span class="ruby-operator">|</span>
+87:       <span class="ruby-identifier">items</span> = <span class="ruby-identifier">factory</span>.<span class="ruby-identifier">create_all_possibilities</span>(<span class="ruby-identifier">item</span>)
+88:       <span class="ruby-identifier">items</span>.<span class="ruby-identifier">each</span>() { <span class="ruby-operator">|</span><span class="ruby-identifier">specific_item</span><span class="ruby-operator">|</span>
+89:         <span class="ruby-identifier">rows</span> = <span class="ruby-identifier">rows</span> <span class="ruby-operator">|</span> <span class="ruby-ivar">@board</span>.<span class="ruby-identifier">calculate_all_positions_of_item</span>(<span class="ruby-identifier">specific_item</span>)
+90:       }
+91:     }
+92:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">rows</span>
+93:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="init-method" class="method-detail ">
+				<a name="method-i-init"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">init</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Inicializace algoritmu
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="init-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/d_l_x_algorithm.rb, line 47</span>
+47:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">init</span>
+48:     <span class="ruby-ivar">@rows</span> = <span class="ruby-identifier">extract_data_from_items</span>()
+49:     <span class="ruby-ivar">@matrix</span> = <span class="ruby-identifier">create_matrix</span>(<span class="ruby-ivar">@rows</span>)
+50:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="print-result-method" class="method-detail ">
+				<a name="method-i-print_result"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">print_result</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Vytiskne výsledek na standardní výstup
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="print-result-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/d_l_x_algorithm.rb, line 149</span>
+149:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">print_result</span>
+150:     <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;#{@board.to_s}&quot;</span>
+151:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="reconstruct-path-method" class="method-detail ">
+				<a name="method-i-reconstruct_path"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">reconstruct_path</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Vytvoří pole čísel reprezentujících přesnou polohu, rotaci a reflexi
+položky na desce. Pole je vytvořeno průchodem stavového prostoru od
+aktuálního uzlu až ke kořenu.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="reconstruct-path-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/d_l_x_algorithm.rb, line 137</span>
+137:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">reconstruct_path</span>()
+138:     <span class="ruby-identifier">node</span> = <span class="ruby-ivar">@actual_node</span>
+139:     <span class="ruby-identifier">array</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+140:     <span class="ruby-keyword kw">until</span> (<span class="ruby-identifier">node</span>.<span class="ruby-identifier">is_root?</span>)
+141:       <span class="ruby-identifier">array</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">node</span>.<span class="ruby-identifier">value</span>)
+142:       <span class="ruby-identifier">node</span> = <span class="ruby-identifier">node</span>.<span class="ruby-identifier">parent</span>
+143:     <span class="ruby-keyword kw">end</span>
+144:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">array</span>
+145:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

@@ -1,0 +1,16 @@
+Mon, 30 Jan 2012 13:07:07 +0100
+./nbproject/private/rake-d.txt	Mon, 30 Jan 2012 11:10:18 +0100
+./README	Mon, 30 Jan 2012 13:06:39 +0100
+./Rakefile	Thu, 26 Jan 2012 10:42:30 +0100
+./LICENSE	Thu, 26 Jan 2012 10:42:30 +0100
+./lib/double_linked_list_item.rb	Mon, 30 Jan 2012 12:50:07 +0100
+./lib/double_linked_matrix.rb	Mon, 30 Jan 2012 12:53:47 +0100
+./lib/item.rb	Mon, 30 Jan 2012 12:51:26 +0100
+./lib/coordinates.rb	Mon, 30 Jan 2012 12:49:06 +0100
+./lib/board.rb	Mon, 30 Jan 2012 12:54:29 +0100
+./lib/input_parser.rb	Mon, 30 Jan 2012 12:54:24 +0100
+./lib/item_factory.rb	Mon, 30 Jan 2012 12:53:15 +0100
+./lib/d_l_x_algorithm.rb	Mon, 30 Jan 2012 12:52:08 +0100
+./lib/double_linked_matrix_item.rb	Mon, 30 Jan 2012 12:44:59 +0100
+./lib/state_space.rb	Mon, 30 Jan 2012 12:54:14 +0100
+./lib/main.rb	Mon, 30 Jan 2012 12:30:09 +0100

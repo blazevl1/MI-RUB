@@ -1,0 +1,704 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Pentomino::Board</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/board_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/board.rb">lib/board.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-i-add_virtual_item">#add_virtual_item</a></li>
+					
+					<li><a href="#method-i-calculate_all_positions_of_item">#calculate_all_positions_of_item</a></li>
+					
+					<li><a href="#method-i-calculate_position_of_item">#calculate_position_of_item</a></li>
+					
+					<li><a href="#method-i-can_be_full%3F">#can_be_full?</a></li>
+					
+					<li><a href="#method-i-convert_coordinates_to_number">#convert_coordinates_to_number</a></li>
+					
+					<li><a href="#method-i-convert_number_to_coordinates">#convert_number_to_coordinates</a></li>
+					
+					<li><a href="#method-i-fill">#fill</a></li>
+					
+					<li><a href="#method-i-to_s">#to_s</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../LICENSE.html">LICENSE</a></li>
+				
+					<li class="file"><a href="../README.html">README</a></li>
+				
+					<li class="file"><a href="../Rakefile.html">Rakefile</a></li>
+				
+					<li class="file"><a href="../nbproject/private/rake-d_txt.html">rake-d.txt</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Pentomino.html">Pentomino</a></li>
+				
+					<li><a href="../Pentomino/Board.html">Pentomino::Board</a></li>
+				
+					<li><a href="../Pentomino/Coordinates.html">Pentomino::Coordinates</a></li>
+				
+					<li><a href="../Pentomino/InputParser.html">Pentomino::InputParser</a></li>
+				
+					<li><a href="../Pentomino/Item.html">Pentomino::Item</a></li>
+				
+					<li><a href="../Pentomino/ItemFactory.html">Pentomino::ItemFactory</a></li>
+				
+					<li><a href="../DLXStructure.html">DLXStructure</a></li>
+				
+					<li><a href="../DLXStructure/DoubleLinkedListItem.html">DLXStructure::DoubleLinkedListItem</a></li>
+				
+					<li><a href="../DLXStructure/DoubleLinkedMatrix.html">DLXStructure::DoubleLinkedMatrix</a></li>
+				
+					<li><a href="../DLXStructure/DoubleLinkedMatrixItem.html">DLXStructure::DoubleLinkedMatrixItem</a></li>
+				
+					<li><a href="../StateSpace.html">StateSpace</a></li>
+				
+					<li><a href="../StateSpace/Graph.html">StateSpace::Graph</a></li>
+				
+					<li><a href="../StateSpace/Node.html">StateSpace::Node</a></li>
+				
+					<li><a href="../DLXAlgorithm.html">DLXAlgorithm</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Pentomino::Board</h1>
+
+		<div id="description">
+			<p>
+Třída reprezentující desku pentomina
+</p>
+<ul>
+<li><p>
+kontejner pro prvky pentomina použité při řešení
+</p>
+</li>
+<li><p>
+vykreslování desky
+</p>
+</li>
+</ul>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+		<div id="attribute-method-details" class="method-section section">
+			<h3 class="section-header">Attributes</h3>
+
+			
+			<div id="width-attribute-method" class="method-detail">
+				<a name="width"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">width</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+Šířka desky
+</p>
+				
+				</div>
+			</div>
+			
+			<div id="height-attribute-method" class="method-detail">
+				<a name="height"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">height</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+Výška desky
+</p>
+				
+				</div>
+			</div>
+			
+			<div id="virtual-items-attribute-method" class="method-detail">
+				<a name="virtual_items"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">virtual_items</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+Pole prvků pentomina, které jsou zaregistrované pro řešení na desce
+</p>
+				
+				</div>
+			</div>
+			
+			<div id="max-capacity-attribute-method" class="method-detail">
+				<a name="max_capacity"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">max_capacity</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+Obsah desky
+</p>
+				
+				</div>
+			</div>
+			
+			<div id="actual-capacity-attribute-method" class="method-detail">
+				<a name="actual_capacity"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">actual_capacity</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+Součet obsahů prvků pentomina zaregistrovaných na desce
+</p>
+				
+				</div>
+			</div>
+			
+		</div>
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(width,height)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Konstruktor width - šířka desky height - výška desky
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/board.rb, line 25</span>
+25:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">width</span>,<span class="ruby-identifier">height</span>)
+26:       <span class="ruby-keyword kw">if</span> (<span class="ruby-identifier">width</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">5</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">height</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">5</span>)
+27:         <span class="ruby-identifier">raise</span> <span class="ruby-value str">&quot;Invalid board dimensions. Board must be at least 5x5!&quot;</span>
+28:       <span class="ruby-keyword kw">else</span>
+29:         <span class="ruby-ivar">@width</span> = <span class="ruby-identifier">width</span>
+30:         <span class="ruby-ivar">@height</span> = <span class="ruby-identifier">height</span>
+31:       <span class="ruby-keyword kw">end</span>
+32:       <span class="ruby-ivar">@items</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+33:       <span class="ruby-ivar">@virtual_items</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+34:       <span class="ruby-ivar">@structure</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+35:       <span class="ruby-keyword kw">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword kw">in</span> <span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-identifier">width</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>
+36:         <span class="ruby-ivar">@structure</span>[<span class="ruby-identifier">i</span>] = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+37:         <span class="ruby-keyword kw">for</span> <span class="ruby-identifier">j</span> <span class="ruby-keyword kw">in</span> <span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-identifier">height</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>
+38:           <span class="ruby-ivar">@structure</span>[<span class="ruby-identifier">i</span>][<span class="ruby-identifier">j</span>] = <span class="ruby-value">0</span>
+39:         <span class="ruby-keyword kw">end</span>
+40:       <span class="ruby-keyword kw">end</span>
+41:       <span class="ruby-ivar">@length</span> = <span class="ruby-ivar">@width</span>*<span class="ruby-ivar">@height</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>
+42:       <span class="ruby-ivar">@max_capacity</span> = <span class="ruby-ivar">@width</span>*<span class="ruby-ivar">@height</span>
+43:       <span class="ruby-ivar">@actual_capacity</span> = <span class="ruby-value">0</span>
+44:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="add-virtual-item-method" class="method-detail ">
+				<a name="method-i-add_virtual_item"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">add_virtual_item</span><span
+						class="method-args">(item)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Přidá (zaregistroruje) prvek pentomina mezi prvky, které se používají
+k řešení
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="add-virtual-item-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/board.rb, line 71</span>
+71:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">add_virtual_item</span>(<span class="ruby-identifier">item</span>)
+72:       <span class="ruby-identifier">item</span>.<span class="ruby-identifier">number</span> = <span class="ruby-ivar">@virtual_items</span>.<span class="ruby-identifier">length</span><span class="ruby-operator">+</span><span class="ruby-value">1</span>
+73:       <span class="ruby-ivar">@virtual_items</span>[<span class="ruby-identifier">item</span>.<span class="ruby-identifier">number</span>] = <span class="ruby-identifier">item</span>
+74:       <span class="ruby-ivar">@actual_capacity</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">capacity</span>
+75:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="calculate-all-positions-of-item-method" class="method-detail ">
+				<a name="method-i-calculate_all_positions_of_item"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">calculate_all_positions_of_item</span><span
+						class="method-args">(item)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Převede všechny možné pozice jednoho předmětu do pole obsahující
+pole čísel
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="calculate-all-positions-of-item-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/board.rb, line 80</span>
+80:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">calculate_all_positions_of_item</span>(<span class="ruby-identifier">item</span>)
+81:       <span class="ruby-identifier">numbers</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+82:       <span class="ruby-keyword kw">for</span> <span class="ruby-identifier">x</span> <span class="ruby-keyword kw">in</span> <span class="ruby-value">0</span><span class="ruby-operator">..</span>(<span class="ruby-ivar">@width</span><span class="ruby-operator">-</span><span class="ruby-identifier">item</span>.<span class="ruby-identifier">width</span>)
+83:         <span class="ruby-keyword kw">for</span> <span class="ruby-identifier">y</span> <span class="ruby-keyword kw">in</span> <span class="ruby-value">0</span><span class="ruby-operator">..</span>(<span class="ruby-ivar">@height</span><span class="ruby-operator">-</span><span class="ruby-identifier">item</span>.<span class="ruby-identifier">height</span>)
+84:            <span class="ruby-identifier">numbers</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">calculate_position_of_item</span>(<span class="ruby-identifier">item</span>,<span class="ruby-identifier">x</span>,<span class="ruby-identifier">y</span>))
+85:         <span class="ruby-keyword kw">end</span>
+86:       <span class="ruby-keyword kw">end</span>
+87:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">numbers</span>
+88:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="calculate-position-of-item-method" class="method-detail ">
+				<a name="method-i-calculate_position_of_item"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">calculate_position_of_item</span><span
+						class="method-args">(item,x,y)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Vypočítá číslo reprezentující souřadnice položky na desce
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="calculate-position-of-item-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/board.rb, line 92</span>
+92:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">calculate_position_of_item</span>(<span class="ruby-identifier">item</span>,<span class="ruby-identifier">x</span>,<span class="ruby-identifier">y</span>)
+93:       <span class="ruby-identifier">array</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+94:       <span class="ruby-identifier">item</span>.<span class="ruby-identifier">coordinates</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">coordinate</span><span class="ruby-operator">|</span>
+95:         <span class="ruby-identifier">array</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">convert_coordinates_to_number</span>(<span class="ruby-identifier">x</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">coordinate</span>.<span class="ruby-identifier">x</span>,<span class="ruby-identifier">y</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">coordinate</span>.<span class="ruby-identifier">y</span>))     
+96:       }
+97:       <span class="ruby-identifier">array</span>.<span class="ruby-identifier">push</span>(<span class="ruby-ivar">@length</span><span class="ruby-operator">+</span><span class="ruby-identifier">item</span>.<span class="ruby-identifier">number</span>)
+98:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">array</span>
+99:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="can-be-full--method" class="method-detail ">
+				<a name="method-i-can_be_full%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">can_be_full?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Může být deska zaplněna zadanými položkami?
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="can-be-full--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/board.rb, line 65</span>
+65:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">can_be_full?</span>
+66:       <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@actual_capacity</span> <span class="ruby-operator">==</span> <span class="ruby-ivar">@max_capacity</span>
+67:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="convert-coordinates-to-number-method" class="method-detail ">
+				<a name="method-i-convert_coordinates_to_number"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">convert_coordinates_to_number</span><span
+						class="method-args">(x,y)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Převede koordináty na číslo
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="convert-coordinates-to-number-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/board.rb, line 103</span>
+103:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">convert_coordinates_to_number</span>(<span class="ruby-identifier">x</span>,<span class="ruby-identifier">y</span>)
+104:       <span class="ruby-keyword kw">if</span> ((<span class="ruby-ivar">@width</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>) <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">||</span> (<span class="ruby-ivar">@height</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>) <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">y</span>)
+105:         <span class="ruby-comment cmt">#raise &quot;Invalid coordinates [#{x};#{y}]. Cannot convert because coordinates are bigger than dimension of board.&quot;</span>
+106:         <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Invalid coordinates [#{x};#{y}]. Cannot convert because coordinates are bigger than dimension of board.&quot;</span>
+107:       <span class="ruby-keyword kw">else</span>
+108:         <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">x</span>*<span class="ruby-ivar">@height</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">y</span>
+109:       <span class="ruby-keyword kw">end</span>
+110:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="convert-number-to-coordinates-method" class="method-detail ">
+				<a name="method-i-convert_number_to_coordinates"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">convert_number_to_coordinates</span><span
+						class="method-args">(number)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Převede číslo na koordináty
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="convert-number-to-coordinates-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/board.rb, line 114</span>
+114:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">convert_number_to_coordinates</span>(<span class="ruby-identifier">number</span>)
+115:       <span class="ruby-identifier">x</span> = <span class="ruby-identifier">number</span><span class="ruby-operator">/</span><span class="ruby-ivar">@height</span>
+116:       <span class="ruby-identifier">y</span> = <span class="ruby-identifier">number</span><span class="ruby-operator">%</span><span class="ruby-ivar">@height</span>
+117:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">x</span>,<span class="ruby-identifier">y</span>
+118:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="fill-method" class="method-detail ">
+				<a name="method-i-fill"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">fill</span><span
+						class="method-args">(array,item_number)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Vyplní políčka na desce zadanými údaji array - pole čísel, které
+reprezentují souřadnice desky item_number - číslo položk, která se
+vyplňuje
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="fill-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/board.rb, line 50</span>
+50:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">fill</span>(<span class="ruby-identifier">array</span>,<span class="ruby-identifier">item_number</span>)
+51:       <span class="ruby-identifier">item_number</span> = <span class="ruby-identifier">item_number</span><span class="ruby-operator">-</span><span class="ruby-ivar">@length</span>
+52:       <span class="ruby-keyword kw">if</span> (<span class="ruby-ivar">@virtual_items</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-identifier">item_number</span>))
+53:         <span class="ruby-identifier">letter</span> = <span class="ruby-ivar">@virtual_items</span>[<span class="ruby-identifier">item_number</span>].<span class="ruby-identifier">letter</span>
+54:         <span class="ruby-identifier">array</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">number</span><span class="ruby-operator">|</span>
+55:           <span class="ruby-identifier">x</span>,<span class="ruby-identifier">y</span> = <span class="ruby-identifier">convert_number_to_coordinates</span>(<span class="ruby-identifier">number</span>)
+56:           <span class="ruby-ivar">@structure</span>[<span class="ruby-identifier">x</span>][<span class="ruby-identifier">y</span>] = <span class="ruby-identifier">letter</span> 
+57:         }
+58:       <span class="ruby-keyword kw">else</span>
+59:         <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Invalid item number. Not found ##{item_number}&quot;</span>
+60:       <span class="ruby-keyword kw">end</span>  
+61:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="to-s-method" class="method-detail ">
+				<a name="method-i-to_s"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">to_s</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Převedení na řetězec
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="to-s-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/board.rb, line 123</span>
+123:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_s</span>
+124:       <span class="ruby-identifier">lines</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+125:       <span class="ruby-ivar">@structure</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">x</span>,<span class="ruby-identifier">hash</span><span class="ruby-operator">|</span>
+126:         <span class="ruby-identifier">hash</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">y</span>,<span class="ruby-identifier">item</span><span class="ruby-operator">|</span>
+127:           <span class="ruby-keyword kw">if</span> (<span class="ruby-keyword kw">not</span> <span class="ruby-identifier">lines</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-identifier">y</span>))
+128:             <span class="ruby-identifier">lines</span>[<span class="ruby-identifier">y</span>] = <span class="ruby-value str">&quot;|&quot;</span>
+129:           <span class="ruby-keyword kw">end</span>
+130:           <span class="ruby-keyword kw">if</span> (<span class="ruby-identifier">item</span> <span class="ruby-operator">!=</span> <span class="ruby-value">0</span>)
+131:             <span class="ruby-identifier">lines</span>[<span class="ruby-identifier">y</span>] <span class="ruby-operator">+=</span>  <span class="ruby-node">&quot;#{item}|&quot;</span>
+132:           <span class="ruby-keyword kw">else</span>
+133:             <span class="ruby-identifier">lines</span>[<span class="ruby-identifier">y</span>] <span class="ruby-operator">+=</span>  <span class="ruby-value str">&quot; |&quot;</span>
+134:           <span class="ruby-keyword kw">end</span>
+135:         }
+136:       }
+137:       <span class="ruby-identifier">lines</span>.<span class="ruby-identifier">values</span>.<span class="ruby-identifier">join</span>(<span class="ruby-value str">&quot;\n&quot;</span>)
+138:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

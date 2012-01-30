@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: DLXStructure::DoubleLinkedListItem</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/double_linked_list_item_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/double_linked_list_item.rb">lib/double_linked_list_item.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-i-disconnect">#disconnect</a></li>
+					
+					<li><a href="#method-i-has_next%3F">#has_next?</a></li>
+					
+					<li><a href="#method-i-is_first%3F">#is_first?</a></li>
+					
+					<li><a href="#method-i-is_last%3F">#is_last?</a></li>
+					
+					<li><a href="#method-i-last">#last</a></li>
+					
+					<li><a href="#method-i-next">#next</a></li>
+					
+					<li><a href="#method-i-previous">#previous</a></li>
+					
+					<li><a href="#method-i-reconnect">#reconnect</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../LICENSE.html">LICENSE</a></li>
+				
+					<li class="file"><a href="../README.html">README</a></li>
+				
+					<li class="file"><a href="../Rakefile.html">Rakefile</a></li>
+				
+					<li class="file"><a href="../nbproject/private/rake-d_txt.html">rake-d.txt</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Pentomino.html">Pentomino</a></li>
+				
+					<li><a href="../Pentomino/Board.html">Pentomino::Board</a></li>
+				
+					<li><a href="../Pentomino/Coordinates.html">Pentomino::Coordinates</a></li>
+				
+					<li><a href="../Pentomino/InputParser.html">Pentomino::InputParser</a></li>
+				
+					<li><a href="../Pentomino/Item.html">Pentomino::Item</a></li>
+				
+					<li><a href="../Pentomino/ItemFactory.html">Pentomino::ItemFactory</a></li>
+				
+					<li><a href="../DLXStructure.html">DLXStructure</a></li>
+				
+					<li><a href="../DLXStructure/DoubleLinkedListItem.html">DLXStructure::DoubleLinkedListItem</a></li>
+				
+					<li><a href="../DLXStructure/DoubleLinkedMatrix.html">DLXStructure::DoubleLinkedMatrix</a></li>
+				
+					<li><a href="../DLXStructure/DoubleLinkedMatrixItem.html">DLXStructure::DoubleLinkedMatrixItem</a></li>
+				
+					<li><a href="../StateSpace.html">StateSpace</a></li>
+				
+					<li><a href="../StateSpace/Graph.html">StateSpace::Graph</a></li>
+				
+					<li><a href="../StateSpace/Node.html">StateSpace::Node</a></li>
+				
+					<li><a href="../DLXAlgorithm.html">DLXAlgorithm</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">DLXStructure::DoubleLinkedListItem</h1>
+
+		<div id="description">
+			<p>
+Třída reprezentující spojový seznam
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+		<div id="attribute-method-details" class="method-section section">
+			<h3 class="section-header">Attributes</h3>
+
+			
+			<div id="previous-item-attribute-method" class="method-detail">
+				<a name="previous_item"></a>
+				
+				<a name="previous_item="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">previous_item</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+Přechozí prvek v seznamu
+</p>
+				
+				</div>
+			</div>
+			
+			<div id="next-item-attribute-method" class="method-detail">
+				<a name="next_item"></a>
+				
+				<a name="next_item="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">next_item</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+Další prvek v seznamu
+</p>
+				
+				</div>
+			</div>
+			
+			<div id="parent-attribute-method" class="method-detail">
+				<a name="parent"></a>
+				
+				<a name="parent="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">parent</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+Prvek typu <a
+href="DoubleLinkedMatrixItem.html">DLXStructure::DoubleLinkedMatrixItem</a>
+pod který tento prvek patří
+</p>
+				
+				</div>
+			</div>
+			
+		</div>
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(item,parent)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Konstruktor item - předchozí prvek typu <a
+href="DoubleLinkedListItem.html">DoubleLinkedListItem</a> parent - prvek
+typu <a href="DoubleLinkedMatrixItem.html">DoubleLinkedMatrixItem</a> pod
+který tento prvek patří
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/double_linked_list_item.rb, line 18</span>
+18:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">item</span>,<span class="ruby-identifier">parent</span>)
+19:       <span class="ruby-ivar">@previous_item</span> = <span class="ruby-identifier">item</span>
+20:       <span class="ruby-ivar">@next_item</span> = <span class="ruby-keyword kw">nil</span>
+21:       <span class="ruby-keyword kw">if</span>(<span class="ruby-ivar">@previous_item</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword kw">nil</span>)
+22:         <span class="ruby-ivar">@previous_item</span>.<span class="ruby-identifier">next_item</span> = <span class="ruby-keyword kw">self</span>
+23:       <span class="ruby-keyword kw">end</span>
+24:       <span class="ruby-ivar">@parent</span> = <span class="ruby-identifier">parent</span>
+25:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="disconnect-method" class="method-detail ">
+				<a name="method-i-disconnect"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">disconnect</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Odpojí položku ze seznamu
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="disconnect-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/double_linked_list_item.rb, line 41</span>
+41:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">disconnect</span>
+42:       <span class="ruby-keyword kw">if</span> (<span class="ruby-keyword kw">not</span> <span class="ruby-identifier">is_first?</span>)
+43:         <span class="ruby-ivar">@previous_item</span>.<span class="ruby-identifier">next_item</span> = <span class="ruby-ivar">@next_item</span>
+44:       <span class="ruby-keyword kw">end</span>
+45:       <span class="ruby-keyword kw">if</span> (<span class="ruby-keyword kw">not</span> <span class="ruby-identifier">is_last?</span>)
+46:         <span class="ruby-ivar">@next_item</span>.<span class="ruby-identifier">previous_item</span> = <span class="ruby-ivar">@previous_item</span>
+47:       <span class="ruby-keyword kw">end</span>
+48:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="has-next--method" class="method-detail ">
+				<a name="method-i-has_next%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">has_next?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Má položka v seznamu následovníka?
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="has-next--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/double_linked_list_item.rb, line 64</span>
+64:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">has_next?</span>
+65:       <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@next_item</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword kw">nil</span>
+66:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="is-first--method" class="method-detail ">
+				<a name="method-i-is_first%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">is_first?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Je položka první v seznamu?
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="is-first--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/double_linked_list_item.rb, line 52</span>
+52:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">is_first?</span>
+53:       <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@previous_item</span> <span class="ruby-operator">==</span> <span class="ruby-keyword kw">nil</span>
+54:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="is-last--method" class="method-detail ">
+				<a name="method-i-is_last%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">is_last?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Je položka poslední v seznamu?
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="is-last--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/double_linked_list_item.rb, line 58</span>
+58:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">is_last?</span>
+59:       <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@next_item</span> <span class="ruby-operator">==</span> <span class="ruby-keyword kw">nil</span>
+60:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="last-method" class="method-detail ">
+				<a name="method-i-last"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">last</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Vrátí poslední položku v seznamu
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="last-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/double_linked_list_item.rb, line 70</span>
+70:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">last</span>
+71:       <span class="ruby-keyword kw">if</span> (<span class="ruby-identifier">is_last?</span>)
+72:         <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">self</span>
+73:       <span class="ruby-keyword kw">else</span>
+74:         <span class="ruby-ivar">@next_item</span>.<span class="ruby-identifier">last</span>
+75:       <span class="ruby-keyword kw">end</span>
+76:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="next-method" class="method-detail ">
+				<a name="method-i-next"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">next</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Vrátí další prvek <a
+href="DoubleLinkedMatrixItem.html">DoubleLinkedMatrixItem</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="next-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/double_linked_list_item.rb, line 80</span>
+80:     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">next</span>
+81:       <span class="ruby-ivar">@next_item</span>.<span class="ruby-identifier">parent</span>
+82:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="previous-method" class="method-detail ">
+				<a name="method-i-previous"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">previous</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Vrátí předchozí prvek <a
+href="DoubleLinkedMatrixItem.html">DoubleLinkedMatrixItem</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="previous-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/double_linked_list_item.rb, line 86</span>
+86:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">previous</span>
+87:       <span class="ruby-ivar">@previous_item</span>.<span class="ruby-identifier">parent</span>
+88:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="reconnect-method" class="method-detail ">
+				<a name="method-i-reconnect"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">reconnect</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Znovu připojí položku na původní místo v seznamu
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="reconnect-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/double_linked_list_item.rb, line 29</span>
+29:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">reconnect</span>
+30:       <span class="ruby-keyword kw">if</span> (<span class="ruby-keyword kw">not</span> <span class="ruby-identifier">is_first?</span>)
+31:         <span class="ruby-ivar">@previous_item</span>.<span class="ruby-identifier">next_item</span> = <span class="ruby-keyword kw">self</span>
+32:       <span class="ruby-keyword kw">end</span>
+33:       <span class="ruby-keyword kw">if</span> (<span class="ruby-keyword kw">not</span> <span class="ruby-identifier">is_last?</span>)
+34:         <span class="ruby-ivar">@next_item</span>.<span class="ruby-identifier">previous_item</span> = <span class="ruby-keyword kw">self</span>
+35:       <span class="ruby-keyword kw">end</span>
+36:       
+37:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

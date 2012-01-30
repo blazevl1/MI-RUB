@@ -1,0 +1,888 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: DLXStructure::DoubleLinkedMatrixItem</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/double_linked_matrix_item_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/double_linked_matrix_item.rb">lib/double_linked_matrix_item.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-i-call_method">#call_method</a></li>
+					
+					<li><a href="#method-i-call_method_next">#call_method_next</a></li>
+					
+					<li><a href="#method-i-call_method_on_columns_items">#call_method_on_columns_items</a></li>
+					
+					<li><a href="#method-i-call_method_on_items">#call_method_on_items</a></li>
+					
+					<li><a href="#method-i-call_method_on_items_except_source">#call_method_on_items_except_source</a></li>
+					
+					<li><a href="#method-i-call_method_on_row_items">#call_method_on_row_items</a></li>
+					
+					<li><a href="#method-i-call_method_previous">#call_method_previous</a></li>
+					
+					<li><a href="#method-i-disconnect">#disconnect</a></li>
+					
+					<li><a href="#method-i-disconnect_all_rows_in_column">#disconnect_all_rows_in_column</a></li>
+					
+					<li><a href="#method-i-disconnect_row">#disconnect_row</a></li>
+					
+					<li><a href="#method-i-horizontal">#horizontal</a></li>
+					
+					<li><a href="#method-i-reconnect">#reconnect</a></li>
+					
+					<li><a href="#method-i-reconnect_all_rows_in_column">#reconnect_all_rows_in_column</a></li>
+					
+					<li><a href="#method-i-reconnect_row">#reconnect_row</a></li>
+					
+					<li><a href="#method-i-vertical">#vertical</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../LICENSE.html">LICENSE</a></li>
+				
+					<li class="file"><a href="../README.html">README</a></li>
+				
+					<li class="file"><a href="../Rakefile.html">Rakefile</a></li>
+				
+					<li class="file"><a href="../nbproject/private/rake-d_txt.html">rake-d.txt</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Pentomino.html">Pentomino</a></li>
+				
+					<li><a href="../Pentomino/Board.html">Pentomino::Board</a></li>
+				
+					<li><a href="../Pentomino/Coordinates.html">Pentomino::Coordinates</a></li>
+				
+					<li><a href="../Pentomino/InputParser.html">Pentomino::InputParser</a></li>
+				
+					<li><a href="../Pentomino/Item.html">Pentomino::Item</a></li>
+				
+					<li><a href="../Pentomino/ItemFactory.html">Pentomino::ItemFactory</a></li>
+				
+					<li><a href="../DLXStructure.html">DLXStructure</a></li>
+				
+					<li><a href="../DLXStructure/DoubleLinkedListItem.html">DLXStructure::DoubleLinkedListItem</a></li>
+				
+					<li><a href="../DLXStructure/DoubleLinkedMatrix.html">DLXStructure::DoubleLinkedMatrix</a></li>
+				
+					<li><a href="../DLXStructure/DoubleLinkedMatrixItem.html">DLXStructure::DoubleLinkedMatrixItem</a></li>
+				
+					<li><a href="../StateSpace.html">StateSpace</a></li>
+				
+					<li><a href="../StateSpace/Graph.html">StateSpace::Graph</a></li>
+				
+					<li><a href="../StateSpace/Node.html">StateSpace::Node</a></li>
+				
+					<li><a href="../DLXAlgorithm.html">DLXAlgorithm</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">DLXStructure::DoubleLinkedMatrixItem</h1>
+
+		<div id="description">
+			<p>
+Třída reprezentující položku v datové struktuře pro algoritmus DLX
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+		<div id="attribute-method-details" class="method-section section">
+			<h3 class="section-header">Attributes</h3>
+
+			
+			<div id="value-attribute-method" class="method-detail">
+				<a name="value"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">value</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+Hodnota prvku (libovolný objekt)
+</p>
+				
+				</div>
+			</div>
+			
+		</div>
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(horizontal_item = nil ,vertical_item = nil ,value = nil )</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Kontruktor horizontal_item - předchozí prvek typu <a
+href="DoubleLinkedListItem.html">DoubleLinkedListItem</a> v horizontálním
+směru vertical_item  - předchozí prvek typu <a
+href="DoubleLinkedListItem.html">DoubleLinkedListItem</a> ve vertikálním
+směru
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/double_linked_matrix_item.rb, line 15</span>
+15:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">horizontal_item</span> = <span class="ruby-keyword kw">nil</span> ,<span class="ruby-identifier">vertical_item</span> = <span class="ruby-keyword kw">nil</span> ,<span class="ruby-identifier">value</span> = <span class="ruby-keyword kw">nil</span> )
+16:       <span class="ruby-ivar">@items</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+17:       <span class="ruby-ivar">@items</span>[<span class="ruby-value str">'horizontal'</span>] = <span class="ruby-constant">DoubleLinkedListItem</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">horizontal_item</span>,<span class="ruby-keyword kw">self</span>)
+18:       <span class="ruby-ivar">@items</span>[<span class="ruby-value str">'vertical'</span>] = <span class="ruby-constant">DoubleLinkedListItem</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">vertical_item</span>,<span class="ruby-keyword kw">self</span>)
+19:       <span class="ruby-ivar">@connected</span> = <span class="ruby-keyword kw">true</span>
+20:       <span class="ruby-ivar">@value</span> = <span class="ruby-identifier">value</span>
+21:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="call-method-method" class="method-detail ">
+				<a name="method-i-call_method"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">call_method</span><span
+						class="method-args">(method)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Zavolání metody na prvku method - metoda, která se má zavolat
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="call-method-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/double_linked_matrix_item.rb, line 98</span>
+ 98:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">call_method</span>(<span class="ruby-identifier">method</span>)
+ 99:       <span class="ruby-identifier">method_object</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">method</span>(<span class="ruby-identifier">method</span>)
+100:       <span class="ruby-identifier">method_object</span>.<span class="ruby-identifier">call</span>
+101:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="call-method-next-method" class="method-detail ">
+				<a name="method-i-call_method_next"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">call_method_next</span><span
+						class="method-args">(method,item)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Zavolá metodu na prvku a pošle zprávu dál nadcházejícímu prvku pokud
+je prvek poslední zastaví posílání zpráv method - metoda, která se
+má zavolat item - směr šíření (horizontal/vertical)
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="call-method-next-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/double_linked_matrix_item.rb, line 142</span>
+142:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">call_method_next</span>(<span class="ruby-identifier">method</span>,<span class="ruby-identifier">item</span>)
+143:       <span class="ruby-identifier">call_method</span>(<span class="ruby-identifier">method</span>)
+144:       <span class="ruby-keyword kw">if</span> (<span class="ruby-keyword kw">not</span> <span class="ruby-ivar">@items</span>[<span class="ruby-identifier">item</span>].<span class="ruby-identifier">is_last?</span>)
+145:         <span class="ruby-ivar">@items</span>[<span class="ruby-identifier">item</span>].<span class="ruby-identifier">next</span>.<span class="ruby-identifier">call_method_next</span>(<span class="ruby-identifier">method</span>,<span class="ruby-identifier">item</span>)
+146:       <span class="ruby-keyword kw">else</span>
+147:       <span class="ruby-keyword kw">end</span>
+148:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="call-method-on-columns-items-method" class="method-detail ">
+				<a name="method-i-call_method_on_columns_items"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">call_method_on_columns_items</span><span
+						class="method-args">(method)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Pošle zprávu všem prvkům ve sloupci kromě prvku na kterém byla metoda
+vyvolána method - metoda, která se má zavolat
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="call-method-on-columns-items-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/double_linked_matrix_item.rb, line 91</span>
+91:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">call_method_on_columns_items</span>(<span class="ruby-identifier">method</span>)
+92:       <span class="ruby-identifier">call_method_on_items_except_source</span>(<span class="ruby-identifier">method</span>,<span class="ruby-value str">'vertical'</span>)
+93:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="call-method-on-items-method" class="method-detail ">
+				<a name="method-i-call_method_on_items"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">call_method_on_items</span><span
+						class="method-args">(method,item)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Zavolá metodu na všech prvcích v daném směru method - metoda, která
+se má zavolat item - směr šíření (horizontal/vertical)
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="call-method-on-items-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/double_linked_matrix_item.rb, line 107</span>
+107:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">call_method_on_items</span>(<span class="ruby-identifier">method</span>,<span class="ruby-identifier">item</span>)
+108:       <span class="ruby-identifier">call_method</span>(<span class="ruby-identifier">method</span>)
+109:       <span class="ruby-identifier">call_method_on_items_except_source</span>(<span class="ruby-identifier">method</span>,<span class="ruby-identifier">item</span>)
+110:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="call-method-on-items-except-source-method" class="method-detail ">
+				<a name="method-i-call_method_on_items_except_source"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">call_method_on_items_except_source</span><span
+						class="method-args">(method,item)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Zavolá metodu na všech prvcích v daném směru kromě aktuálního prvku
+method - metoda, která se má zavolat item - směr šíření
+(horizontal/vertical)
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="call-method-on-items-except-source-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/double_linked_matrix_item.rb, line 116</span>
+116:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">call_method_on_items_except_source</span>(<span class="ruby-identifier">method</span>,<span class="ruby-identifier">item</span>)
+117:       <span class="ruby-keyword kw">if</span> (<span class="ruby-keyword kw">not</span> <span class="ruby-ivar">@items</span>[<span class="ruby-identifier">item</span>].<span class="ruby-identifier">is_first?</span>)
+118:         <span class="ruby-ivar">@items</span>[<span class="ruby-identifier">item</span>].<span class="ruby-identifier">previous</span>.<span class="ruby-identifier">call_method_previous</span>(<span class="ruby-identifier">method</span>,<span class="ruby-identifier">item</span>)
+119:       <span class="ruby-keyword kw">end</span>
+120:       <span class="ruby-keyword kw">if</span> (<span class="ruby-keyword kw">not</span> <span class="ruby-ivar">@items</span>[<span class="ruby-identifier">item</span>].<span class="ruby-identifier">is_last?</span>)
+121:         <span class="ruby-ivar">@items</span>[<span class="ruby-identifier">item</span>].<span class="ruby-identifier">next</span>.<span class="ruby-identifier">call_method_next</span>(<span class="ruby-identifier">method</span>,<span class="ruby-identifier">item</span>)
+122:       <span class="ruby-keyword kw">end</span>
+123:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="call-method-on-row-items-method" class="method-detail ">
+				<a name="method-i-call_method_on_row_items"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">call_method_on_row_items</span><span
+						class="method-args">(method)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Pošle zprávu všem prvkům v řádků kromě prvku na kterém byla metoda
+vyvolána method - metoda, která se má zavolat
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="call-method-on-row-items-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/double_linked_matrix_item.rb, line 84</span>
+84:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">call_method_on_row_items</span>(<span class="ruby-identifier">method</span>)
+85:       <span class="ruby-identifier">call_method_on_items_except_source</span>(<span class="ruby-identifier">method</span>,<span class="ruby-value str">'horizontal'</span>)
+86:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="call-method-previous-method" class="method-detail ">
+				<a name="method-i-call_method_previous"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">call_method_previous</span><span
+						class="method-args">(method,item)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Zavolá metodu na prvku a pošle zprávu dál předchozímu prvku pokud je
+prvek první zastaví posílání zpráv method - metoda, která se má
+zavolat item - směr šíření (horizontal/vertical)
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="call-method-previous-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/double_linked_matrix_item.rb, line 130</span>
+130:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">call_method_previous</span>(<span class="ruby-identifier">method</span>,<span class="ruby-identifier">item</span>)
+131:       <span class="ruby-identifier">call_method</span>(<span class="ruby-identifier">method</span>)
+132:       <span class="ruby-keyword kw">if</span> (<span class="ruby-keyword kw">not</span> <span class="ruby-ivar">@items</span>[<span class="ruby-identifier">item</span>].<span class="ruby-identifier">is_first?</span>)
+133:         <span class="ruby-ivar">@items</span>[<span class="ruby-identifier">item</span>].<span class="ruby-identifier">previous</span>.<span class="ruby-identifier">call_method_previous</span>(<span class="ruby-identifier">method</span>,<span class="ruby-identifier">item</span>)
+134:       <span class="ruby-keyword kw">end</span>
+135:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="disconnect-method" class="method-detail ">
+				<a name="method-i-disconnect"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">disconnect</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Odpojí prvek pokud již nebyl odpojen
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="disconnect-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/double_linked_matrix_item.rb, line 25</span>
+25:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">disconnect</span>
+26:       <span class="ruby-keyword kw">if</span>(<span class="ruby-ivar">@connected</span>)      
+27:         <span class="ruby-keyword kw">if</span> (<span class="ruby-keyword kw">not</span> <span class="ruby-ivar">@items</span>[<span class="ruby-value str">'vertical'</span>].<span class="ruby-identifier">is_first?</span>())
+28:           <span class="ruby-comment cmt">#puts &quot;Disconnecting item #{value} vertical&quot;</span>
+29:           <span class="ruby-ivar">@items</span>[<span class="ruby-value str">'vertical'</span>].<span class="ruby-identifier">disconnect</span>
+30:         <span class="ruby-keyword kw">else</span>
+31:           <span class="ruby-comment cmt">#puts &quot;Disconnecting item #{value} horizontal&quot;</span>
+32:           <span class="ruby-ivar">@items</span>[<span class="ruby-value str">'horizontal'</span>].<span class="ruby-identifier">disconnect</span>
+33:         <span class="ruby-keyword kw">end</span>
+34:         <span class="ruby-ivar">@connected</span> = <span class="ruby-keyword kw">false</span>
+35:       <span class="ruby-keyword kw">end</span>
+36:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="disconnect-all-rows-in-column-method" class="method-detail ">
+				<a name="method-i-disconnect_all_rows_in_column"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">disconnect_all_rows_in_column</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Pošle zprávu pro odpojení všem prvkům ve sloupci kromě prvku na
+kterém byla metoda vyvolána
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="disconnect-all-rows-in-column-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/double_linked_matrix_item.rb, line 53</span>
+53:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">disconnect_all_rows_in_column</span>
+54:       <span class="ruby-identifier">call_method_on_columns_items</span>(<span class="ruby-value">:disconnect_row</span>)
+55:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="disconnect-row-method" class="method-detail ">
+				<a name="method-i-disconnect_row"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">disconnect_row</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Pošle zprávu pro odpojení řádku, na kterém se prvek nachází, pokud
+není prvek v hlavičce sloupců
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="disconnect-row-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/double_linked_matrix_item.rb, line 60</span>
+60:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">disconnect_row</span>
+61:       <span class="ruby-keyword kw">if</span> (<span class="ruby-keyword kw">not</span> <span class="ruby-ivar">@items</span>[<span class="ruby-value str">'vertical'</span>].<span class="ruby-identifier">is_first?</span>())
+62:         <span class="ruby-identifier">call_method_on_row_items</span>(<span class="ruby-value">:disconnect</span>)
+63:       <span class="ruby-keyword kw">else</span>
+64:         <span class="ruby-identifier">disconnect</span>
+65:       <span class="ruby-keyword kw">end</span>
+66: 
+67:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="horizontal-method" class="method-detail ">
+				<a name="method-i-horizontal"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">horizontal</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Vrátí prvek typu <a
+href="DoubleLinkedListItem.html">DoubleLinkedListItem</a> přiřezený k
+tomuto prvku pro horizontální směr
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="horizontal-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/double_linked_matrix_item.rb, line 158</span>
+158:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">horizontal</span>
+159:       <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@items</span>[<span class="ruby-value str">'horizontal'</span>]
+160:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="reconnect-method" class="method-detail ">
+				<a name="method-i-reconnect"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">reconnect</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Připojí prvek, pokud byl odpojený
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="reconnect-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/double_linked_matrix_item.rb, line 40</span>
+40:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">reconnect</span>
+41:       <span class="ruby-keyword kw">if</span> (<span class="ruby-keyword kw">not</span> <span class="ruby-ivar">@connected</span>)
+42:         <span class="ruby-keyword kw">if</span> (<span class="ruby-keyword kw">not</span> <span class="ruby-ivar">@items</span>[<span class="ruby-value str">'vertical'</span>].<span class="ruby-identifier">is_first?</span>())
+43:           <span class="ruby-ivar">@items</span>[<span class="ruby-value str">'vertical'</span>].<span class="ruby-identifier">reconnect</span>
+44:         <span class="ruby-keyword kw">else</span>
+45:           <span class="ruby-ivar">@items</span>[<span class="ruby-value str">'horizontal'</span>].<span class="ruby-identifier">reconnect</span>
+46:         <span class="ruby-keyword kw">end</span>
+47:         <span class="ruby-ivar">@connected</span> = <span class="ruby-keyword kw">true</span>
+48:       <span class="ruby-keyword kw">end</span>
+49:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="reconnect-all-rows-in-column-method" class="method-detail ">
+				<a name="method-i-reconnect_all_rows_in_column"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">reconnect_all_rows_in_column</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Pošle zprávu pro připojení všem prvkům ve sloupci kromě prvku na
+kterém byla metoda vyvolána
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="reconnect-all-rows-in-column-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/double_linked_matrix_item.rb, line 71</span>
+71:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">reconnect_all_rows_in_column</span>
+72:       <span class="ruby-identifier">call_method_on_columns_items</span>(<span class="ruby-value">:reconnect_row</span>)
+73:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="reconnect-row-method" class="method-detail ">
+				<a name="method-i-reconnect_row"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">reconnect_row</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Pošle zprávu pro připojení řádku, na kterém se prvek nachází
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="reconnect-row-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/double_linked_matrix_item.rb, line 77</span>
+77:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">reconnect_row</span>
+78:       <span class="ruby-identifier">call_method_on_row_items</span>(<span class="ruby-value">:reconnect</span>)
+79:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="vertical-method" class="method-detail ">
+				<a name="method-i-vertical"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">vertical</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Vrátí prvek typu <a
+href="DoubleLinkedListItem.html">DoubleLinkedListItem</a> přiřezený k
+tomuto prvku pro vertikální směr
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="vertical-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/double_linked_matrix_item.rb, line 152</span>
+152:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">vertical</span>
+153:       <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@items</span>[<span class="ruby-value str">'vertical'</span>]
+154:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: StateSpace::Node</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/state_space_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/state_space.rb">lib/state_space.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-i-add_child">#add_child</a></li>
+					
+					<li><a href="#method-i-has_child_with_value%3F">#has_child_with_value?</a></li>
+					
+					<li><a href="#method-i-is_root%3F">#is_root?</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../LICENSE.html">LICENSE</a></li>
+				
+					<li class="file"><a href="../README.html">README</a></li>
+				
+					<li class="file"><a href="../Rakefile.html">Rakefile</a></li>
+				
+					<li class="file"><a href="../nbproject/private/rake-d_txt.html">rake-d.txt</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Pentomino.html">Pentomino</a></li>
+				
+					<li><a href="../Pentomino/Board.html">Pentomino::Board</a></li>
+				
+					<li><a href="../Pentomino/Coordinates.html">Pentomino::Coordinates</a></li>
+				
+					<li><a href="../Pentomino/InputParser.html">Pentomino::InputParser</a></li>
+				
+					<li><a href="../Pentomino/Item.html">Pentomino::Item</a></li>
+				
+					<li><a href="../Pentomino/ItemFactory.html">Pentomino::ItemFactory</a></li>
+				
+					<li><a href="../DLXStructure.html">DLXStructure</a></li>
+				
+					<li><a href="../DLXStructure/DoubleLinkedListItem.html">DLXStructure::DoubleLinkedListItem</a></li>
+				
+					<li><a href="../DLXStructure/DoubleLinkedMatrix.html">DLXStructure::DoubleLinkedMatrix</a></li>
+				
+					<li><a href="../DLXStructure/DoubleLinkedMatrixItem.html">DLXStructure::DoubleLinkedMatrixItem</a></li>
+				
+					<li><a href="../StateSpace.html">StateSpace</a></li>
+				
+					<li><a href="../StateSpace/Graph.html">StateSpace::Graph</a></li>
+				
+					<li><a href="../StateSpace/Node.html">StateSpace::Node</a></li>
+				
+					<li><a href="../DLXAlgorithm.html">DLXAlgorithm</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">StateSpace::Node</h1>
+
+		<div id="description">
+			<p>
+Třída reprezentující uzel v grafu
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+		<div id="attribute-method-details" class="method-section section">
+			<h3 class="section-header">Attributes</h3>
+
+			
+			<div id="childs-attribute-method" class="method-detail">
+				<a name="childs"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">childs</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+Potomci uzlu
+</p>
+				
+				</div>
+			</div>
+			
+			<div id="value-attribute-method" class="method-detail">
+				<a name="value"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">value</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+Hodnota uzlu
+</p>
+				
+				</div>
+			</div>
+			
+			<div id="parent-attribute-method" class="method-detail">
+				<a name="parent"></a>
+				
+				<a name="parent="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">parent</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+Předek uzlu
+</p>
+				
+				</div>
+			</div>
+			
+		</div>
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(value)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Konstruktor value - hodnota uzlu
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/state_space.rb, line 35</span>
+35:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">value</span>)
+36:       <span class="ruby-ivar">@parent</span> = <span class="ruby-keyword kw">nil</span>
+37:       <span class="ruby-ivar">@childs</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+38:       <span class="ruby-ivar">@value</span> = <span class="ruby-identifier">value</span>
+39:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="add-child-method" class="method-detail ">
+				<a name="method-i-add_child"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">add_child</span><span
+						class="method-args">(node)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Přidá potomka aktuálnímu uzlu a nastaví potomkovi jako rodiče
+aktuální uzel node - potomek
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="add-child-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/state_space.rb, line 44</span>
+44:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">add_child</span>(<span class="ruby-identifier">node</span>)
+45:       <span class="ruby-identifier">node</span>.<span class="ruby-identifier">parent</span> = <span class="ruby-keyword kw">self</span>
+46:       <span class="ruby-ivar">@childs</span>[<span class="ruby-identifier">node</span>.<span class="ruby-identifier">value</span>] = <span class="ruby-identifier">node</span>
+47:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="has-child-with-value--method" class="method-detail ">
+				<a name="method-i-has_child_with_value%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">has_child_with_value?</span><span
+						class="method-args">(value)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Má aktuální uzel potomka se zadanou hodnotou? value - hodnota, podle
+které se hledá potomek
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="has-child-with-value--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/state_space.rb, line 52</span>
+52:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">has_child_with_value?</span>(<span class="ruby-identifier">value</span>)
+53:       <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@childs</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-identifier">value</span>)
+54:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="is-root--method" class="method-detail ">
+				<a name="method-i-is_root%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">is_root?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Je aktuální uzel kořenem?
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="is-root--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/state_space.rb, line 58</span>
+58:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">is_root?</span>()
+59:       <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@parent</span> <span class="ruby-operator">==</span> <span class="ruby-keyword kw">nil</span>
+60:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

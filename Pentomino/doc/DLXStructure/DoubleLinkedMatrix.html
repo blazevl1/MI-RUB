@@ -1,0 +1,863 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: DLXStructure::DoubleLinkedMatrix</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/double_linked_matrix_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/double_linked_matrix.rb">lib/double_linked_matrix.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-i-column_header_has_next%3F">#column_header_has_next?</a></li>
+					
+					<li><a href="#method-i-column_header_next">#column_header_next</a></li>
+					
+					<li><a href="#method-i-columns">#columns</a></li>
+					
+					<li><a href="#method-i-connect_item">#connect_item</a></li>
+					
+					<li><a href="#method-i-disconnect_section">#disconnect_section</a></li>
+					
+					<li><a href="#method-i-get_row">#get_row</a></li>
+					
+					<li><a href="#method-i-invalidate_cache">#invalidate_cache</a></li>
+					
+					<li><a href="#method-i-reconnect_section">#reconnect_section</a></li>
+					
+					<li><a href="#method-i-reset_column_header_iterator">#reset_column_header_iterator</a></li>
+					
+					<li><a href="#method-i-reset_row_header_iterator">#reset_row_header_iterator</a></li>
+					
+					<li><a href="#method-i-row_header_has_next%3F">#row_header_has_next?</a></li>
+					
+					<li><a href="#method-i-row_header_next">#row_header_next</a></li>
+					
+					<li><a href="#method-i-rows">#rows</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../LICENSE.html">LICENSE</a></li>
+				
+					<li class="file"><a href="../README.html">README</a></li>
+				
+					<li class="file"><a href="../Rakefile.html">Rakefile</a></li>
+				
+					<li class="file"><a href="../nbproject/private/rake-d_txt.html">rake-d.txt</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Pentomino.html">Pentomino</a></li>
+				
+					<li><a href="../Pentomino/Board.html">Pentomino::Board</a></li>
+				
+					<li><a href="../Pentomino/Coordinates.html">Pentomino::Coordinates</a></li>
+				
+					<li><a href="../Pentomino/InputParser.html">Pentomino::InputParser</a></li>
+				
+					<li><a href="../Pentomino/Item.html">Pentomino::Item</a></li>
+				
+					<li><a href="../Pentomino/ItemFactory.html">Pentomino::ItemFactory</a></li>
+				
+					<li><a href="../DLXStructure.html">DLXStructure</a></li>
+				
+					<li><a href="../DLXStructure/DoubleLinkedListItem.html">DLXStructure::DoubleLinkedListItem</a></li>
+				
+					<li><a href="../DLXStructure/DoubleLinkedMatrix.html">DLXStructure::DoubleLinkedMatrix</a></li>
+				
+					<li><a href="../DLXStructure/DoubleLinkedMatrixItem.html">DLXStructure::DoubleLinkedMatrixItem</a></li>
+				
+					<li><a href="../StateSpace.html">StateSpace</a></li>
+				
+					<li><a href="../StateSpace/Graph.html">StateSpace::Graph</a></li>
+				
+					<li><a href="../StateSpace/Node.html">StateSpace::Node</a></li>
+				
+					<li><a href="../DLXAlgorithm.html">DLXAlgorithm</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">DLXStructure::DoubleLinkedMatrix</h1>
+
+		<div id="description">
+			<p>
+Třída reprezentující datovou strukturu pro algoritmus DLX
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Konstruktor
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/double_linked_matrix.rb, line 12</span>
+12:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>
+13:       <span class="ruby-ivar">@root</span> = <span class="ruby-constant">DoubleLinkedMatrixItem</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword kw">nil</span>,<span class="ruby-keyword kw">nil</span>,<span class="ruby-value str">'root'</span>)
+14:       <span class="ruby-ivar">@rows_header</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+15:       <span class="ruby-ivar">@columns_header</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+16:       <span class="ruby-ivar">@last_row_header</span> = <span class="ruby-ivar">@root</span>
+17:       <span class="ruby-ivar">@last_column_header</span> = <span class="ruby-ivar">@root</span>
+18:       <span class="ruby-ivar">@row_header_iterator</span> = <span class="ruby-ivar">@last_row_header</span>
+19:       <span class="ruby-ivar">@column_header_iterator</span> = <span class="ruby-ivar">@last_row_header</span>
+20:       <span class="ruby-ivar">@rows</span> = <span class="ruby-value">0</span>
+21:       <span class="ruby-ivar">@columns</span> = <span class="ruby-value">0</span>
+22:       <span class="ruby-ivar">@cache_info</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+23:       <span class="ruby-ivar">@cache_info</span>[<span class="ruby-value str">'rows'</span>] = <span class="ruby-keyword kw">true</span>
+24:       <span class="ruby-ivar">@cache_info</span>[<span class="ruby-value str">'columns'</span>] = <span class="ruby-keyword kw">true</span>
+25:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="column-header-has-next--method" class="method-detail ">
+				<a name="method-i-column_header_has_next%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">column_header_has_next?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Lze iterovat dál pres připojené hlavičky sloupců?
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="column-header-has-next--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/double_linked_matrix.rb, line 165</span>
+165:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">column_header_has_next?</span>
+166:       <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@column_header_iterator</span>.<span class="ruby-identifier">horizontal</span>.<span class="ruby-identifier">has_next?</span>
+167:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="column-header-next-method" class="method-detail ">
+				<a name="method-i-column_header_next"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">column_header_next</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Metoda pro iteraci přes všechny připojené hlavičky sloupců, která
+vrací další prvek
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="column-header-next-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/double_linked_matrix.rb, line 171</span>
+171:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">column_header_next</span>
+172:       <span class="ruby-ivar">@column_header_iterator</span> = <span class="ruby-ivar">@column_header_iterator</span>.<span class="ruby-identifier">horizontal</span>.<span class="ruby-identifier">next</span>
+173:       <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@column_header_iterator</span>.<span class="ruby-identifier">value</span>
+174:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="columns-method" class="method-detail ">
+				<a name="method-i-columns"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">columns</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Vrátí počet všech sloupců, které jsou v matici připojené Pro
+zrychlení výpočtu výsledky cachuje a zneplatní cache, pokud dodjde ke
+změně strukutury matice
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="columns-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/double_linked_matrix.rb, line 111</span>
+111:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">columns</span>
+112:       <span class="ruby-keyword kw">if</span> (<span class="ruby-ivar">@cache_info</span>[<span class="ruby-value str">'columns'</span>])
+113:         <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@columns</span>
+114:       <span class="ruby-keyword kw">else</span>
+115:         <span class="ruby-identifier">count</span> = <span class="ruby-value">0</span>
+116:         <span class="ruby-keyword kw">while</span>(<span class="ruby-identifier">column_header_has_next?</span>)
+117:           <span class="ruby-identifier">count</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+118:           <span class="ruby-identifier">column_header_next</span>
+119:         <span class="ruby-keyword kw">end</span>
+120:         <span class="ruby-identifier">reset_column_header_iterator</span>
+121:         <span class="ruby-ivar">@cache_info</span>[<span class="ruby-value str">'columns'</span>] = <span class="ruby-keyword kw">true</span>
+122:         <span class="ruby-ivar">@columns</span> = <span class="ruby-identifier">count</span>
+123:         <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@columns</span>
+124:       <span class="ruby-keyword kw">end</span>
+125:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="connect-item-method" class="method-detail ">
+				<a name="method-i-connect_item"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">connect_item</span><span
+						class="method-args">(column_id,row_id)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Připojí položku do matice
+</p>
+<ul>
+<li><p>
+pokud neexistuje hlavička sloupce se zadaným id, tak je vytvořena
+</p>
+</li>
+<li><p>
+pokud neexistuje hlavička řádku se zadaným id, tak je vytvořena
+</p>
+</li>
+<li><p>
+zneplatňuje cache
+</p>
+</li>
+</ul>
+<p>
+column_id - id sloupce row_id - id řádku
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="connect-item-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/double_linked_matrix.rb, line 35</span>
+35:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">connect_item</span>(<span class="ruby-identifier">column_id</span>,<span class="ruby-identifier">row_id</span>)
+36:       <span class="ruby-identifier">invalidate_cache</span>()
+37:       <span class="ruby-keyword kw">if</span> (<span class="ruby-keyword kw">not</span> <span class="ruby-ivar">@rows_header</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-identifier">row_id</span>))
+38:         <span class="ruby-ivar">@last_row_header</span> = <span class="ruby-constant">DoubleLinkedMatrixItem</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword kw">nil</span>,<span class="ruby-ivar">@last_row_header</span>.<span class="ruby-identifier">vertical</span>,<span class="ruby-identifier">row_id</span>)
+39:         <span class="ruby-ivar">@rows_header</span>[<span class="ruby-identifier">row_id</span>] = <span class="ruby-ivar">@last_row_header</span>
+40:       <span class="ruby-keyword kw">end</span>
+41:       <span class="ruby-keyword kw">if</span> (<span class="ruby-keyword kw">not</span> <span class="ruby-ivar">@columns_header</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-identifier">column_id</span>))
+42:         <span class="ruby-ivar">@last_column_header</span> = <span class="ruby-constant">DoubleLinkedMatrixItem</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@last_column_header</span>.<span class="ruby-identifier">horizontal</span>,<span class="ruby-keyword kw">nil</span>,[<span class="ruby-identifier">column_id</span>,<span class="ruby-value">0</span>])
+43:         <span class="ruby-ivar">@columns_header</span>[<span class="ruby-identifier">column_id</span>] = <span class="ruby-ivar">@last_column_header</span>
+44:       <span class="ruby-keyword kw">else</span>
+45: 
+46:       <span class="ruby-keyword kw">end</span>
+47:       <span class="ruby-identifier">row_item</span> = <span class="ruby-ivar">@rows_header</span>[<span class="ruby-identifier">row_id</span>].<span class="ruby-identifier">horizontal</span>
+48:       <span class="ruby-identifier">column_item</span> = <span class="ruby-ivar">@columns_header</span>[<span class="ruby-identifier">column_id</span>].<span class="ruby-identifier">vertical</span>
+49:       <span class="ruby-constant">DoubleLinkedMatrixItem</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">row_item</span>.<span class="ruby-identifier">last</span>,<span class="ruby-identifier">column_item</span>.<span class="ruby-identifier">last</span>,[<span class="ruby-identifier">column_id</span>,<span class="ruby-identifier">row_id</span>])
+50:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="disconnect-section-method" class="method-detail ">
+				<a name="method-i-disconnect_section"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">disconnect_section</span><span
+						class="method-args">(row_id)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Odpojí z matice celou sekci, která se identifikuje pomocí id řádku
+</p>
+<ul>
+<li><p>
+zneplatňuje cache
+</p>
+</li>
+</ul>
+<p>
+row_id - identifikátor sekce
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="disconnect-section-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/double_linked_matrix.rb, line 56</span>
+56:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">disconnect_section</span>(<span class="ruby-identifier">row_id</span>)
+57:       <span class="ruby-keyword kw">if</span> (<span class="ruby-ivar">@rows_header</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-identifier">row_id</span>))
+58:         <span class="ruby-identifier">invalidate_cache</span>()
+59:         <span class="ruby-identifier">item_header</span> = <span class="ruby-ivar">@rows_header</span>[<span class="ruby-identifier">row_id</span>]
+60:         <span class="ruby-identifier">item_header</span>.<span class="ruby-identifier">disconnect</span>
+61:         <span class="ruby-identifier">item</span> = <span class="ruby-identifier">item_header</span>
+62:         <span class="ruby-keyword kw">while</span> (<span class="ruby-identifier">item</span>.<span class="ruby-identifier">horizontal</span>.<span class="ruby-identifier">has_next?</span>)
+63:           <span class="ruby-identifier">item</span> = <span class="ruby-identifier">item</span>.<span class="ruby-identifier">horizontal</span>.<span class="ruby-identifier">next</span>
+64:           <span class="ruby-keyword kw">if</span> (<span class="ruby-keyword kw">not</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">horizontal</span>.<span class="ruby-identifier">is_first?</span>)
+65:             <span class="ruby-identifier">item</span>.<span class="ruby-identifier">disconnect_all_rows_in_column</span>
+66:           <span class="ruby-keyword kw">end</span>
+67:         <span class="ruby-keyword kw">end</span>
+68:       <span class="ruby-keyword kw">end</span>
+69:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="get-row-method" class="method-detail ">
+				<a name="method-i-get_row"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">get_row</span><span
+						class="method-args">(row_id)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Vrátí řádek i když je od matice odpojený row_id - id řádku
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="get-row-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/double_linked_matrix.rb, line 130</span>
+130:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">get_row</span>(<span class="ruby-identifier">row_id</span>)
+131:       <span class="ruby-identifier">array</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+132:       <span class="ruby-keyword kw">if</span> (<span class="ruby-ivar">@rows_header</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-identifier">row_id</span>))
+133:         <span class="ruby-identifier">item</span> = <span class="ruby-ivar">@rows_header</span>[<span class="ruby-identifier">row_id</span>]
+134:         <span class="ruby-keyword kw">while</span> (<span class="ruby-identifier">item</span>.<span class="ruby-identifier">horizontal</span>.<span class="ruby-identifier">has_next?</span>)
+135:           <span class="ruby-identifier">item</span> = <span class="ruby-identifier">item</span>.<span class="ruby-identifier">horizontal</span>.<span class="ruby-identifier">next</span>
+136:           <span class="ruby-identifier">array</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">item</span>.<span class="ruby-identifier">value</span>[<span class="ruby-value">0</span>])
+137:         <span class="ruby-keyword kw">end</span>
+138: 
+139:       <span class="ruby-keyword kw">else</span>
+140:         <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Error invalid key. Row ID #{row_id} does not exists.&quot;</span>
+141:       <span class="ruby-keyword kw">end</span>
+142:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">array</span>;
+143:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="reconnect-section-method" class="method-detail ">
+				<a name="method-i-reconnect_section"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">reconnect_section</span><span
+						class="method-args">(row_id)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Připojí zpět celou sekci, která se identifikuje pomocí id řádku
+</p>
+<ul>
+<li><p>
+zneplatňuje cache
+</p>
+</li>
+</ul>
+<p>
+row_id - identifikátor sekce
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="reconnect-section-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/double_linked_matrix.rb, line 74</span>
+74:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">reconnect_section</span>(<span class="ruby-identifier">row_id</span>)
+75:       <span class="ruby-keyword kw">if</span> (<span class="ruby-ivar">@rows_header</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-identifier">row_id</span>))
+76:         <span class="ruby-identifier">invalidate_cache</span>()
+77:         <span class="ruby-identifier">item_header</span> = <span class="ruby-ivar">@rows_header</span>[<span class="ruby-identifier">row_id</span>]
+78:         <span class="ruby-identifier">item_header</span>.<span class="ruby-identifier">reconnect</span>
+79:         <span class="ruby-identifier">item</span> = <span class="ruby-identifier">item_header</span>
+80:         <span class="ruby-keyword kw">while</span> (<span class="ruby-identifier">item</span>.<span class="ruby-identifier">horizontal</span>.<span class="ruby-identifier">has_next?</span>)
+81:           <span class="ruby-identifier">item</span> = <span class="ruby-identifier">item</span>.<span class="ruby-identifier">horizontal</span>.<span class="ruby-identifier">next</span>
+82:           <span class="ruby-keyword kw">if</span> (<span class="ruby-keyword kw">not</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">horizontal</span>.<span class="ruby-identifier">is_first?</span>)
+83:             <span class="ruby-identifier">item</span>.<span class="ruby-identifier">reconnect_all_rows_in_column</span>
+84:           <span class="ruby-keyword kw">end</span>
+85:         <span class="ruby-keyword kw">end</span>
+86:       <span class="ruby-keyword kw">end</span>
+87:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="reset-column-header-iterator-method" class="method-detail ">
+				<a name="method-i-reset_column_header_iterator"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">reset_column_header_iterator</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Nastavení ukazatele iterace přes všechny připojené hlavičky sloupců
+na počátek
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="reset-column-header-iterator-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/double_linked_matrix.rb, line 177</span>
+177:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">reset_column_header_iterator</span>
+178:       <span class="ruby-ivar">@column_header_iterator</span> = <span class="ruby-ivar">@root</span>
+179:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="reset-row-header-iterator-method" class="method-detail ">
+				<a name="method-i-reset_row_header_iterator"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">reset_row_header_iterator</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Nastavení ukazatele iterace přes všechny připojené hlavičky řádků
+na počátek
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="reset-row-header-iterator-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/double_linked_matrix.rb, line 159</span>
+159:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">reset_row_header_iterator</span>
+160:       <span class="ruby-ivar">@row_header_iterator</span> = <span class="ruby-ivar">@root</span>
+161:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="row-header-has-next--method" class="method-detail ">
+				<a name="method-i-row_header_has_next%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">row_header_has_next?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Lze iterovat dále pres připojené hlavičky řádků?
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="row-header-has-next--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/double_linked_matrix.rb, line 146</span>
+146:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">row_header_has_next?</span>
+147:       <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@row_header_iterator</span>.<span class="ruby-identifier">vertical</span>.<span class="ruby-identifier">has_next?</span>
+148:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="row-header-next-method" class="method-detail ">
+				<a name="method-i-row_header_next"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">row_header_next</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Metoda pro iteraci přes všechny připojené hlavičky řádků, která
+vrací další prvek
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="row-header-next-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/double_linked_matrix.rb, line 152</span>
+152:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">row_header_next</span>
+153:       <span class="ruby-ivar">@row_header_iterator</span> = <span class="ruby-ivar">@row_header_iterator</span>.<span class="ruby-identifier">vertical</span>.<span class="ruby-identifier">next</span>
+154:       <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@row_header_iterator</span>.<span class="ruby-identifier">value</span>
+155:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="rows-method" class="method-detail ">
+				<a name="method-i-rows"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">rows</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Vrátí počet všech řádků, které jsou v matici připojené Pro
+zrychlení výpočtu výsledky cachuje a zneplatní cache, pokud dodjde ke
+změně strukutury matice
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="rows-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/double_linked_matrix.rb, line 92</span>
+ 92:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">rows</span>
+ 93:       <span class="ruby-keyword kw">if</span> (<span class="ruby-ivar">@cache_info</span>[<span class="ruby-value str">'rows'</span>])
+ 94:         <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@rows</span>
+ 95:       <span class="ruby-keyword kw">else</span>
+ 96:         <span class="ruby-identifier">count</span> = <span class="ruby-value">0</span>
+ 97:         <span class="ruby-keyword kw">while</span>(<span class="ruby-identifier">row_header_has_next?</span>)
+ 98:           <span class="ruby-identifier">count</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+ 99:           <span class="ruby-identifier">row_header_next</span>
+100:         <span class="ruby-keyword kw">end</span>
+101:         <span class="ruby-identifier">reset_row_header_iterator</span>
+102:         <span class="ruby-ivar">@cache_info</span>[<span class="ruby-value str">'rows'</span>] = <span class="ruby-keyword kw">true</span>
+103:         <span class="ruby-ivar">@rows</span> = <span class="ruby-identifier">count</span>
+104:         <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@rows</span>
+105:       <span class="ruby-keyword kw">end</span>
+106:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="invalidate-cache-method" class="method-detail ">
+				<a name="method-i-invalidate_cache"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">invalidate_cache</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Zneplatnění cache
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="invalidate-cache-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/double_linked_matrix.rb, line 185</span>
+185:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">invalidate_cache</span>
+186:       <span class="ruby-ivar">@cache_info</span>[<span class="ruby-value str">'rows'</span>] = <span class="ruby-keyword kw">false</span>
+187:       <span class="ruby-ivar">@cache_info</span>[<span class="ruby-value str">'columns'</span>] = <span class="ruby-keyword kw">false</span>
+188:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

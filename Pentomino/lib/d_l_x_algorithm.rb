@@ -1,17 +1,19 @@
 require 'state_space'
+require 'double_linked_matrix'
+
 
 include DLXStructure
 include StateSpace
 
+# Třída která se stará o spuštění DLX algoritmu
+
 class DLXAlgorithm
 
 
-  def initialize(board)
-    @board = board
-  end
-
-  def execute
+  # Spustí algoritmus
+  def execute(board) 
     beginning = Time.now
+    @board = board
     puts "Vytvarim datove struktury pro beh algoritmu..."
     init()
     puts "Datove struktury pripraveny."
@@ -38,11 +40,16 @@ class DLXAlgorithm
     end 
   end
 
+  private
+  
+  # Inicializace algoritmu
 
   def init
     @rows = extract_data_from_items()
     @matrix = create_matrix(@rows)
   end
+
+  # Spustí hlavní část algoritmu dlx
 
   def execute_dlx
     @state_space = StateSpace::Graph.new()
@@ -70,6 +77,9 @@ class DLXAlgorithm
     end
   end
 
+  # Vytvoří všechny možné kombinace rotací, reflexí a posunů položek a uloží je do pole
+  # jako pole čísel reprezentujících souřadnice položky na desce
+
   def extract_data_from_items
     factory = ItemFactory.new
     rows = Array.new
@@ -82,6 +92,8 @@ class DLXAlgorithm
     return rows
   end
 
+  # Vytvoří datovou strukturu matice
+  
   def create_matrix(rows)
     matrix = DoubleLinkedMatrix.new
     iterator = 1
@@ -94,6 +106,8 @@ class DLXAlgorithm
     return matrix
   end
 
+  # Vytvoří hlavičky matice
+
   def create_column_headers(board,matrix)
     for x in 0..board.width-1
       for y in 0..board.height-1
@@ -103,6 +117,10 @@ class DLXAlgorithm
     end
   end
 
+  # Provede backtracking
+  # * znovu připojení sekce
+  # * návrat ve stavovém prostoru
+  
   def backtrack
     @matrix.reconnect_section(@actual_node.value)
     if (@actual_node.is_root?)
@@ -113,6 +131,9 @@ class DLXAlgorithm
     end
   end
 
+  # Vytvoří pole čísel reprezentujících přesnou polohu, rotaci a reflexi položky na desce.
+  # Pole je vytvořeno průchodem stavového prostoru od aktuálního uzlu až ke kořenu.
+
   def reconstruct_path()
     node = @actual_node
     array = Array.new
@@ -122,6 +143,8 @@ class DLXAlgorithm
     end
     return array
   end
+
+  # Vytiskne výsledek na standardní výstup
 
   def print_result
     puts "#{@board.to_s}"

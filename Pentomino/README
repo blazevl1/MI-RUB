@@ -1,3 +1,35 @@
 == Pentomino
 
-You should document your project here.
+Hledá jedno správné řešení pentomina (http://cs.wikipedia.org/wiki/Pentomino).
+Použitý algoritmus je DLX také známý jako DancingLinks (http://en.wikipedia.org/wiki/Dancing_Links).
+
+Vstup
+Velikost desky
+- minimální hodnota je 5x5
+- údaj se zadávává ve formátu NxM, kde N,M je kladné přirozené číslo větší nebo rovno 5
+
+Prvky pentomina
+- seznam znaků reprezentujících jednotlivé prvky pentomina oddělené čárkou
+- povolené znaky
+http://upload.wikimedia.org/wikipedia/commons/4/48/Pentominos.gif
+
+Příklad vstupu:
+
+<pre>Zadejte velikost desky (format MxN, min 5x5): 5x5
+Zadejte polozky oddelene carkou (f,i,l,n,p,t,u,v,w,x,y,z): i,i,i,i,i
+</pre>
+
+Příklad výstupu:
+<pre>
+Vytvarim datove struktury pro beh algoritmu...
+Datove struktury pripraveny.
+Spoustim algoritmus.
+
+Reseni nalezeno za 0 vterin.
+
+|i|i|i|i|i|
+|i|i|i|i|i|
+|i|i|i|i|i|
+|i|i|i|i|i|
+|i|i|i|i|i|
+</pre>

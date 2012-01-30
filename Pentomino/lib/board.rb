@@ -1,6 +1,27 @@
+# Pentomino
+
 module Pentomino
+
+  # Třída reprezentující desku pentomina
+  # * kontejner pro prvky pentomina použité při řešení
+  # * vykreslování desky
+
   class Board
 
+    # Šířka desky
+    attr_reader :width
+    # Výška desky
+    attr_reader :height
+    # Pole prvků pentomina, které jsou zaregistrované pro řešení na desce
+    attr_reader :virtual_items
+    # Obsah desky
+    attr_reader :max_capacity
+    # Součet obsahů prvků pentomina zaregistrovaných na desce
+    attr_reader :actual_capacity
+
+    # Konstruktor
+    # width - šířka desky
+    # height - výška desky
     def initialize(width,height)
       if (width < 5 || height < 5)
         raise "Invalid board dimensions. Board must be at least 5x5!"
@@ -22,6 +43,10 @@ module Pentomino
       @actual_capacity = 0
     end
 
+    # Vyplní políčka na desce zadanými údaji
+    # array - pole čísel, které reprezentují souřadnice desky
+    # item_number - číslo položk, která se vyplňuje
+
     def fill(array,item_number)
       item_number = item_number-@length
       if (@virtual_items.key?(item_number))
@@ -35,9 +60,13 @@ module Pentomino
       end  
     end
 
+    # Může být deska zaplněna zadanými položkami?
+
     def can_be_full?
       return @actual_capacity == @max_capacity
     end
+
+    # Přidá (zaregistroruje) prvek pentomina mezi prvky, které se používají k řešení
 
     def add_virtual_item(item)
       item.number = @virtual_items.length+1
@@ -57,6 +86,8 @@ module Pentomino
       end
       return numbers
     end
+
+    # Vypočítá číslo reprezentující souřadnice položky na desce
 
     def calculate_position_of_item(item,x,y)
       array = Array.new
@@ -87,6 +118,8 @@ module Pentomino
     end
 
 
+    # Převedení na řetězec
+    
     def to_s
       lines = Hash.new
       @structure.each { |x,hash|
@@ -104,6 +137,5 @@ module Pentomino
       lines.values.join("\n")
     end
   end
-
-  attr_reader :width, :height, :virtual_items, :max_capacity, :actual_capacity
+ 
 end

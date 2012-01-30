@@ -1,7 +1,29 @@
+require 'coordinates'
+
 module Pentomino
 
+  # Třída reprezentující prvek pentomina
   class Item
 
+    # Pole souřadnic na kterých se vyskystují jednotlivá políčka prvku
+    attr_reader :coordinates
+    # Písmeno, kterým je prvek pentomina charakterizován
+    attr_reader :letter
+    # Šířka prvku
+    attr_reader :width
+    # Výška prvku
+    attr_reader :height
+    # Obsah prvku
+    attr_reader :capacity
+    # Číslo, které je přiděleno prvku pro reprezentaci v datové struktuře DoubleLinkedMatrix
+    attr_accessor :number
+
+    # Kontruktor
+    # letter - písmeno charakterizující prvek pentomina
+    # reflection  - má prvek reflexivní obraz, který je různý?
+    # rotation_90 - má prvek obraz otočený o 90°, který je různý?
+    # rotation_180 - má prvek obraz otočený o 180°, který je různý?
+    # number - číslo reprezentující prvek pentomina v datové struktuře DoubleLinkedMatrix
     def initialize(letter,reflection,rotation_90,rotation_180,number = 0)
       @structure = Hash.new
       @number = number
@@ -21,14 +43,19 @@ module Pentomino
       @capacity = 0
     end
 
+    # Přidá další políčko na zadaných souřadnicích k prvku
+
     def fill(x,y)
       if (x < 0 || x > 4 || y < 0 || y > 4)
         raise "Invalid index X and Y. Index must be in Integer range <0;4>"
       else
+        if (@structure[x][y] == 0)
+          @capacity += 1
+        end
         @structure[x][y] = 1
         @coordinates.push(Coordinates.new(x,y))
       end
-      @capacity += 1
+      
       calculate_boundaries
     end
 
@@ -56,31 +83,6 @@ module Pentomino
       return clone
     end
 
-    def calculate_boundaries
-      @height = 0
-      @width = 0
-      start = -1
-      finish = -1
-      @structure.each { |key,hash|
-        if(hash.values.reduce(:+) > 0)
-          @width += 1
-        end     
-        hash.each_key { |index|
-          if (hash[index] > 0)
-            if (start == -1)
-              start = index
-            elsif (start > index)
-              start = index
-            end
-            if (finish < index+1)
-              finish = index+1
-            end
-          end
-        }
-      }    
-      @height = (finish-start)
-    end
-
     # Existuje pro tento objekt reflexivní obraz, který je různý?
 
     def has_reflection?
@@ -99,6 +101,8 @@ module Pentomino
       @has_rotation_180
     end
 
+    # Převedení na řetězec
+    
     def to_s
       lines = Hash.new
       @structure.each { |x,hash|
@@ -115,9 +119,36 @@ module Pentomino
       }
       lines.values.join("\n")
     end
+    
+    private
 
-    attr_reader :coordinates, :letter, :width, :height, :capacity
-    attr_accessor :number
+    # Spočítá hranice (rozměry) prvku
+    def calculate_boundaries
+      @height = 0
+      @width = 0
+      start = -1
+      finish = -1
+      @structure.each { |key,hash|
+        if(hash.values.reduce(:+) > 0)
+          @width += 1
+        end
+        hash.each_key { |index|
+          if (hash[index] > 0)
+            if (start == -1)
+              start = index
+            elsif (start > index)
+              start = index
+            end
+            if (finish < index+1)
+              finish = index+1
+            end
+          end
+        }
+      }
+      @height = (finish-start)
+    end
+
+    
     
   end
   
