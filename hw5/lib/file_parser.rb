@@ -3,17 +3,19 @@ module MinimalCoverage
   require 'test_case'
   require 'segment'
 
+  # Parser souborů obsahujících zadání jednotlivých problémů
   class FileParser
-    def initialize
-    
-    end
 
-    def FileParser.parse(filename)
+    # Načte zadání problému ze souboru
+    # filename - cesta k souboru
+    def parse(filename)
       file = File.open(filename)
       return self::parse_string(file)
     end
 
-    def FileParser.parse_string(string)
+    # Načte zadání problému z řetězce znaků
+    # string - řetězec znaků obsahující zadání problému
+    def parse_string(string)
       test_case_number = 0
       test_cases = []
       test_case = nil
@@ -31,7 +33,7 @@ module MinimalCoverage
               return test_cases
             end
           when /(^[-]{0,1}[0-9]+ [-]{0,1}[0-9]+\s)$/
-            segment = self::parse_line(line)
+            segment = create_segment_from_line(line,test_case.endpoint)
             test_case.add_segment(segment)
           end
         end
@@ -39,11 +41,13 @@ module MinimalCoverage
       return test_cases
     end
   
+    private
 
-    def FileParser.parse_line(line)
+    # Vytvoří Segment z dat vyskytujících se na řádku
+    def create_segment_from_line(line,test_case_endpoint)
       chunks = line.split(' ')
       if (chunks.length >= 2)
-        return Segment.new(chunks[0].to_i,chunks[1].to_i)
+        return Segment.new(test_case_endpoint,chunks[0].to_i,chunks[1].to_i)
       else
         raise "Invalid file structure"
       end

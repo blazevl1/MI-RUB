@@ -3,10 +3,14 @@ require 'coverage'
 
 module MinimalCoverage
 
+  # Řeší problémy minimálního pokrytí zadané v souboru
   class Solver
 
-    def solve(filename)     
-      test_cases = FileParser.parse(filename)
+    @@parser = FileParser.new
+    # Vyřeší problém minimálního pokrytí, který je popsán v souboru a vrátí pole objektů typu Coverage, které obsahují řešení instací
+    # filename - cesta k souboru, který obsahuje zadání problému
+    def solve(filename)
+      test_cases = @@parser.parse(filename)
       coverages = []
       iterator = 0
       test_cases.each{|test_case|
@@ -16,6 +20,8 @@ module MinimalCoverage
       return coverages;
     end
 
+    # Najde minimální pokrytí pro danou instanci problému (test case)
+    # test_case - instance problému
     def find_minimal_coverage(test_case)
       segments = test_case.segments.sort { |a, b| a <=> b }
       offset = 0
