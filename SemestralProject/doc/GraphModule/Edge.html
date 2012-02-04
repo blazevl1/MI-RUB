@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: GraphModule::Edge</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/graph_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/graph.rb">lib/graph.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-i-eql%3F">#eql?</a></li>
+					
+					<li><a href="#method-i-temporary%3F">#temporary?</a></li>
+					
+					<li><a href="#method-i-to_s">#to_s</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../LICENSE.html">LICENSE</a></li>
+				
+					<li class="file"><a href="../README.html">README</a></li>
+				
+					<li class="file"><a href="../Rakefile.html">Rakefile</a></li>
+				
+					<li class="file"><a href="../lib/matrix_txt.html">matrix.txt</a></li>
+				
+					<li class="file"><a href="../nbproject/private/rake-d_txt.html">rake-d.txt</a></li>
+				
+					<li class="file"><a href="../spec/correct_matrix_txt.html">correct_matrix.txt</a></li>
+				
+					<li class="file"><a href="../spec/euler_graph_txt.html">euler_graph.txt</a></li>
+				
+					<li class="file"><a href="../spec/graph_for_dijkstra_txt.html">graph_for_dijkstra.txt</a></li>
+				
+					<li class="file"><a href="../spec/matrixA_txt.html">matrixA.txt</a></li>
+				
+					<li class="file"><a href="../spec/matrixB_txt.html">matrixB.txt</a></li>
+				
+					<li class="file"><a href="../spec/not_strongly_connected_txt.html">not_strongly_connected.txt</a></li>
+				
+					<li class="file"><a href="../spec/strongly_connected_txt.html">strongly_connected.txt</a></li>
+				
+					<li class="file"><a href="../spec/strongly_connected2_txt.html">strongly_connected2.txt</a></li>
+				
+					<li class="file"><a href="../spec/wrong_matrix1_txt.html">wrong_matrix1.txt</a></li>
+				
+					<li class="file"><a href="../spec/wrong_matrix2_txt.html">wrong_matrix2.txt</a></li>
+				
+					<li class="file"><a href="../spec/wrong_matrix3_txt.html">wrong_matrix3.txt</a></li>
+				
+					<li class="file"><a href="../spec/wrong_matrix4_txt.html">wrong_matrix4.txt</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../GraphAlgorithms.html">GraphAlgorithms</a></li>
+				
+					<li><a href="../GraphAlgorithms/BFS.html">GraphAlgorithms::BFS</a></li>
+				
+					<li><a href="../GraphAlgorithms/CycleFindingAlgorithm.html">GraphAlgorithms::CycleFindingAlgorithm</a></li>
+				
+					<li><a href="../GraphAlgorithms/DijkstraAlgorithm.html">GraphAlgorithms::DijkstraAlgorithm</a></li>
+				
+					<li><a href="../GraphAlgorithms/HeuristicAlgorithm.html">GraphAlgorithms::HeuristicAlgorithm</a></li>
+				
+					<li><a href="../GraphAlgorithms/Search.html">GraphAlgorithms::Search</a></li>
+				
+					<li><a href="../GraphAlgorithms/Tour.html">GraphAlgorithms::Tour</a></li>
+				
+					<li><a href="../GraphModule.html">GraphModule</a></li>
+				
+					<li><a href="../GraphModule/Edge.html">GraphModule::Edge</a></li>
+				
+					<li><a href="../GraphModule/Graph.html">GraphModule::Graph</a></li>
+				
+					<li><a href="../GraphModule/Node.html">GraphModule::Node</a></li>
+				
+					<li><a href="../GraphModule/TemporaryEdge.html">GraphModule::TemporaryEdge</a></li>
+				
+					<li><a href="../FileParser.html">FileParser</a></li>
+				
+					<li><a href="../FileParser/DistanceMatrixFileParser.html">FileParser::DistanceMatrixFileParser</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">GraphModule::Edge</h1>
+
+		<div id="description">
+			<p>
+Třída reprezentující hranu datové struktury grafu
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+		<div id="attribute-method-details" class="method-section section">
+			<h3 class="section-header">Attributes</h3>
+
+			
+			<div id="source-attribute-method" class="method-detail">
+				<a name="source"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">source</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+Zdrojový uzel hrany (uzel, ze kterého hranu vystupuje)
+</p>
+				
+				</div>
+			</div>
+			
+			<div id="target-attribute-method" class="method-detail">
+				<a name="target"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">target</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+Cílový uzel hrany (uzel, do kterého hrana vstupuje)
+</p>
+				
+				</div>
+			</div>
+			
+			<div id="weight-attribute-method" class="method-detail">
+				<a name="weight"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">weight</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+Váha hrany
+</p>
+				
+				</div>
+			</div>
+			
+		</div>
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(source,target,weight)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Konstruktor přidá hranu do vstupní a výstupní množiny hran obou uzlů
+</p>
+<ul>
+<li><p>
+source - zdrojový uzel hrany (uzel, ze kterého hranu vystupuje)
+</p>
+</li>
+<li><p>
+target - cílový uzel hrany (uzel, do kterého hrana vstupuje)
+</p>
+</li>
+<li><p>
+weight - váha hrany
+</p>
+</li>
+</ul>
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/graph.rb, line 103</span>
+103:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">source</span>,<span class="ruby-identifier">target</span>,<span class="ruby-identifier">weight</span>)
+104:       <span class="ruby-ivar">@source</span> = <span class="ruby-identifier">source</span>
+105:       <span class="ruby-ivar">@target</span> = <span class="ruby-identifier">target</span>
+106:       <span class="ruby-ivar">@weight</span> = <span class="ruby-identifier">weight</span>
+107:       <span class="ruby-ivar">@source</span>.<span class="ruby-identifier">add_edge</span>(<span class="ruby-keyword kw">self</span>)
+108:       <span class="ruby-ivar">@target</span>.<span class="ruby-identifier">add_edge</span>(<span class="ruby-keyword kw">self</span>)
+109:       <span class="ruby-ivar">@temporary</span> = <span class="ruby-keyword kw">false</span>
+110:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="eql--method" class="method-detail ">
+				<a name="method-i-eql%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">eql?</span><span
+						class="method-args">(edge)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Implementace metodye eql? hrany jsou ekvivalentní, jestliže se shodují
+id zdrojových a cílových uzlů a hrana má stejnou váhu
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="eql--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/graph.rb, line 119</span>
+119:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">eql?</span> (<span class="ruby-identifier">edge</span>)
+120:       <span class="ruby-keyword kw">return</span> (<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">source</span>.<span class="ruby-identifier">id</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">edge</span>.<span class="ruby-identifier">source</span>.<span class="ruby-identifier">id</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">target</span>.<span class="ruby-identifier">id</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">edge</span>.<span class="ruby-identifier">target</span>.<span class="ruby-identifier">id</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">weight</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">edge</span>.<span class="ruby-identifier">weight</span>)
+121:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="temporary--method" class="method-detail ">
+				<a name="method-i-temporary%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">temporary?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Je hrana dočasná?
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="temporary--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/graph.rb, line 113</span>
+113:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">temporary?</span>
+114:       <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@temporary</span>
+115:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="to-s-method" class="method-detail ">
+				<a name="method-i-to_s"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">to_s</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Převedení objektu na řetězec
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="to-s-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/graph.rb, line 124</span>
+124:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_s</span>
+125:       <span class="ruby-node">&quot;#{source.id}--#{weight}--#{target.id}&quot;</span>
+126:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

@@ -13,13 +13,10 @@ module GraphAlgorithms
   # * je spuštěn algoritmus hledání cyklů na grafu
 
   class HeuristicAlgorithm
-    def initialize
-    
-    end
 
     # Provede algoritmus
-    # graph - datová struktura na které se bude algoritmus provádět
-    # start_node - uzel, ze kterého se začíná
+    # * graph - datová struktura na které se bude algoritmus provádět
+    # * start_node - uzel, ze kterého se začíná
 
     def execute(start_node,graph)
       input_nodes,output_nodes = split_nodes_into_subsets(graph.nodes)
@@ -32,6 +29,7 @@ module GraphAlgorithms
 
     # Vytvoří dvě množiny a vloží do nich některé z uzlů
     # množiny: {vstupní stupeň  > výstupní stupeň}, {vstupní stupeň < výstupní stupeň}
+    # * nodes - množina uzlů, která bude rozdělena
 
     def split_nodes_into_subsets(nodes)
       input_nodes = Hash.new
@@ -47,7 +45,9 @@ module GraphAlgorithms
     end
 
     # Vytvoří dočasné hrany
-
+    # * input_nodes - množina uzlů, které mají vstupní stupeň  větší než výstupní stupeň
+    # * output_nodes - množina uzlů, které mají vstupní stupeň menší než výstupní stupeň
+    # * graph - datová struktura na které se bude operace přidání dočasných hran provádět
     def create_temporary_edges(input_nodes,output_nodes,graph)
       input_nodes.each_value { |node|
         targets,paths = find_closest_nodes(node,graph)
@@ -70,9 +70,9 @@ module GraphAlgorithms
     # Vytvoří pole hran (cestu)
     # postupuje směrem od cíle ke startu
     #
-    # start_node - počáteční uzel cesty
-    # paths - hash mapa, kde je klíčem uzel a hodnotou hrana (výstup Dijkstrova algoritmu)
-    # target - koncový uzel cesty
+    # * start_node - počáteční uzel cesty
+    # * paths - hash mapa, kde je klíčem uzel a hodnotou hrana (výstup Dijkstrova algoritmu)
+    # * target - koncový uzel cesty
 
     def edges_from_nodes_and_paths(start_node,paths,target)
       target_node = target
@@ -86,7 +86,7 @@ module GraphAlgorithms
 
     # Vytvoří pole hran (sled)
     #
-    # path_of_nodes - seřazené pole uzlů
+    # * path_of_nodes - seřazené pole uzlů
     #
 
     def edges_from_nodes_path(path_of_nodes)

@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: GraphAlgorithms::HeuristicAlgorithm</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/heuristic_algorithm_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/heuristic_algorithm.rb">lib/heuristic_algorithm.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-i-create_temporary_edges">#create_temporary_edges</a></li>
+					
+					<li><a href="#method-i-edges_from_nodes_and_paths">#edges_from_nodes_and_paths</a></li>
+					
+					<li><a href="#method-i-edges_from_nodes_path">#edges_from_nodes_path</a></li>
+					
+					<li><a href="#method-i-execute">#execute</a></li>
+					
+					<li><a href="#method-i-split_nodes_into_subsets">#split_nodes_into_subsets</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../LICENSE.html">LICENSE</a></li>
+				
+					<li class="file"><a href="../README.html">README</a></li>
+				
+					<li class="file"><a href="../Rakefile.html">Rakefile</a></li>
+				
+					<li class="file"><a href="../lib/matrix_txt.html">matrix.txt</a></li>
+				
+					<li class="file"><a href="../nbproject/private/rake-d_txt.html">rake-d.txt</a></li>
+				
+					<li class="file"><a href="../spec/correct_matrix_txt.html">correct_matrix.txt</a></li>
+				
+					<li class="file"><a href="../spec/euler_graph_txt.html">euler_graph.txt</a></li>
+				
+					<li class="file"><a href="../spec/graph_for_dijkstra_txt.html">graph_for_dijkstra.txt</a></li>
+				
+					<li class="file"><a href="../spec/matrixA_txt.html">matrixA.txt</a></li>
+				
+					<li class="file"><a href="../spec/matrixB_txt.html">matrixB.txt</a></li>
+				
+					<li class="file"><a href="../spec/not_strongly_connected_txt.html">not_strongly_connected.txt</a></li>
+				
+					<li class="file"><a href="../spec/strongly_connected_txt.html">strongly_connected.txt</a></li>
+				
+					<li class="file"><a href="../spec/strongly_connected2_txt.html">strongly_connected2.txt</a></li>
+				
+					<li class="file"><a href="../spec/wrong_matrix1_txt.html">wrong_matrix1.txt</a></li>
+				
+					<li class="file"><a href="../spec/wrong_matrix2_txt.html">wrong_matrix2.txt</a></li>
+				
+					<li class="file"><a href="../spec/wrong_matrix3_txt.html">wrong_matrix3.txt</a></li>
+				
+					<li class="file"><a href="../spec/wrong_matrix4_txt.html">wrong_matrix4.txt</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../GraphAlgorithms.html">GraphAlgorithms</a></li>
+				
+					<li><a href="../GraphAlgorithms/BFS.html">GraphAlgorithms::BFS</a></li>
+				
+					<li><a href="../GraphAlgorithms/CycleFindingAlgorithm.html">GraphAlgorithms::CycleFindingAlgorithm</a></li>
+				
+					<li><a href="../GraphAlgorithms/DijkstraAlgorithm.html">GraphAlgorithms::DijkstraAlgorithm</a></li>
+				
+					<li><a href="../GraphAlgorithms/HeuristicAlgorithm.html">GraphAlgorithms::HeuristicAlgorithm</a></li>
+				
+					<li><a href="../GraphAlgorithms/Search.html">GraphAlgorithms::Search</a></li>
+				
+					<li><a href="../GraphAlgorithms/Tour.html">GraphAlgorithms::Tour</a></li>
+				
+					<li><a href="../GraphModule.html">GraphModule</a></li>
+				
+					<li><a href="../GraphModule/Edge.html">GraphModule::Edge</a></li>
+				
+					<li><a href="../GraphModule/Graph.html">GraphModule::Graph</a></li>
+				
+					<li><a href="../GraphModule/Node.html">GraphModule::Node</a></li>
+				
+					<li><a href="../GraphModule/TemporaryEdge.html">GraphModule::TemporaryEdge</a></li>
+				
+					<li><a href="../FileParser.html">FileParser</a></li>
+				
+					<li><a href="../FileParser/DistanceMatrixFileParser.html">FileParser::DistanceMatrixFileParser</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">GraphAlgorithms::HeuristicAlgorithm</h1>
+
+		<div id="description">
+			<p>
+Třída zodpovědná za nalezení cesty, pokud graf není Eulerovým grafem
+</p>
+<p>
+Postup algoritmu
+</p>
+<ul>
+<li><p>
+projde všechny uzly grafu a rozdělí je do tří množin (vstupní
+stupeň  == výstupní stupeň, vstupní stupeň  > výstupní stupeň,
+vstupní stupeň < výstupní stupeň)
+</p>
+</li>
+<li><p>
+vytvoří dočasné hrany, které mají jako zdroj uzel množiny s
+větším vstupním stupněm a jako cíl uzel z množiny s větším
+výstupním stupněm
+</p>
+</li>
+<li><p>
+po vytvoření dočasných hran, by měl být graf Eulerovým grafem
+</p>
+</li>
+<li><p>
+je spuštěn algoritmus hledání cyklů na grafu
+</p>
+</li>
+</ul>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="execute-method" class="method-detail ">
+				<a name="method-i-execute"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">execute</span><span
+						class="method-args">(start_node,graph)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Provede algoritmus
+</p>
+<ul>
+<li><p>
+graph - datová struktura na které se bude algoritmus provádět
+</p>
+</li>
+<li><p>
+start_node - uzel, ze kterého se začíná
+</p>
+</li>
+</ul>
+					
+
+					
+					<div class="method-source-code"
+						id="execute-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/heuristic_algorithm.rb, line 21</span>
+21:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">execute</span>(<span class="ruby-identifier">start_node</span>,<span class="ruby-identifier">graph</span>)
+22:       <span class="ruby-identifier">input_nodes</span>,<span class="ruby-identifier">output_nodes</span> = <span class="ruby-identifier">split_nodes_into_subsets</span>(<span class="ruby-identifier">graph</span>.<span class="ruby-identifier">nodes</span>)
+23:       <span class="ruby-identifier">create_temporary_edges</span>(<span class="ruby-identifier">input_nodes</span>,<span class="ruby-identifier">output_nodes</span>,<span class="ruby-identifier">graph</span>)
+24:       <span class="ruby-identifier">tour</span> = <span class="ruby-constant">GraphAlgorithms</span>.<span class="ruby-identifier">find_tour_in_euler_graph</span>(<span class="ruby-identifier">start_node</span>,<span class="ruby-identifier">graph</span>)
+25:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">edges_from_nodes_path</span>(<span class="ruby-identifier">tour</span>.<span class="ruby-identifier">nodes</span>)
+26:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="create-temporary-edges-method" class="method-detail ">
+				<a name="method-i-create_temporary_edges"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">create_temporary_edges</span><span
+						class="method-args">(input_nodes,output_nodes,graph)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Vytvoří dočasné hrany
+</p>
+<ul>
+<li><p>
+input_nodes - množina uzlů, které mají vstupní stupeň  větší než
+výstupní stupeň
+</p>
+</li>
+<li><p>
+output_nodes - množina uzlů, které mají vstupní stupeň menší než
+výstupní stupeň
+</p>
+</li>
+<li><p>
+graph - datová struktura na které se bude operace přidání dočasných
+hran provádět
+</p>
+</li>
+</ul>
+					
+
+					
+					<div class="method-source-code"
+						id="create-temporary-edges-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/heuristic_algorithm.rb, line 51</span>
+51:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">create_temporary_edges</span>(<span class="ruby-identifier">input_nodes</span>,<span class="ruby-identifier">output_nodes</span>,<span class="ruby-identifier">graph</span>)
+52:       <span class="ruby-identifier">input_nodes</span>.<span class="ruby-identifier">each_value</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">node</span><span class="ruby-operator">|</span>
+53:         <span class="ruby-identifier">targets</span>,<span class="ruby-identifier">paths</span> = <span class="ruby-identifier">find_closest_nodes</span>(<span class="ruby-identifier">node</span>,<span class="ruby-identifier">graph</span>)
+54:         <span class="ruby-keyword kw">until</span>(<span class="ruby-identifier">node</span>.<span class="ruby-identifier">input_degree</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">node</span>.<span class="ruby-identifier">output_degree</span>)
+55:           <span class="ruby-identifier">targets</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">target</span><span class="ruby-operator">|</span>
+56:             <span class="ruby-keyword kw">if</span> (<span class="ruby-identifier">output_nodes</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-identifier">target</span>.<span class="ruby-identifier">id</span>))
+57:               <span class="ruby-identifier">edges</span> = <span class="ruby-identifier">edges_from_nodes_and_paths</span>(<span class="ruby-identifier">node</span>,<span class="ruby-identifier">paths</span>,<span class="ruby-identifier">target</span>)
+58:               <span class="ruby-identifier">edge</span> = <span class="ruby-constant">TemporaryEdge</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">node</span>,<span class="ruby-identifier">target</span>,<span class="ruby-identifier">edges</span>)
+59:               <span class="ruby-identifier">graph</span>.<span class="ruby-identifier">add_edge</span>(<span class="ruby-identifier">edge</span>)
+60:               <span class="ruby-keyword kw">if</span> (<span class="ruby-identifier">target</span>.<span class="ruby-identifier">input_degree</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">target</span>.<span class="ruby-identifier">output_degree</span>)
+61:                 <span class="ruby-identifier">output_nodes</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">target</span>.<span class="ruby-identifier">id</span>)
+62:               <span class="ruby-keyword kw">end</span>
+63:               <span class="ruby-keyword kw">break</span>
+64:             <span class="ruby-keyword kw">end</span>
+65:           }
+66:         <span class="ruby-keyword kw">end</span>
+67:       }
+68:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="edges-from-nodes-and-paths-method" class="method-detail ">
+				<a name="method-i-edges_from_nodes_and_paths"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">edges_from_nodes_and_paths</span><span
+						class="method-args">(start_node,paths,target)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Vytvoří pole hran (cestu) postupuje směrem od cíle ke startu
+</p>
+<ul>
+<li><p>
+start_node - počáteční uzel cesty
+</p>
+</li>
+<li><p>
+paths - hash mapa, kde je klíčem uzel a hodnotou hrana (výstup
+Dijkstrova algoritmu)
+</p>
+</li>
+<li><p>
+target - koncový uzel cesty
+</p>
+</li>
+</ul>
+					
+
+					
+					<div class="method-source-code"
+						id="edges-from-nodes-and-paths-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/heuristic_algorithm.rb, line 77</span>
+77:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">edges_from_nodes_and_paths</span>(<span class="ruby-identifier">start_node</span>,<span class="ruby-identifier">paths</span>,<span class="ruby-identifier">target</span>)
+78:       <span class="ruby-identifier">target_node</span> = <span class="ruby-identifier">target</span>
+79:       <span class="ruby-identifier">edges</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+80:       <span class="ruby-keyword kw">while</span> (<span class="ruby-identifier">target_node</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">start_node</span>)
+81:         <span class="ruby-identifier">edges</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">paths</span>[<span class="ruby-identifier">target_node</span>])
+82:         <span class="ruby-identifier">target_node</span> = <span class="ruby-identifier">paths</span>[<span class="ruby-identifier">target_node</span>].<span class="ruby-identifier">source</span>
+83:       <span class="ruby-keyword kw">end</span>
+84:       <span class="ruby-identifier">edges</span>.<span class="ruby-identifier">reverse</span>
+85:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="edges-from-nodes-path-method" class="method-detail ">
+				<a name="method-i-edges_from_nodes_path"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">edges_from_nodes_path</span><span
+						class="method-args">(path_of_nodes)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Vytvoří pole hran (sled)
+</p>
+<ul>
+<li><p>
+path_of_nodes - seřazené pole uzlů
+</p>
+</li>
+</ul>
+					
+
+					
+					<div class="method-source-code"
+						id="edges-from-nodes-path-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/heuristic_algorithm.rb, line 92</span>
+ 92:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">edges_from_nodes_path</span>(<span class="ruby-identifier">path_of_nodes</span>)
+ 93:       <span class="ruby-identifier">last_node</span> =  <span class="ruby-keyword kw">nil</span>
+ 94:       <span class="ruby-identifier">edges</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+ 95:       <span class="ruby-identifier">path_of_nodes</span>.<span class="ruby-identifier">each</span>() { <span class="ruby-operator">|</span><span class="ruby-identifier">node</span><span class="ruby-operator">|</span>
+ 96:         <span class="ruby-keyword kw">if</span> (<span class="ruby-identifier">last_node</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword kw">nil</span>)
+ 97:           <span class="ruby-identifier">edge</span> = <span class="ruby-identifier">last_node</span>.<span class="ruby-identifier">output_edges</span>[<span class="ruby-identifier">node</span>.<span class="ruby-identifier">id</span>]
+ 98:           <span class="ruby-identifier">edges</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">edge</span>) 
+ 99:         <span class="ruby-keyword kw">end</span>
+100:         <span class="ruby-identifier">last_node</span> = <span class="ruby-identifier">node</span>
+101:       }
+102:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">edges</span>
+103:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="split-nodes-into-subsets-method" class="method-detail ">
+				<a name="method-i-split_nodes_into_subsets"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">split_nodes_into_subsets</span><span
+						class="method-args">(nodes)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Vytvoří dvě množiny a vloží do nich některé z uzlů množiny:
+{vstupní stupeň  > výstupní stupeň}, {vstupní stupeň < výstupní
+stupeň}
+</p>
+<ul>
+<li><p>
+nodes - množina uzlů, která bude rozdělena
+</p>
+</li>
+</ul>
+					
+
+					
+					<div class="method-source-code"
+						id="split-nodes-into-subsets-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/heuristic_algorithm.rb, line 34</span>
+34:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">split_nodes_into_subsets</span>(<span class="ruby-identifier">nodes</span>)
+35:       <span class="ruby-identifier">input_nodes</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+36:       <span class="ruby-identifier">output_nodes</span> =  <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+37:       <span class="ruby-identifier">nodes</span>.<span class="ruby-identifier">each_value</span>() { <span class="ruby-operator">|</span><span class="ruby-identifier">node</span><span class="ruby-operator">|</span>
+38:         <span class="ruby-keyword kw">if</span> (<span class="ruby-identifier">node</span>.<span class="ruby-identifier">input_degree</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">node</span>.<span class="ruby-identifier">output_degree</span>)
+39:           <span class="ruby-identifier">input_nodes</span>[<span class="ruby-identifier">node</span>.<span class="ruby-identifier">id</span>] = <span class="ruby-identifier">node</span>
+40:         <span class="ruby-keyword kw">elsif</span> (<span class="ruby-identifier">node</span>.<span class="ruby-identifier">input_degree</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">node</span>.<span class="ruby-identifier">output_degree</span>)
+41:           <span class="ruby-identifier">output_nodes</span>[<span class="ruby-identifier">node</span>.<span class="ruby-identifier">id</span>] = <span class="ruby-identifier">node</span>
+42:         <span class="ruby-keyword kw">end</span>
+43:       }
+44:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">input_nodes</span>,<span class="ruby-identifier">output_nodes</span>
+45:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

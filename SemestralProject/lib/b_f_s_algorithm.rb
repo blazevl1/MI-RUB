@@ -2,13 +2,14 @@ require 'thread'
 
 module GraphAlgorithms
 
+  # Abstraktní třída pro hledání uzlů v grafu
   class Search
-    def initialize
-
-    end
 
     public
 
+    # Spusti algoritmus pro hledani uzlu, po dokonceni algoritmu nastavi stav vsech uzlu na OPEN
+    # * root_node_index - index uzlu, ze kterho zacne hledani
+    # * graph - graf na kterém se má algoritmus provést
     def execute(root_node_index,graph)
       root_node = graph.get_node(root_node_index)
       @graph = graph
@@ -19,24 +20,23 @@ module GraphAlgorithms
 
     protected
 
+    # Spustí algoritmus
+    # Metodu je nutné v potomcích překrýt a doplnit její implementaci
     def execute_algorithm
       raise NotImplementedError
     end
 
   end
 
+  # Třída je implementací algoritmus BFS
   class BFS < Search
-    @queue
-    @array
 
-    def initialize()
-      @queue = Queue.new
-      @array = Array.new
-    end
-
-    def execute_algorithm(rootNode)
-      @queue.push(rootNode)
-      rootNode.close
+    # Spustí algoritmus
+    # * root_node - uzel, ze kterého algoritmus začíná
+    def execute_algorithm(root_node)
+      init()
+      @queue.push(root_node)
+      root_node.close
       while (not @queue.empty?)
         node = @queue.pop
         search(node)
@@ -47,6 +47,14 @@ module GraphAlgorithms
 
     private
 
+    # Inicializace algoritmus, vytvoření datových struktur
+    def init()
+      @queue = Queue.new
+      @array = Array.new
+    end
+
+    # Objeví všechny neuzavřené sousedy uzly
+    # * node - uzel, jehož sousedi budou objeveni
     def search(node)
       node.output_edges.each_value { |edge|
         neighbour = edge.target

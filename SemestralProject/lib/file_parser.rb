@@ -1,26 +1,42 @@
 require 'graph'
 
+# Modul pro načítání grafů ze souborů
+
 module FileParser
+
+  # Třída pro načtení grafu, který je reprezentován maticí vzdáleností, ze souboru
 
   class DistanceMatrixFileParser
 
+    # Zpracuje soubor a vytvoří dle struktury v souboru graf
+    # * filename - cesta k souboru
+
     def parse_file(filename)
-      file = File.open(filename,'r')
-      begin
-        parse(file)
-      ensure
-        file.close
+      if (File.exist?(filename))
+        file = File.open(filename,'r')
+        begin
+          graph = parse(file)
+        ensure
+          file.close
+        end
+        return graph;
+      else
+        raise "Neexistujici soubor #{filename}"
       end
     end
 
     private
 
+    # Zpracuje textový řetězec a vytvoří graf
+    # * content - textový řetězec
     def parse(content)
       matrix = create_matrix(content)
       graph = create_graph_from_matrix(matrix)
       return graph
     end
 
+    # Vytvoří matici dle zadaného textového řetězce, pokud je validní
+    # * content - textový řetězec
     def create_matrix(content)
       matrix = []
       content.each_line() { |line|
@@ -39,6 +55,7 @@ module FileParser
       return matrix
     end
 
+    # Zkontroluje, jestli ma matice správný rozměr. Pokud nemá, tak vyvolá výjimku.
     def check_matrix(matrix)
       matrix.each_index { |index|
         if (matrix.length != matrix[index].length)
@@ -47,6 +64,9 @@ module FileParser
       }
     end
 
+
+    # Vytvoří z matice graf
+    # * matrix - matice
     def create_graph_from_matrix(matrix)
       graph = GraphModule::Graph.new
       for id in (0..matrix.length-1)

@@ -26,12 +26,17 @@ describe GraphAlgorithms do
   describe "#is_strongly_connected?" do
     it "should return true if graph is strongly connected" do
       graph = @file_parser.parse_file('spec/strongly_connected.txt')
-      GraphAlgorithms.bfs(0, graph).length.should_not eql true
+      GraphAlgorithms.is_strongly_connected?(graph).should eql true
+    end
+
+    it "should return true if graph is strongly connected" do
+      graph = @file_parser.parse_file('spec/strongly_connected2.txt')
+      GraphAlgorithms.is_strongly_connected?(graph).should eql true
     end
 
     it "should return false if graph is not strongly connected" do
       graph = @file_parser.parse_file('spec/not_strongly_connected.txt')
-      GraphAlgorithms.is_strongly_connected?(0, graph).should eql false
+      GraphAlgorithms.is_strongly_connected?(graph).should eql false
     end
   end
 

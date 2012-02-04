@@ -1,3 +1,23 @@
 == SemestralProject
 
-You should document your project here.
+Semestrální práce se snaží řešit problém Čínského pošťáka (http://en.wikipedia.org/wiki/Route_inspection_problem). Cílem je najít v orientovaném grafu
+nejkratší sled (procházku) z libovolného uzlu, tak aby sled obsahoval všechny hrany a každá hrana byla navštívena co nejméněkrát. Je dokázáno, že graf, který
+lze projít tak, aby každá hrana byla navštívena pouze jednou je tzv. Eulerův graf. Pro orientovaný graf platí, že Eulerův graf má všechny uzly se stejným vstupním a výstupním stupněm.
+
+Je zřejmé, že řešit problém pro grafy, které nejsou silně souvislé nemá smysl, protože při vstupu do slepé uličky by již nebylo možné se vrátit.
+
+Implementovaný algoritmus pro řešení tohoto problému není optimální. Skládá se z několika různých grafových algoritmů.
+Postup při řešení je následující.
+
+* 1) Zjistím, jestli je graf silně souvislý. To provádím pomocí BFS a porovnání počtu objevených uzlů s počtem uzlů grafu). To samé pro graf s opačnou orientací hran.
+Pokud graf není silně souvislý je ukončeno provádění algoritmu, protože řešit problém nemá smysl. V opačném případě se pokračuje dále.
+* 2) Zjistím, jestli je graf Eulerovým grafem. To je provedeno triviální iterací nad všemi uzly grafu a porovnání jejich vstupních a výstupních stupňů. Je-li rozdíl stupňů všech uzlů nulový,
+je graf Eulerovým grafem a pokračuji bodem 3.2. Není-li Eulerovým grafem pokračuji bodem 3.1.
+* 3.1) Uzly grafu rozdělím do 3 množin. Na ty které mají větší výstupní stupeň. Ty, které mají větší vstupní stupeň. A ty, které mají vstupní a výstupní stupeň stejný. Dále vytvořím
+dočasné hrany, které vždy vedou z uzlu z první množiny do uzlu z druhé množiny. Přidáním těchto dočasných hran redukuji 3 množiny na jednu (uzly mají stejný vstupní i výstupní stupeň).
+Graf se stane Eulerovým grafem a pokračuji bodem 3.2. Zde by bylo možné algoritmus ještě zlepšit a přidat algoritmus, pro řešení nejlepšího párování. Místo toho jsem pouze implmentoval
+Dijkstrův Algoritmus, abych alespoň pro aktuální uzel vždy našel nejkratší cestu do uzlu z druhé množiny.
+* 3.2) Na grafu spustím algoritmus Cycle Finding, který objeví všechny kružnice v grafu a vytvoří z nich datovou strukturu Tour. Ta obsahuje všechny kružnice a při její převedení na textový řetězec vypíše
+všechny hrany, tak jak jdou při procházce za sebou.
+* 4) Převedu datovou strukturu Tour na řetězec a vypíši na standartní výstup.
+

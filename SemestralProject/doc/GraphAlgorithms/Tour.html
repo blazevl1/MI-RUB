@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: GraphAlgorithms::Tour</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/cycle_finding_algorithm_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/cycle_finding_algorithm.rb">lib/cycle_finding_algorithm.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-i-add_cycle">#add_cycle</a></li>
+					
+					<li><a href="#method-i-nodes">#nodes</a></li>
+					
+					<li><a href="#method-i-to_s">#to_s</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../LICENSE.html">LICENSE</a></li>
+				
+					<li class="file"><a href="../README.html">README</a></li>
+				
+					<li class="file"><a href="../Rakefile.html">Rakefile</a></li>
+				
+					<li class="file"><a href="../lib/matrix_txt.html">matrix.txt</a></li>
+				
+					<li class="file"><a href="../nbproject/private/rake-d_txt.html">rake-d.txt</a></li>
+				
+					<li class="file"><a href="../spec/correct_matrix_txt.html">correct_matrix.txt</a></li>
+				
+					<li class="file"><a href="../spec/euler_graph_txt.html">euler_graph.txt</a></li>
+				
+					<li class="file"><a href="../spec/graph_for_dijkstra_txt.html">graph_for_dijkstra.txt</a></li>
+				
+					<li class="file"><a href="../spec/matrixA_txt.html">matrixA.txt</a></li>
+				
+					<li class="file"><a href="../spec/matrixB_txt.html">matrixB.txt</a></li>
+				
+					<li class="file"><a href="../spec/not_strongly_connected_txt.html">not_strongly_connected.txt</a></li>
+				
+					<li class="file"><a href="../spec/strongly_connected_txt.html">strongly_connected.txt</a></li>
+				
+					<li class="file"><a href="../spec/strongly_connected2_txt.html">strongly_connected2.txt</a></li>
+				
+					<li class="file"><a href="../spec/wrong_matrix1_txt.html">wrong_matrix1.txt</a></li>
+				
+					<li class="file"><a href="../spec/wrong_matrix2_txt.html">wrong_matrix2.txt</a></li>
+				
+					<li class="file"><a href="../spec/wrong_matrix3_txt.html">wrong_matrix3.txt</a></li>
+				
+					<li class="file"><a href="../spec/wrong_matrix4_txt.html">wrong_matrix4.txt</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../GraphAlgorithms.html">GraphAlgorithms</a></li>
+				
+					<li><a href="../GraphAlgorithms/BFS.html">GraphAlgorithms::BFS</a></li>
+				
+					<li><a href="../GraphAlgorithms/CycleFindingAlgorithm.html">GraphAlgorithms::CycleFindingAlgorithm</a></li>
+				
+					<li><a href="../GraphAlgorithms/DijkstraAlgorithm.html">GraphAlgorithms::DijkstraAlgorithm</a></li>
+				
+					<li><a href="../GraphAlgorithms/HeuristicAlgorithm.html">GraphAlgorithms::HeuristicAlgorithm</a></li>
+				
+					<li><a href="../GraphAlgorithms/Search.html">GraphAlgorithms::Search</a></li>
+				
+					<li><a href="../GraphAlgorithms/Tour.html">GraphAlgorithms::Tour</a></li>
+				
+					<li><a href="../GraphModule.html">GraphModule</a></li>
+				
+					<li><a href="../GraphModule/Edge.html">GraphModule::Edge</a></li>
+				
+					<li><a href="../GraphModule/Graph.html">GraphModule::Graph</a></li>
+				
+					<li><a href="../GraphModule/Node.html">GraphModule::Node</a></li>
+				
+					<li><a href="../GraphModule/TemporaryEdge.html">GraphModule::TemporaryEdge</a></li>
+				
+					<li><a href="../FileParser.html">FileParser</a></li>
+				
+					<li><a href="../FileParser/DistanceMatrixFileParser.html">FileParser::DistanceMatrixFileParser</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">GraphAlgorithms::Tour</h1>
+
+		<div id="description">
+			<p>
+Datová struktura pro reprezentaci procházky v grafu
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(start_node)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Konstruktor
+</p>
+<ul>
+<li><p>
+start_node - uzel, ve kterém procházky začíná
+</p>
+</li>
+</ul>
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/cycle_finding_algorithm.rb, line 57</span>
+57:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">start_node</span>)
+58:       <span class="ruby-ivar">@start_node</span> = <span class="ruby-identifier">start_node</span>
+59:       <span class="ruby-ivar">@cycles</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+60:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="add-cycle-method" class="method-detail ">
+				<a name="method-i-add_cycle"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">add_cycle</span><span
+						class="method-args">(start_node,nodes)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Přidá jeden cyklus do procházky
+</p>
+<ul>
+<li><p>
+start_node - uzel, ve kterém cyklus začíná
+</p>
+</li>
+<li><p>
+nodes - všechny uzly cyklu
+</p>
+</li>
+</ul>
+					
+
+					
+					<div class="method-source-code"
+						id="add-cycle-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/cycle_finding_algorithm.rb, line 65</span>
+65:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">add_cycle</span>(<span class="ruby-identifier">start_node</span>,<span class="ruby-identifier">nodes</span>)
+66:       <span class="ruby-keyword kw">if</span> (<span class="ruby-ivar">@cycles</span>[<span class="ruby-identifier">start_node</span>.<span class="ruby-identifier">id</span>] <span class="ruby-operator">==</span> <span class="ruby-keyword kw">nil</span>)
+67:         <span class="ruby-ivar">@cycles</span>[<span class="ruby-identifier">start_node</span>.<span class="ruby-identifier">id</span>] = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+68:       <span class="ruby-keyword kw">end</span>
+69:       <span class="ruby-keyword kw">if</span> (<span class="ruby-identifier">start_node</span> <span class="ruby-operator">!=</span> <span class="ruby-ivar">@start_node</span>)
+70:         <span class="ruby-identifier">nodes</span>.<span class="ruby-identifier">pop</span>()
+71:       <span class="ruby-keyword kw">end</span>
+72:       <span class="ruby-ivar">@cycles</span>[<span class="ruby-identifier">start_node</span>.<span class="ruby-identifier">id</span>].<span class="ruby-identifier">push</span>(<span class="ruby-identifier">nodes</span>)
+73:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="nodes-method" class="method-detail ">
+				<a name="method-i-nodes"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">nodes</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Vrátí všechny uzly procházky seřazené podle průchodu
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="nodes-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/cycle_finding_algorithm.rb, line 76</span>
+76:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">nodes</span>
+77:       <span class="ruby-identifier">nodes</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+78:       <span class="ruby-ivar">@cycles</span>[<span class="ruby-ivar">@start_node</span>.<span class="ruby-identifier">id</span>].<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">array</span><span class="ruby-operator">|</span>
+79:         <span class="ruby-identifier">array</span>.<span class="ruby-identifier">each</span>() { <span class="ruby-operator">|</span><span class="ruby-identifier">node</span><span class="ruby-operator">|</span>
+80:           <span class="ruby-keyword kw">if</span> (<span class="ruby-ivar">@cycles</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">node</span>.<span class="ruby-identifier">id</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">node</span> <span class="ruby-operator">!=</span> <span class="ruby-ivar">@start_node</span>)
+81:             <span class="ruby-ivar">@cycles</span>[<span class="ruby-identifier">node</span>.<span class="ruby-identifier">id</span>].<span class="ruby-identifier">each</span>() { <span class="ruby-operator">|</span><span class="ruby-identifier">array</span><span class="ruby-operator">|</span>
+82:               <span class="ruby-identifier">array</span>.<span class="ruby-identifier">each</span>() { <span class="ruby-operator">|</span><span class="ruby-identifier">node</span><span class="ruby-operator">|</span>
+83:                 <span class="ruby-identifier">nodes</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">node</span>)
+84:               }
+85:             }
+86:           <span class="ruby-keyword kw">end</span>
+87:           <span class="ruby-identifier">nodes</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">node</span>)
+88:         }
+89:       }
+90:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">nodes</span>
+91:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="to-s-method" class="method-detail ">
+				<a name="method-i-to_s"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">to_s</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Převede objekt na řetězec
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="to-s-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/cycle_finding_algorithm.rb, line 94</span>
+ 94:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_s</span>
+ 95:       <span class="ruby-identifier">output</span> = <span class="ruby-value str">''</span>
+ 96:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">nodes</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">node</span><span class="ruby-operator">|</span>
+ 97:         <span class="ruby-identifier">output</span> <span class="ruby-operator">+=</span> <span class="ruby-node">&quot;#{node} &quot;</span>
+ 98:       }
+ 99:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">output</span>
+100:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

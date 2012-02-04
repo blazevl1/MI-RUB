@@ -7,9 +7,9 @@ module GraphAlgorithms
 
   class DijkstraAlgorithm
 
-    def initialize
-    
-    end
+    # Spustí algoritmus
+    # * start_node - uzel, ze kterého začíná Dijkstrův algoritmus
+    # * graph - graf na kterém je algoritmus prováděn
 
     def execute(start_node,graph)
       initialize_algorithm(start_node,graph)
@@ -30,6 +30,8 @@ module GraphAlgorithms
 
     # Inicializace algoritmu
     # vytvoření používaných datových struktur
+    # * start_node - uzel, ze kterého začíná Dijkstrův algoritmus
+    # * graph - graf na kterém je algoritmus prováděn
 
     def initialize_algorithm(start_node,graph)
       @nodes = Array.new
@@ -43,6 +45,7 @@ module GraphAlgorithms
     # Vyčištění datové struktury Graph po provedení algoritmu
     # * opět otevře uzly
     # * nastaví vzdálenost na nekonečno
+    # graph - graf na kterém je algoritmus prováděn
 
     def finalize_algorithm(graph)
       graph.nodes.each_value { |node|
@@ -53,6 +56,7 @@ module GraphAlgorithms
 
     # Relaxace hran
     # relaxuje všechny výstupní hrany uzlu
+    # * node - uzel, jehož hrany jsou relaxovány
 
     def relaxation(node)
       node.output_edges.each_value { |edge|

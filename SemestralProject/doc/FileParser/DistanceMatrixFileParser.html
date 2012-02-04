@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: FileParser::DistanceMatrixFileParser</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/file_parser_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/file_parser.rb">lib/file_parser.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-i-check_matrix">#check_matrix</a></li>
+					
+					<li><a href="#method-i-create_graph_from_matrix">#create_graph_from_matrix</a></li>
+					
+					<li><a href="#method-i-create_matrix">#create_matrix</a></li>
+					
+					<li><a href="#method-i-parse">#parse</a></li>
+					
+					<li><a href="#method-i-parse_file">#parse_file</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../LICENSE.html">LICENSE</a></li>
+				
+					<li class="file"><a href="../README.html">README</a></li>
+				
+					<li class="file"><a href="../Rakefile.html">Rakefile</a></li>
+				
+					<li class="file"><a href="../lib/matrix_txt.html">matrix.txt</a></li>
+				
+					<li class="file"><a href="../nbproject/private/rake-d_txt.html">rake-d.txt</a></li>
+				
+					<li class="file"><a href="../spec/correct_matrix_txt.html">correct_matrix.txt</a></li>
+				
+					<li class="file"><a href="../spec/euler_graph_txt.html">euler_graph.txt</a></li>
+				
+					<li class="file"><a href="../spec/graph_for_dijkstra_txt.html">graph_for_dijkstra.txt</a></li>
+				
+					<li class="file"><a href="../spec/matrixA_txt.html">matrixA.txt</a></li>
+				
+					<li class="file"><a href="../spec/matrixB_txt.html">matrixB.txt</a></li>
+				
+					<li class="file"><a href="../spec/not_strongly_connected_txt.html">not_strongly_connected.txt</a></li>
+				
+					<li class="file"><a href="../spec/strongly_connected_txt.html">strongly_connected.txt</a></li>
+				
+					<li class="file"><a href="../spec/strongly_connected2_txt.html">strongly_connected2.txt</a></li>
+				
+					<li class="file"><a href="../spec/wrong_matrix1_txt.html">wrong_matrix1.txt</a></li>
+				
+					<li class="file"><a href="../spec/wrong_matrix2_txt.html">wrong_matrix2.txt</a></li>
+				
+					<li class="file"><a href="../spec/wrong_matrix3_txt.html">wrong_matrix3.txt</a></li>
+				
+					<li class="file"><a href="../spec/wrong_matrix4_txt.html">wrong_matrix4.txt</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../GraphAlgorithms.html">GraphAlgorithms</a></li>
+				
+					<li><a href="../GraphAlgorithms/BFS.html">GraphAlgorithms::BFS</a></li>
+				
+					<li><a href="../GraphAlgorithms/CycleFindingAlgorithm.html">GraphAlgorithms::CycleFindingAlgorithm</a></li>
+				
+					<li><a href="../GraphAlgorithms/DijkstraAlgorithm.html">GraphAlgorithms::DijkstraAlgorithm</a></li>
+				
+					<li><a href="../GraphAlgorithms/HeuristicAlgorithm.html">GraphAlgorithms::HeuristicAlgorithm</a></li>
+				
+					<li><a href="../GraphAlgorithms/Search.html">GraphAlgorithms::Search</a></li>
+				
+					<li><a href="../GraphAlgorithms/Tour.html">GraphAlgorithms::Tour</a></li>
+				
+					<li><a href="../GraphModule.html">GraphModule</a></li>
+				
+					<li><a href="../GraphModule/Edge.html">GraphModule::Edge</a></li>
+				
+					<li><a href="../GraphModule/Graph.html">GraphModule::Graph</a></li>
+				
+					<li><a href="../GraphModule/Node.html">GraphModule::Node</a></li>
+				
+					<li><a href="../GraphModule/TemporaryEdge.html">GraphModule::TemporaryEdge</a></li>
+				
+					<li><a href="../FileParser.html">FileParser</a></li>
+				
+					<li><a href="../FileParser/DistanceMatrixFileParser.html">FileParser::DistanceMatrixFileParser</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">FileParser::DistanceMatrixFileParser</h1>
+
+		<div id="description">
+			<p>
+Třída pro načtení grafu, který je reprezentován maticí
+vzdáleností, ze souboru
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="parse-file-method" class="method-detail ">
+				<a name="method-i-parse_file"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">parse_file</span><span
+						class="method-args">(filename)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Zpracuje soubor a vytvoří dle struktury v souboru graf
+</p>
+<ul>
+<li><p>
+filename - cesta k souboru
+</p>
+</li>
+</ul>
+					
+
+					
+					<div class="method-source-code"
+						id="parse-file-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/file_parser.rb, line 14</span>
+14:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">parse_file</span>(<span class="ruby-identifier">filename</span>)
+15:       <span class="ruby-keyword kw">if</span> (<span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-identifier">filename</span>))
+16:         <span class="ruby-identifier">file</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">filename</span>,<span class="ruby-value str">'r'</span>)
+17:         <span class="ruby-keyword kw">begin</span>
+18:           <span class="ruby-identifier">graph</span> = <span class="ruby-identifier">parse</span>(<span class="ruby-identifier">file</span>)
+19:         <span class="ruby-keyword kw">ensure</span>
+20:           <span class="ruby-identifier">file</span>.<span class="ruby-identifier">close</span>
+21:         <span class="ruby-keyword kw">end</span>
+22:         <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">graph</span>;
+23:       <span class="ruby-keyword kw">else</span>
+24:         <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Neexistujici soubor #{filename}&quot;</span>
+25:       <span class="ruby-keyword kw">end</span>
+26:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="check-matrix-method" class="method-detail ">
+				<a name="method-i-check_matrix"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">check_matrix</span><span
+						class="method-args">(matrix)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Zkontroluje, jestli ma matice správný rozměr. Pokud nemá, tak vyvolá
+výjimku.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="check-matrix-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/file_parser.rb, line 59</span>
+59:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">check_matrix</span>(<span class="ruby-identifier">matrix</span>)
+60:       <span class="ruby-identifier">matrix</span>.<span class="ruby-identifier">each_index</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">index</span><span class="ruby-operator">|</span>
+61:         <span class="ruby-keyword kw">if</span> (<span class="ruby-identifier">matrix</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">matrix</span>[<span class="ruby-identifier">index</span>].<span class="ruby-identifier">length</span>)
+62:           <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Invalid matrix dimension. Distance matrix dimension must be MxM! Found dimension #{matrix.length}x#{matrix[index].length} on row #{index}.&quot;</span>
+63:         <span class="ruby-keyword kw">end</span>
+64:       }
+65:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="create-graph-from-matrix-method" class="method-detail ">
+				<a name="method-i-create_graph_from_matrix"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">create_graph_from_matrix</span><span
+						class="method-args">(matrix)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Vytvoří z matice graf
+</p>
+<ul>
+<li><p>
+matrix - matice
+</p>
+</li>
+</ul>
+					
+
+					
+					<div class="method-source-code"
+						id="create-graph-from-matrix-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/file_parser.rb, line 70</span>
+70:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">create_graph_from_matrix</span>(<span class="ruby-identifier">matrix</span>)
+71:       <span class="ruby-identifier">graph</span> = <span class="ruby-constant">GraphModule</span><span class="ruby-operator">::</span><span class="ruby-constant">Graph</span>.<span class="ruby-identifier">new</span>
+72:       <span class="ruby-keyword kw">for</span> <span class="ruby-identifier">id</span> <span class="ruby-keyword kw">in</span> (<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-identifier">matrix</span>.<span class="ruby-identifier">length</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>)
+73:         <span class="ruby-identifier">graph</span>.<span class="ruby-identifier">add_node</span>(<span class="ruby-constant">GraphModule</span><span class="ruby-operator">::</span><span class="ruby-constant">Node</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">id</span>))
+74:       <span class="ruby-keyword kw">end</span>
+75:       <span class="ruby-identifier">matrix</span>.<span class="ruby-identifier">each_index</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">node_A_index</span><span class="ruby-operator">|</span>
+76:         <span class="ruby-identifier">matrix</span>[<span class="ruby-identifier">node_A_index</span>].<span class="ruby-identifier">each_index</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">node_B_index</span><span class="ruby-operator">|</span>
+77:           <span class="ruby-identifier">weight</span> = <span class="ruby-identifier">matrix</span>[<span class="ruby-identifier">node_A_index</span>][<span class="ruby-identifier">node_B_index</span>]
+78:           <span class="ruby-keyword kw">if</span> (<span class="ruby-identifier">weight</span> <span class="ruby-operator">!=</span> <span class="ruby-value">0</span>)          
+79:             <span class="ruby-identifier">target_node</span> = <span class="ruby-identifier">graph</span>.<span class="ruby-identifier">get_node</span>(<span class="ruby-identifier">node_A_index</span>)
+80:             <span class="ruby-identifier">source_node</span> = <span class="ruby-identifier">graph</span>.<span class="ruby-identifier">get_node</span>(<span class="ruby-identifier">node_B_index</span>)
+81:             <span class="ruby-identifier">edge</span> = <span class="ruby-constant">GraphModule</span><span class="ruby-operator">::</span><span class="ruby-constant">Edge</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">source_node</span>,<span class="ruby-identifier">target_node</span>,<span class="ruby-identifier">weight</span>)
+82:             <span class="ruby-identifier">graph</span>.<span class="ruby-identifier">add_edge</span>(<span class="ruby-identifier">edge</span>)
+83:           <span class="ruby-keyword kw">end</span>
+84:         }
+85:       }
+86:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">graph</span>
+87:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="create-matrix-method" class="method-detail ">
+				<a name="method-i-create_matrix"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">create_matrix</span><span
+						class="method-args">(content)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Vytvoří matici dle zadaného textového řetězce, pokud je validní
+</p>
+<ul>
+<li><p>
+content - textový řetězec
+</p>
+</li>
+</ul>
+					
+
+					
+					<div class="method-source-code"
+						id="create-matrix-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/file_parser.rb, line 40</span>
+40:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">create_matrix</span>(<span class="ruby-identifier">content</span>)
+41:       <span class="ruby-identifier">matrix</span> = []
+42:       <span class="ruby-identifier">content</span>.<span class="ruby-identifier">each_line</span>() { <span class="ruby-operator">|</span><span class="ruby-identifier">line</span><span class="ruby-operator">|</span>
+43:         <span class="ruby-identifier">chunks</span> = <span class="ruby-identifier">line</span>.<span class="ruby-identifier">split</span>(<span class="ruby-regexp re">/[\s]+/</span>);
+44:         <span class="ruby-identifier">matrix</span>[<span class="ruby-identifier">content</span>.<span class="ruby-identifier">lineno</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>] = []
+45:         <span class="ruby-identifier">chunks</span>.<span class="ruby-identifier">each_index</span>() { <span class="ruby-operator">|</span><span class="ruby-identifier">index</span><span class="ruby-operator">|</span>
+46:           <span class="ruby-identifier">value</span> = <span class="ruby-identifier">chunks</span>[<span class="ruby-identifier">index</span>].<span class="ruby-identifier">strip</span>
+47:           <span class="ruby-keyword kw">if</span> (<span class="ruby-regexp re">/^\d+$/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">value</span>)
+48:             <span class="ruby-identifier">matrix</span>[<span class="ruby-identifier">content</span>.<span class="ruby-identifier">lineno</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>].<span class="ruby-identifier">push</span>(<span class="ruby-identifier">value</span>.<span class="ruby-identifier">to_i</span>)
+49:           <span class="ruby-keyword kw">else</span>
+50:             <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Invalid file structure. Expected number given: #{value}&quot;</span>
+51:           <span class="ruby-keyword kw">end</span>
+52:         }
+53:       }
+54:       <span class="ruby-identifier">check_matrix</span>(<span class="ruby-identifier">matrix</span>)
+55:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">matrix</span>
+56:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="parse-method" class="method-detail ">
+				<a name="method-i-parse"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">parse</span><span
+						class="method-args">(content)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Zpracuje textový řetězec a vytvoří graf
+</p>
+<ul>
+<li><p>
+content - textový řetězec
+</p>
+</li>
+</ul>
+					
+
+					
+					<div class="method-source-code"
+						id="parse-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/file_parser.rb, line 32</span>
+32:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">parse</span>(<span class="ruby-identifier">content</span>)
+33:       <span class="ruby-identifier">matrix</span> = <span class="ruby-identifier">create_matrix</span>(<span class="ruby-identifier">content</span>)
+34:       <span class="ruby-identifier">graph</span> = <span class="ruby-identifier">create_graph_from_matrix</span>(<span class="ruby-identifier">matrix</span>)
+35:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">graph</span>
+36:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

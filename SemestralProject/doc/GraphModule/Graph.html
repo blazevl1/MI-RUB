@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: GraphModule::Graph</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/graph_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/graph.rb">lib/graph.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-i-add_edge">#add_edge</a></li>
+					
+					<li><a href="#method-i-add_node">#add_node</a></li>
+					
+					<li><a href="#method-i-create_inverted">#create_inverted</a></li>
+					
+					<li><a href="#method-i-eql%3F">#eql?</a></li>
+					
+					<li><a href="#method-i-exists_node_with_id">#exists_node_with_id</a></li>
+					
+					<li><a href="#method-i-get_node">#get_node</a></li>
+					
+					<li><a href="#method-i-number_of_nodes">#number_of_nodes</a></li>
+					
+					<li><a href="#method-i-refresh_nodes">#refresh_nodes</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../LICENSE.html">LICENSE</a></li>
+				
+					<li class="file"><a href="../README.html">README</a></li>
+				
+					<li class="file"><a href="../Rakefile.html">Rakefile</a></li>
+				
+					<li class="file"><a href="../lib/matrix_txt.html">matrix.txt</a></li>
+				
+					<li class="file"><a href="../nbproject/private/rake-d_txt.html">rake-d.txt</a></li>
+				
+					<li class="file"><a href="../spec/correct_matrix_txt.html">correct_matrix.txt</a></li>
+				
+					<li class="file"><a href="../spec/euler_graph_txt.html">euler_graph.txt</a></li>
+				
+					<li class="file"><a href="../spec/graph_for_dijkstra_txt.html">graph_for_dijkstra.txt</a></li>
+				
+					<li class="file"><a href="../spec/matrixA_txt.html">matrixA.txt</a></li>
+				
+					<li class="file"><a href="../spec/matrixB_txt.html">matrixB.txt</a></li>
+				
+					<li class="file"><a href="../spec/not_strongly_connected_txt.html">not_strongly_connected.txt</a></li>
+				
+					<li class="file"><a href="../spec/strongly_connected_txt.html">strongly_connected.txt</a></li>
+				
+					<li class="file"><a href="../spec/strongly_connected2_txt.html">strongly_connected2.txt</a></li>
+				
+					<li class="file"><a href="../spec/wrong_matrix1_txt.html">wrong_matrix1.txt</a></li>
+				
+					<li class="file"><a href="../spec/wrong_matrix2_txt.html">wrong_matrix2.txt</a></li>
+				
+					<li class="file"><a href="../spec/wrong_matrix3_txt.html">wrong_matrix3.txt</a></li>
+				
+					<li class="file"><a href="../spec/wrong_matrix4_txt.html">wrong_matrix4.txt</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../GraphAlgorithms.html">GraphAlgorithms</a></li>
+				
+					<li><a href="../GraphAlgorithms/BFS.html">GraphAlgorithms::BFS</a></li>
+				
+					<li><a href="../GraphAlgorithms/CycleFindingAlgorithm.html">GraphAlgorithms::CycleFindingAlgorithm</a></li>
+				
+					<li><a href="../GraphAlgorithms/DijkstraAlgorithm.html">GraphAlgorithms::DijkstraAlgorithm</a></li>
+				
+					<li><a href="../GraphAlgorithms/HeuristicAlgorithm.html">GraphAlgorithms::HeuristicAlgorithm</a></li>
+				
+					<li><a href="../GraphAlgorithms/Search.html">GraphAlgorithms::Search</a></li>
+				
+					<li><a href="../GraphAlgorithms/Tour.html">GraphAlgorithms::Tour</a></li>
+				
+					<li><a href="../GraphModule.html">GraphModule</a></li>
+				
+					<li><a href="../GraphModule/Edge.html">GraphModule::Edge</a></li>
+				
+					<li><a href="../GraphModule/Graph.html">GraphModule::Graph</a></li>
+				
+					<li><a href="../GraphModule/Node.html">GraphModule::Node</a></li>
+				
+					<li><a href="../GraphModule/TemporaryEdge.html">GraphModule::TemporaryEdge</a></li>
+				
+					<li><a href="../FileParser.html">FileParser</a></li>
+				
+					<li><a href="../FileParser/DistanceMatrixFileParser.html">FileParser::DistanceMatrixFileParser</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">GraphModule::Graph</h1>
+
+		<div id="description">
+			<p>
+Datová struktura graf
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+		<div id="attribute-method-details" class="method-section section">
+			<h3 class="section-header">Attributes</h3>
+
+			
+			<div id="edges-attribute-method" class="method-detail">
+				<a name="edges"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">edges</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+Pole všech hran v grafu
+</p>
+				
+				</div>
+			</div>
+			
+			<div id="nodes-attribute-method" class="method-detail">
+				<a name="nodes"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">nodes</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+Hash všech uzlů v grafu
+</p>
+				
+				</div>
+			</div>
+			
+		</div>
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Konstruktor
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/graph.rb, line 14</span>
+14:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>
+15:       <span class="ruby-ivar">@nodes</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+16:       <span class="ruby-ivar">@edges</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+17:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="add-edge-method" class="method-detail ">
+				<a name="method-i-add_edge"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">add_edge</span><span
+						class="method-args">(edge)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Přidá hranu do grafu
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="add-edge-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/graph.rb, line 25</span>
+25:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">add_edge</span>(<span class="ruby-identifier">edge</span>)
+26:       <span class="ruby-ivar">@edges</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">edge</span>)
+27:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="add-node-method" class="method-detail ">
+				<a name="method-i-add_node"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">add_node</span><span
+						class="method-args">(node)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Přidá uzel do grafu
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="add-node-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/graph.rb, line 20</span>
+20:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">add_node</span>(<span class="ruby-identifier">node</span>)
+21:       <span class="ruby-ivar">@nodes</span>[<span class="ruby-identifier">node</span>.<span class="ruby-identifier">id</span>] = <span class="ruby-identifier">node</span>
+22:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="create-inverted-method" class="method-detail ">
+				<a name="method-i-create_inverted"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">create_inverted</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Vytvoří graf s inverzní orientací hran
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="create-inverted-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/graph.rb, line 51</span>
+51:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">create_inverted</span>
+52:       <span class="ruby-identifier">graph</span> = <span class="ruby-constant">Graph</span>.<span class="ruby-identifier">new</span>
+53:       <span class="ruby-ivar">@nodes</span>.<span class="ruby-identifier">each_value</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">node</span> <span class="ruby-operator">|</span>
+54:         <span class="ruby-identifier">graph</span>.<span class="ruby-identifier">add_node</span>(<span class="ruby-constant">Node</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">node</span>.<span class="ruby-identifier">id</span>))
+55:       }
+56:       <span class="ruby-ivar">@edges</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">edge</span><span class="ruby-operator">|</span>
+57:         <span class="ruby-identifier">source</span> = <span class="ruby-identifier">graph</span>.<span class="ruby-identifier">get_node</span>(<span class="ruby-identifier">edge</span>.<span class="ruby-identifier">target</span>.<span class="ruby-identifier">id</span>)
+58:         <span class="ruby-identifier">target</span> = <span class="ruby-identifier">graph</span>.<span class="ruby-identifier">get_node</span>(<span class="ruby-identifier">edge</span>.<span class="ruby-identifier">source</span>.<span class="ruby-identifier">id</span>)
+59:         <span class="ruby-identifier">inverted_edge</span> = <span class="ruby-constant">Edge</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">source</span>,<span class="ruby-identifier">target</span>,<span class="ruby-identifier">edge</span>.<span class="ruby-identifier">weight</span>)
+60:         <span class="ruby-identifier">graph</span>.<span class="ruby-identifier">add_edge</span>(<span class="ruby-identifier">inverted_edge</span>)
+61:       }
+62:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">graph</span>
+63:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="eql--method" class="method-detail ">
+				<a name="method-i-eql%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">eql?</span><span
+						class="method-args">(graph)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Implementace metody eql? Dva grafy jsou ekvivalentní pokud mají stejný
+počet uzlů a všechny uzly jsou ekvivalentní (ekvivalence uzlu zahrnuje
+i testovaní hran)
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="eql--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/graph.rb, line 74</span>
+74:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">eql?</span> (<span class="ruby-identifier">graph</span>)
+75:       <span class="ruby-keyword kw">if</span> (<span class="ruby-ivar">@nodes</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">graph</span>.<span class="ruby-identifier">nodes</span>.<span class="ruby-identifier">length</span>)
+76:         <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">false</span>
+77:       <span class="ruby-keyword kw">end</span>
+78:       <span class="ruby-ivar">@nodes</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">id</span>,<span class="ruby-identifier">node</span><span class="ruby-operator">|</span>
+79:         <span class="ruby-keyword kw">if</span> (<span class="ruby-operator">!</span><span class="ruby-identifier">graph</span>.<span class="ruby-identifier">get_node</span>(<span class="ruby-identifier">id</span>).<span class="ruby-identifier">eql?</span>(<span class="ruby-identifier">node</span>))
+80:           <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">false</span>
+81:         <span class="ruby-keyword kw">end</span>
+82:       }
+83:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">true</span>
+84:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="exists-node-with-id-method" class="method-detail ">
+				<a name="method-i-exists_node_with_id"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">exists_node_with_id</span><span
+						class="method-args">(id)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Existuje v grafu uzel s daným id?
+</p>
+<ul>
+<li><p>
+id - id hledaného uzlu
+</p>
+</li>
+</ul>
+					
+
+					
+					<div class="method-source-code"
+						id="exists-node-with-id-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/graph.rb, line 41</span>
+41:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">exists_node_with_id</span>(<span class="ruby-identifier">id</span>)
+42:       <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@nodes</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-identifier">id</span>)
+43:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="get-node-method" class="method-detail ">
+				<a name="method-i-get_node"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">get_node</span><span
+						class="method-args">(id)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Vrátí uzel grafu s daným ID, pokud existuje jinak vyvolá výjimku
+</p>
+<ul>
+<li><p>
+id - id uzlu grafu
+</p>
+</li>
+</ul>
+					
+
+					
+					<div class="method-source-code"
+						id="get-node-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/graph.rb, line 31</span>
+31:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">get_node</span>(<span class="ruby-identifier">id</span>)
+32:       <span class="ruby-keyword kw">if</span> (<span class="ruby-ivar">@nodes</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">id</span>))
+33:         <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@nodes</span>[<span class="ruby-identifier">id</span>]
+34:       <span class="ruby-keyword kw">else</span>
+35:         <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Cannot retrieve node with ID = #{id}. Node does not exist in this graph.&quot;</span>
+36:       <span class="ruby-keyword kw">end</span>
+37:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="number-of-nodes-method" class="method-detail ">
+				<a name="method-i-number_of_nodes"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">number_of_nodes</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Vrátí počet uzlů v grafu
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="number-of-nodes-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/graph.rb, line 46</span>
+46:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">number_of_nodes</span>
+47:       <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@nodes</span>.<span class="ruby-identifier">length</span>
+48:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="refresh-nodes-method" class="method-detail ">
+				<a name="method-i-refresh_nodes"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">refresh_nodes</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Obnoví všechny uzly v grafu - nastaví jejich stav na OPEN
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="refresh-nodes-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/graph.rb, line 66</span>
+66:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">refresh_nodes</span>
+67:       <span class="ruby-ivar">@nodes</span>.<span class="ruby-identifier">each_value</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">node</span> <span class="ruby-operator">|</span>
+68:         <span class="ruby-identifier">node</span>.<span class="ruby-identifier">open</span>
+69:       }
+70:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

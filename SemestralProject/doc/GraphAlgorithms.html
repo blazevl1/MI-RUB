@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Module: GraphAlgorithms</title>
+
+	<link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+	<script src="./js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="module">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="./lib/cycle_finding_algorithm_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/cycle_finding_algorithm.rb">lib/cycle_finding_algorithm.rb</a></li>
+					
+						<li><a href="./lib/heuristic_algorithm_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/heuristic_algorithm.rb">lib/heuristic_algorithm.rb</a></li>
+					
+						<li><a href="./lib/b_f_s_algorithm_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/b_f_s_algorithm.rb">lib/b_f_s_algorithm.rb</a></li>
+					
+						<li><a href="./lib/dijkstra_algorithm_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/dijkstra_algorithm.rb">lib/dijkstra_algorithm.rb</a></li>
+					
+						<li><a href="./lib/graph_algorithms_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/graph_algorithms.rb">lib/graph_algorithms.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+
+			<!-- Namespace Contents -->
+			
+			<div id="namespace-list-section" class="section">
+				<h3 class="section-header">Namespace</h3>
+				<ul class="link-list">
+					
+					<li><span class="type">CLASS</span> <a href="GraphAlgorithms/BFS.html">GraphAlgorithms::BFS</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="GraphAlgorithms/CycleFindingAlgorithm.html">GraphAlgorithms::CycleFindingAlgorithm</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="GraphAlgorithms/DijkstraAlgorithm.html">GraphAlgorithms::DijkstraAlgorithm</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="GraphAlgorithms/HeuristicAlgorithm.html">GraphAlgorithms::HeuristicAlgorithm</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="GraphAlgorithms/Search.html">GraphAlgorithms::Search</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="GraphAlgorithms/Tour.html">GraphAlgorithms::Tour</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-i-bfs">#bfs</a></li>
+					
+					<li><a href="#method-i-find_closest_nodes">#find_closest_nodes</a></li>
+					
+					<li><a href="#method-i-find_tour_in_euler_graph">#find_tour_in_euler_graph</a></li>
+					
+					<li><a href="#method-i-find_tour_in_normal_graph">#find_tour_in_normal_graph</a></li>
+					
+					<li><a href="#method-i-get_algorithm">#get_algorithm</a></li>
+					
+					<li><a href="#method-i-is_euler%3F">#is_euler?</a></li>
+					
+					<li><a href="#method-i-is_strongly_connected%3F">#is_strongly_connected?</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+			<div id="includes-section" class="section">
+				<h3 class="section-header">Included Modules</h3>
+				<ul class="link-list">
+				
+				
+					<li><a class="include" href="GraphModule.html">GraphModule</a></li>
+				
+				
+				</ul>
+			</div>
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="./LICENSE.html">LICENSE</a></li>
+				
+					<li class="file"><a href="./README.html">README</a></li>
+				
+					<li class="file"><a href="./Rakefile.html">Rakefile</a></li>
+				
+					<li class="file"><a href="./lib/matrix_txt.html">matrix.txt</a></li>
+				
+					<li class="file"><a href="./nbproject/private/rake-d_txt.html">rake-d.txt</a></li>
+				
+					<li class="file"><a href="./spec/correct_matrix_txt.html">correct_matrix.txt</a></li>
+				
+					<li class="file"><a href="./spec/euler_graph_txt.html">euler_graph.txt</a></li>
+				
+					<li class="file"><a href="./spec/graph_for_dijkstra_txt.html">graph_for_dijkstra.txt</a></li>
+				
+					<li class="file"><a href="./spec/matrixA_txt.html">matrixA.txt</a></li>
+				
+					<li class="file"><a href="./spec/matrixB_txt.html">matrixB.txt</a></li>
+				
+					<li class="file"><a href="./spec/not_strongly_connected_txt.html">not_strongly_connected.txt</a></li>
+				
+					<li class="file"><a href="./spec/strongly_connected_txt.html">strongly_connected.txt</a></li>
+				
+					<li class="file"><a href="./spec/strongly_connected2_txt.html">strongly_connected2.txt</a></li>
+				
+					<li class="file"><a href="./spec/wrong_matrix1_txt.html">wrong_matrix1.txt</a></li>
+				
+					<li class="file"><a href="./spec/wrong_matrix2_txt.html">wrong_matrix2.txt</a></li>
+				
+					<li class="file"><a href="./spec/wrong_matrix3_txt.html">wrong_matrix3.txt</a></li>
+				
+					<li class="file"><a href="./spec/wrong_matrix4_txt.html">wrong_matrix4.txt</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="./images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="./GraphAlgorithms.html">GraphAlgorithms</a></li>
+				
+					<li><a href="./GraphAlgorithms/BFS.html">GraphAlgorithms::BFS</a></li>
+				
+					<li><a href="./GraphAlgorithms/CycleFindingAlgorithm.html">GraphAlgorithms::CycleFindingAlgorithm</a></li>
+				
+					<li><a href="./GraphAlgorithms/DijkstraAlgorithm.html">GraphAlgorithms::DijkstraAlgorithm</a></li>
+				
+					<li><a href="./GraphAlgorithms/HeuristicAlgorithm.html">GraphAlgorithms::HeuristicAlgorithm</a></li>
+				
+					<li><a href="./GraphAlgorithms/Search.html">GraphAlgorithms::Search</a></li>
+				
+					<li><a href="./GraphAlgorithms/Tour.html">GraphAlgorithms::Tour</a></li>
+				
+					<li><a href="./GraphModule.html">GraphModule</a></li>
+				
+					<li><a href="./GraphModule/Edge.html">GraphModule::Edge</a></li>
+				
+					<li><a href="./GraphModule/Graph.html">GraphModule::Graph</a></li>
+				
+					<li><a href="./GraphModule/Node.html">GraphModule::Node</a></li>
+				
+					<li><a href="./GraphModule/TemporaryEdge.html">GraphModule::TemporaryEdge</a></li>
+				
+					<li><a href="./FileParser.html">FileParser</a></li>
+				
+					<li><a href="./FileParser/DistanceMatrixFileParser.html">FileParser::DistanceMatrixFileParser</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="module">GraphAlgorithms</h1>
+
+		<div id="description">
+			<p>
+Modul obsahuje různé algoritmy pro řešení problémů v grafu
+(prohledávání do šířky, nalezení nejkratších cest atd.). Zároveň
+poskytuje sadu metod, které tvoří fasádu pro práci s danými
+algoritmy.
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="bfs-method" class="method-detail ">
+				<a name="method-i-bfs"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">bfs</span><span
+						class="method-args">(root_node_index,graph)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Provede algoritmus <a href="GraphAlgorithms/BFS.html">BFS</a> na zadaném
+grafu
+</p>
+<ul>
+<li><p>
+root_node_index - id uzlu, ze kterého prohledávání začíná
+</p>
+</li>
+<li><p>
+graph - graf, na kterém se algoritmus provádí
+</p>
+</li>
+</ul>
+					
+
+					
+					<div class="method-source-code"
+						id="bfs-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/graph_algorithms.rb, line 16</span>
+16:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">bfs</span>(<span class="ruby-identifier">root_node_index</span>,<span class="ruby-identifier">graph</span>)
+17:     <span class="ruby-identifier">algorithm</span> = <span class="ruby-identifier">get_algorithm</span>(<span class="ruby-value str">&quot;BFS&quot;</span>)
+18:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">algorithm</span>.<span class="ruby-identifier">execute</span>(<span class="ruby-identifier">root_node_index</span>, <span class="ruby-identifier">graph</span>)
+19:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="find-closest-nodes-method" class="method-detail ">
+				<a name="method-i-find_closest_nodes"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">find_closest_nodes</span><span
+						class="method-args">(start_node,graph)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Najde nejbližší uzly od zadaného uzlu (implementováno Dijkstrovým
+algoritmem)
+</p>
+<ul>
+<li><p>
+start_node - uzel, od kterého se hledají nejbližší uzly
+</p>
+</li>
+<li><p>
+graph - graf na kterém, se algoritmus provádí
+</p>
+</li>
+</ul>
+					
+
+					
+					<div class="method-source-code"
+						id="find-closest-nodes-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/graph_algorithms.rb, line 64</span>
+64:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">find_closest_nodes</span>(<span class="ruby-identifier">start_node</span>,<span class="ruby-identifier">graph</span>)
+65:     <span class="ruby-identifier">algorithm</span> = <span class="ruby-identifier">get_algorithm</span>(<span class="ruby-value str">&quot;DijkstraAlgorithm&quot;</span>)
+66:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">algorithm</span>.<span class="ruby-identifier">execute</span>(<span class="ruby-identifier">start_node</span>,<span class="ruby-identifier">graph</span>)
+67:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="find-tour-in-euler-graph-method" class="method-detail ">
+				<a name="method-i-find_tour_in_euler_graph"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">find_tour_in_euler_graph</span><span
+						class="method-args">(start_node,graph)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Najde procházku v Eulerově grafu
+</p>
+<ul>
+<li><p>
+start_node - uzel, ve kterém procházka začíná
+</p>
+</li>
+<li><p>
+graph - graf na kterém, se algoritmus provádí
+</p>
+</li>
+</ul>
+					
+
+					
+					<div class="method-source-code"
+						id="find-tour-in-euler-graph-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/graph_algorithms.rb, line 48</span>
+48:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">find_tour_in_euler_graph</span>(<span class="ruby-identifier">start_node</span>,<span class="ruby-identifier">graph</span>)
+49:     <span class="ruby-identifier">algorithm</span> = <span class="ruby-identifier">get_algorithm</span>(<span class="ruby-value str">&quot;CycleFindingAlgorithm&quot;</span>)
+50:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">algorithm</span>.<span class="ruby-identifier">execute</span>(<span class="ruby-identifier">start_node</span>,<span class="ruby-identifier">graph</span>)
+51:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="find-tour-in-normal-graph-method" class="method-detail ">
+				<a name="method-i-find_tour_in_normal_graph"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">find_tour_in_normal_graph</span><span
+						class="method-args">(start_node,graph)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Najde procházku v normálním grafu (nemusí být Eulerův)
+</p>
+<ul>
+<li><p>
+start_node - uzel, ve kterém procházka začíná
+</p>
+</li>
+<li><p>
+graph - graf na kterém, se algoritmus provádí
+</p>
+</li>
+</ul>
+					
+
+					
+					<div class="method-source-code"
+						id="find-tour-in-normal-graph-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/graph_algorithms.rb, line 56</span>
+56:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">find_tour_in_normal_graph</span>(<span class="ruby-identifier">start_node</span>,<span class="ruby-identifier">graph</span>)
+57:     <span class="ruby-identifier">algorithm</span> = <span class="ruby-identifier">get_algorithm</span>(<span class="ruby-value str">&quot;HeuristicAlgorithm&quot;</span>)
+58:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">algorithm</span>.<span class="ruby-identifier">execute</span>(<span class="ruby-identifier">start_node</span>,<span class="ruby-identifier">graph</span>)
+59:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="is-euler--method" class="method-detail ">
+				<a name="method-i-is_euler%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">is_euler?</span><span
+						class="method-args">(graph)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Je zadaný graf Eulerovým grafem?
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="is-euler--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/graph_algorithms.rb, line 36</span>
+36:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">is_euler?</span>(<span class="ruby-identifier">graph</span>)
+37:     <span class="ruby-identifier">graph</span>.<span class="ruby-identifier">nodes</span>.<span class="ruby-identifier">each_value</span>() { <span class="ruby-operator">|</span><span class="ruby-identifier">node</span><span class="ruby-operator">|</span>
+38:       <span class="ruby-keyword kw">if</span> (<span class="ruby-identifier">node</span>.<span class="ruby-identifier">input_degree</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">node</span>.<span class="ruby-identifier">output_degree</span>)
+39:         <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">false</span>
+40:       <span class="ruby-keyword kw">end</span>
+41:     }
+42:     <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">true</span>
+43:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="is-strongly-connected--method" class="method-detail ">
+				<a name="method-i-is_strongly_connected%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">is_strongly_connected?</span><span
+						class="method-args">(graph)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Je zadaný graf silně souvislý?
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="is-strongly-connected--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/graph_algorithms.rb, line 22</span>
+22:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">is_strongly_connected?</span>(<span class="ruby-identifier">graph</span>)
+23:     <span class="ruby-identifier">nodes</span> = <span class="ruby-constant">GraphAlgorithms</span>.<span class="ruby-identifier">bfs</span>(<span class="ruby-value">0</span>,<span class="ruby-identifier">graph</span>)
+24:     <span class="ruby-keyword kw">if</span> (<span class="ruby-identifier">nodes</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">graph</span>.<span class="ruby-identifier">number_of_nodes</span>)    
+25:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">false</span>
+26:     <span class="ruby-keyword kw">end</span>
+27:     <span class="ruby-identifier">inverted_graph</span> = <span class="ruby-identifier">graph</span>.<span class="ruby-identifier">create_inverted</span>
+28:     <span class="ruby-identifier">nodes</span> = <span class="ruby-constant">GraphAlgorithms</span>.<span class="ruby-identifier">bfs</span>(<span class="ruby-value">0</span>,<span class="ruby-identifier">inverted_graph</span>)
+29:     <span class="ruby-keyword kw">if</span> (<span class="ruby-identifier">nodes</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">inverted_graph</span>.<span class="ruby-identifier">number_of_nodes</span>)   
+30:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">false</span>
+31:     <span class="ruby-keyword kw">end</span>
+32:     <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">true</span>
+33:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="get-algorithm-method" class="method-detail ">
+				<a name="method-i-get_algorithm"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">get_algorithm</span><span
+						class="method-args">(class_name)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Odložená inicializace algoritmů, pokud již existuje objekt pro
+vykonávání daného algoritmu, tak ho vrátí pokud ještě neexistuje,
+tak objekt vytvoří uloží do Hash a vrátí. class_name - název
+třídy, která implementuje algoritmus
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="get-algorithm-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/graph_algorithms.rb, line 74</span>
+74:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">get_algorithm</span>(<span class="ruby-identifier">class_name</span>)
+75:     <span class="ruby-keyword kw">if</span> (<span class="ruby-identifier">@@algorithms</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">class_name</span>))
+76:       <span class="ruby-identifier">algorithm</span> = <span class="ruby-identifier">@@algorithms</span>[<span class="ruby-identifier">class_name</span>]
+77:     <span class="ruby-keyword kw">else</span>
+78:       <span class="ruby-identifier">algorithm</span> = <span class="ruby-identifier">@@algorithms</span>[<span class="ruby-identifier">class_name</span>] = <span class="ruby-constant">Object</span>.<span class="ruby-identifier">const_get</span>(<span class="ruby-value str">&quot;GraphAlgorithms&quot;</span>).<span class="ruby-identifier">const_get</span>(<span class="ruby-identifier">class_name</span>).<span class="ruby-identifier">new</span>
+79:     <span class="ruby-keyword kw">end</span>
+80:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">algorithm</span>
+81:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+
